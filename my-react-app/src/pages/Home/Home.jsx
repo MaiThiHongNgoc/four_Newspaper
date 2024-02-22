@@ -1,13 +1,10 @@
 import React from 'react'
-//import logo from "../../../img-eFruit/img/img-logo.png"
+import Header from './Header/Header'
 const Home = () => {
     return (
         <div>
-            <div class="header-with-seach">
-                <div class="header_logo">
-                    <img src="" alt='logo'></img>
-                </div>
-            </div>
+            <Header />
+
         </div>
     )
 }

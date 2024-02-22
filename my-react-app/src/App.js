@@ -3,9 +3,10 @@ import { Route, Link, Routes, BrowserRouter, Router } from 'react-router-dom';
 
 
 import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import Product from "./pages/Product/Product";
-import Register from "./pages/Register/Register";
+import Menu from "./pages/Menu/Menu";
+import Shop from "./pages/Shop/Shop";
+import Pages from "./pages/Pages/Pages";
+import Blogs from "./pages/Blogs/Blogs";
 //import Search from "./pages/Search";
 
 function App() {
@@ -17,15 +18,17 @@ function App() {
 
         <ul>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/About">About </Link></li>
-          <li><Link to="/Product">Product</Link></li>
-          <li><Link to="/Register">Register</Link></li>
+          <li><Link to="/Menu">Menu </Link></li>
+          <li><Link to="/Shop">Shop</Link></li>
+          <li><Link to="/Pages">Pages</Link></li>
+          <li><Link to="/Blogs">Blogs</Link></li>
         </ul>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/About' element={<About />} />
-          <Route path='/Product' element={<Product />} />
-          <Route path='/Register' element={<Register />} />
+          <Route path='/Menu' element={<Menu />} />
+          <Route path='/Shop' element={<Shop />} />
+          <Route path='/Pages' element={<Pages />} />
+          <Route path='/Blogs' element={<Blogs />} />
         </Routes>
 
       </BrowserRouter>
