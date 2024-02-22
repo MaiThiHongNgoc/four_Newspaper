@@ -16,13 +16,7 @@ function App() {
     <div>
       <BrowserRouter>
 
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/Menu">Menu </Link></li>
-          <li><Link to="/Shop">Shop</Link></li>
-          <li><Link to="/Pages">Pages</Link></li>
-          <li><Link to="/Blogs">Blogs</Link></li>
-        </ul>
+
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/Menu' element={<Menu />} />
