@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Header.scss'
-// import "@fortawesome/react-fontawesome"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import 'react-icons'
+import { IoIosSearch } from "react-icons/io";
+import { CiHeart } from "react-icons/ci";
+import { VscAccount } from "react-icons/vsc";
+import { MdOutlineShoppingBag } from "react-icons/md";
 
 const Header = () => {
     return (
@@ -19,15 +22,10 @@ const Header = () => {
 
             </div>
             <div className="components-header">
-                <div className="icon-search"><FontAwesomeIcon icon="fas fa-search" /></div>
-                <div className="icon-login"><FontAwesomeIcon icon="fas fa-user-alt" /></div>
-                <div className="icon-tym"><FontAwesomeIcon icon="far fa-heart" /></div>
-               
-
-                <div>
-                    <FontAwesomeIcon icon="check-square" />
-                    Your <FontAwesomeIcon icon="coffee" /> is hot and ready!
-                </div>
+                <div className="icon-search"><IoIosSearch /></div>
+                <div className="icon-login"><VscAccount /></div>
+                <div className="icon-tym"><CiHeart /></div>
+                <div className="icon-cart"><MdOutlineShoppingBag /></div>
             </div>
         </div>
     );
