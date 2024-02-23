@@ -14,17 +14,56 @@ const Slideshow = () => {
         <Slide>
             <div className="slide-container">
                 <div style={{ 'backgroundImage': `url(${images[0]})` }}>
-                    <span>Slide 1</span>
+                    <div className='title1'>
+                    <div className="box-title4">
+                        <h3>SUGGESTIONS FOR YOU</h3> <br/>
+                    </div>
+                    <div className='box-title1'>
+                        <h3>Fresh Smoothie</h3> <br/>
+                    </div>
+                    <div className="box-title2">
+                        <h3>Drink a smoothie every day to make you healtthier.</h3> <br/>
+                    </div> 
+                    <div className="box-title3">
+                        <a className='button'  href="">SHOP NOW</a>
+                    </div>
+                    </div>
                 </div>
             </div>
             <div className="slide-container">
                 <div style={{ 'backgroundImage': `url(${images[1]})` }}>
-                    <span>Slide 2</span>
+                <div className='title2'>
+                    <div className="box-title4">
+                        <h3>SUGGESTIONS FOR YOU</h3> <br/>
+                    </div>
+                    <div className='box-title1'>
+                        <h3>Orange Juice</h3> <br/>
+                    </div>
+                    <div className="box-title2">
+                        <h3>Drink a smoothie every day to make you healtthier.</h3> <br/>
+                    </div> 
+                    <div className="box-title3">
+                        <a className='button'  href="">SHOP NOW</a>
+                    </div>
+                    </div>
                 </div>
             </div>
             <div className="slide-container">
                 <div style={{ 'backgroundImage': `url(${images[2]})` }}>
-                    <span>Slide 3</span>
+                    <div className='title3'>
+                    <div className="box-title4">
+                        <h3>SPECIAL OFFER</h3> <br/>
+                    </div>
+                    <div className='box-title1'>
+                        <h3>Fresh Fruits Juice</h3> <br/>
+                    </div>
+                    <div className="box-title2">
+                        <h3>10% OFF ORDER FROM $100.</h3> <br/>
+                    </div> 
+                    <div className="box-title3">
+                        <a className='button'  href="">SHOP NOW</a>
+                    </div>
+                    </div>
                 </div>
             </div>
         </Slide>
