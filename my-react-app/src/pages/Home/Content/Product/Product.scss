@@ -1,0 +1,63 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px; // Giúp cân chỉnh khoảng cách giữa các sản phẩm
+  }
+  
+  .product-item {
+    flex: 0 0 25%; // Mỗi sản phẩm chiếm 25% chiều rộng của container để có 4 sản phẩm trên một hàng
+    max-width: 25%; // Giới hạn chiều rộng tối đa của mỗi sản phẩm
+    padding: 15px; // Tạo khoảng cách giữa các sản phẩm
+    box-sizing: border-box; // Đảm bảo padding không ảnh hưởng đến chiều rộng tổng thể
+  
+    img {
+      width: 100%; // Đảm bảo hình ảnh co dãn để phù hợp với kích thước của .product-item
+      height: auto; // Giữ tỷ lệ của hình ảnh
+      display: block; // Xóa khoảng cách dưới cùng của hình ảnh
+    }
+  
+    h3 {
+        margin-left: 40px;
+        color: #000000;
+      margin-top: 10px;
+      font-family: Jost;
+      &:hover {
+        color: #58B720;
+    }
+       // Khoảng cách giữa hình ảnh và tiêu đề sản phẩm
+    }
+  
+    p {
+        margin-left: 100px;
+        color: #000000;
+    font-family: Jost;
+      margin-top: 5px; // Khoảng cách giữa tiêu đề và giá sản phẩm
+      font-size: 1.2rem;
+      &:hover {
+        color: #58B720;
+    }
+    }
+    
+  }
+  
+  // Phản hồi cho các màn hình nhỏ hơn
+  @media (max-width: 1200px) {
+    .product-item {
+      flex: 0 0 33.333%; // 3 sản phẩm trên một hàng
+      max-width: 33.333%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-item {
+      flex: 0 0 50%; // 2 sản phẩm trên một hàng
+      max-width: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-item {
+      flex: 0 0 100%; // 1 sản phẩm trên một hàng
+      max-width: 100%;
+    }
+  }
