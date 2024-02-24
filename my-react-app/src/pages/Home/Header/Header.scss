@@ -21,7 +21,7 @@
     justify-content: space-between;
     align-items: center;
     right: 0;
-    width: 35%;
+    width: 30%;
     list-style: none;
     padding-left: 30px;
     left: 0;
@@ -32,6 +32,8 @@
 .navbar-header a {
     text-decoration: none;
     color: #000000;
+    font-family: Jost;
+    font-size: 20px;
 }
 .navbar-header a:hover{
     cursor: pointer;
@@ -41,7 +43,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 13%;
+    width: 10%;
     padding-right: 30px;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
