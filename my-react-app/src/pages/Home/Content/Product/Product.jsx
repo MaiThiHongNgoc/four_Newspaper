@@ -21,9 +21,15 @@ const Product = () => {
               />
               {hoveredImg === product.id && ( // Hiển thị icon search chỉ khi hover vào sản phẩm
                 <div className="search-icon">
+                  <div className="icon">
                   <IoIosSearch/>
+                  </div>
+                  <div className="icon">
                   <CiHeart/>
+                  </div>
+                  <div className="icon">
                   <MdOutlineShoppingBag/>
+                  </div>
                 </div>
               )}
             </div>
