@@ -33,7 +33,7 @@ const Product = () => {
                 </div>
               )}
             </div>
-            <h3>{product.title}</h3>
+            <h4>{product.title}</h4>
             <p>${product.price.toFixed(2)}</p>
           </div>
         ))}
