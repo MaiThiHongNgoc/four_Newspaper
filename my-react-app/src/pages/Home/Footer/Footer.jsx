@@ -10,15 +10,12 @@ const Footer = () => {
   return ( 
         <footer className='footer_v2'>
           <div className="top-footer">
+            <div className="footer">
                     <div className="logo-top">
-                      <a href="" className="logo">
                         <img src="https://desero-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1657783401" alt="Desero - Organic Fruit & Juice Responsive Shopify Theme" className="img-fluid" />
-                      </a>
                     </div>
-                    <p className="conten">Subscribe our newsletter and get</p>
-                    <br></br>
-                    <p className= "content_footer">discount 30% off</p>
-
+                    <p className="conten">Subscribe our newsletter and get <br/> discount 30% off</p>
+                   
                     <div className="newletter_email">
                         <div className="form-group">
                           <input type="email" name="EMAIL" className="form-control" placeholder="Your email address..." required/>
@@ -52,75 +49,47 @@ const Footer = () => {
                         </li>      
                       </ul>
                     </div>
-    
-                  <div className="info_footer">
-                    <div className="title_footer">
-                      <h4>Customer Case</h4>
                     </div>
-                    <ul className="list-unstyled">
-                      <li>
-                        <a href="">Delivery</a>
-                      </li>
-                      <li>
-                        <a href="">Legal Notice</a>
-                      </li>
-                      <li>
-                        <a href="">Documentation</a>
-                      </li>
-                      <li>
-                        <a href="">Secure payment</a>
-                      </li>
-                      <li>
-                        <a href="">Stores</a>
-                      </li>
-                    </ul>
+                    <div className="footer-columns">
+                        <div className="info_footer1">
+                        <div className="title_footer1">
+                           <h4>Customer Case</h4>
+                         </div>
+                        <ul className="list-unstyled1">
+                          <li><a href="">Delivery</a></li>
+                          <li><a href="">Legal Notice</a></li>
+                          <li><a href="">Documentation</a></li>
+                          <li><a href="">Secure payment</a></li>
+                          <li><a href="">Stores</a></li>
+                        </ul>
+                      </div>
+
+                      <div className="info_footer2">
+                        <div className="title_footer2">
+                        <h4>Quick Shop</h4>
+                         </div>
+                         <ul className="list-unstyled2">
+                         <li><a href="">Pagination</a></li>
+                         <li><a href="">Terms & Condition</a></li>
+                         <li><a href="">Contact</a></li>
+                         <li><a href="">Home page</a></li>
+                         <li><a href="">Term of us</a></li>
+                         </ul>
+                         </div>
+
+                         <div className="info_footer3">
+                         <div className="title_footer3">
+                           <h4>Company</h4>
+                           </div>
+                         <ul className="list-unstyled3">
+                         <li><a href="">Help Center</a></li>
+                         <li><a href="">Address Store</a></li>
+                         <li><a href="">Privacy Policy</a></li>
+                         <li><a href="">Receivers & Amplifiers</a></li>
+                         <li><a href="">Clothings</a></li>
+                        </ul>
+                        </div>
                   </div>
-                
-                  <div className="info_footer">
-                    <div className="title_footer">
-                      <h4>Quick Shop</h4>
-                    </div>
-                    <ul className="list-unstyled">
-                    <li>
-                        <a href="">Pagination</a>
-                      </li>
-                      <li>
-                        <a href="">Terms & Condition</a>
-                      </li>
-                      <li>
-                        <a href="">Contact</a>
-                      </li>
-                      <li>
-                        <a href="">Home page</a>
-                      </li>
-                      <li>
-                        <a href="">Term of us</a>
-                      </li>
-                    </ul>
-                  </div>
-                
-                  <div className="info_footer">
-                    <div className="title_footer">
-                      <h4>Company</h4>
-                    </div>
-                    <ul className="list-unstyled">
-                    <li>
-                        <a href="">Help Center</a>
-                      </li>
-                      <li>
-                        <a href="">Address Store</a>
-                      </li>
-                      <li>
-                        <a href="">Privacy Policy</a>
-                      </li>
-                      <li>
-                        <a href="">Receivers & Amplifiers</a>
-                      </li>
-                      <li>
-                        <a href="">Clothings</a>
-                      </li>
-                    </ul>
-                  </div>  
           </div>
           <div className="copyright">
             <div className="container">
