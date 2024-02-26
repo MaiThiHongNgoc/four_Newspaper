@@ -9,8 +9,16 @@ const Product = () => {
   const [hoveredImg, setHoveredImg] = useState(null); // Sử dụng state để lưu trữ đường dẫn của ảnh khi hover
 
   return (
-    <div>
-      <h2>Products</h2>
+    <div className='product'>
+      <h2>OUR BEST SELLER</h2>
+      <p>__________________</p>
+      <div className="product-link">
+        <ul>
+          <li className='product-link1'><a href="">NEW ARRIVALS</a></li>
+          <li className='product-link2'><a href="">BEST SELLERS</a ></li>
+          <li className='product-link2'><a href="">TOP RATES</a></li>
+        </ul>
+      </div>
       <div className="product-container">
         {dataProduct.map(product => (
           <div key={product.id} className="product-item" onMouseEnter={() => setHoveredImg(product.id)} onMouseLeave={() => setHoveredImg(null)}>
