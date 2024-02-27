@@ -5,6 +5,7 @@ import Product from './Product/Product'
 import OurBlogs from './OurBlogs/OurBlogs'
 import BestSeller from './Product/BestSellers/BestSeller'
 import TopRate from './Product/TopRates/TopRate'
+import Product2 from './Product-2/Product2'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const Conten = () => {
   return (
@@ -21,6 +22,7 @@ const Conten = () => {
       </Routes>
     
         <OurBlogs/>
+        <Product2/>
 
     </div>
   )
