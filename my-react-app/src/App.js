@@ -7,8 +7,10 @@ import Menu from "./pages/Menu/Menu";
 import Shop from "./pages/Shop/Shop";
 import Pages from "./pages/Pages/Pages";
 import Blogs from "./pages/Blogs/Blogs";
+import NewArrivals from "./pages/Home/Content/Product/NewArrivals/NewArrivals";
 //import Search from "./pages/Search";
-
+import BestSeller from "./pages/Home/Content/Product/BestSellers/BestSeller";
+import TopRate from "./pages/Home/Content/Product/TopRates/TopRate";
 function App() {
 
 
@@ -18,7 +20,13 @@ function App() {
 
 
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home />} >
+            <Route index path="newarrivals" element={<NewArrivals/>}/>
+            <Route path="newarrivals" element={<NewArrivals/>}/>
+            <Route path='best-sellers' element={<BestSeller />} />
+            <Route path='top-rates' element={<TopRate />} />
+            
+          </Route>
           <Route path='/Menu' element={<Menu />} />
           <Route path='/Shop' element={<Shop />} />
           <Route path='/Pages' element={<Pages />} />
