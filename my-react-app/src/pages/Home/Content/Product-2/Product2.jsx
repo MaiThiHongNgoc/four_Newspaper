@@ -22,11 +22,11 @@ const Product2 = () => {
                     <div className="info-product">
                         <h4 >Strawberry Smoothie</h4>
                         <span className="star">
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
                         <p>
@@ -42,11 +42,11 @@ const Product2 = () => {
                     <div className="info-product">
                         <h4 >Peach Smoothie</h4>
                         <span className="star">
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
                         <p>
@@ -62,11 +62,11 @@ const Product2 = () => {
                     <div className="info-product">
                         <h4 >Mango Smoothie</h4>
                         <span className="star">
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
                         <p>
@@ -95,11 +95,11 @@ const Product2 = () => {
                     <div className="info-product">
                         <h4 >Orange Juice</h4>
                         <span className="star">
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
                         <p>
@@ -115,11 +115,11 @@ const Product2 = () => {
                     <div className="info-product">
                         <h4 >Kiwi Juice</h4>
                         <span className="star">
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
                         <p>
@@ -135,11 +135,11 @@ const Product2 = () => {
                     <div className="info-product">
                         <h4 >Guava Juice</h4>
                         <span className="star">
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
                         <p>
@@ -167,11 +167,11 @@ const Product2 = () => {
                     <div className="info-product">
                         <h4 >Synthetic Smoothies</h4>
                         <span className="star">
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
                         <p>
@@ -187,11 +187,11 @@ const Product2 = () => {
                     <div className="info-product">
                         <h4 >Strawberry Smoothie</h4>
                         <span className="star">
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
                         <p>
@@ -207,11 +207,11 @@ const Product2 = () => {
                     <div className="info-product">
                         <h4 >Raspberry Smoothie</h4>
                         <span className="star">
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
-                            <i className="icon"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
+                            <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
                         <p>
