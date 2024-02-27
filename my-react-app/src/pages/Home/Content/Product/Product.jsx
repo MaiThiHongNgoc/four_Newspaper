@@ -4,19 +4,22 @@ import './Product.scss'
 import { IoIosSearch } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineShoppingBag } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const Product = () => {
   const [hoveredImg, setHoveredImg] = useState(null); // Sử dụng state để lưu trữ đường dẫn của ảnh khi hover
 
   return (
+    <div>
+    {/* <BestSellers/> */}
     <div className='product'>
       <h2>OUR BEST SELLER</h2>
       <p>__________________</p>
       <div className="product-link">
         <ul>
           <li className='product-link1'><a href="">NEW ARRIVALS</a></li>
-          <li className='product-link2'><a href="">BEST SELLERS</a ></li>
-          <li className='product-link2'><a href="">TOP RATES</a></li>
+          <li className='product-link2'><Link to="/best-sellers">BEST SELLERS</Link ></li>
+          <li className='product-link2'><Link to="/top-rates">TOP RATES</Link></li>
         </ul>
       </div>
       <div className="product-container">
@@ -46,6 +49,7 @@ const Product = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }
