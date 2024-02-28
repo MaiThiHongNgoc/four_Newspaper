@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../Home/Header/Header'
+import Header from '../../Component/Header/Header1'
 const Pages = () => {
     return (
         <div>

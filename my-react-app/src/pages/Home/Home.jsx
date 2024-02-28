@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import Header from './Header/Header';
+import Header from '../../Component/Header/Header1';
 import Conten from './Content/Conten';
-import Footer from './Footer/Footer';
+import Footer from '../../Component/Footer/Footer';
+
 
 const Home = () => {
     return (
