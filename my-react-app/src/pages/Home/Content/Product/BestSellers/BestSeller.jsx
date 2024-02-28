@@ -4,9 +4,12 @@ import { dataProduct } from '../Data/Data2';
 import { IoIosSearch } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineShoppingBag } from "react-icons/md";
+import { useShoppingContext } from '../../../../../Context/ShoppingContext';
 
 const BestSeller = () => {
   const [hoveredImg, setHoveredImg] = useState(null); // Sử dụng state để lưu trữ đường dẫn của ảnh khi hover
+  const { addCartItem } = useShoppingContext(); // Destructure để lấy ra hàm addCartItem từ context
+
   return (
     <div>
       <div className="product-container">
@@ -25,7 +28,7 @@ const BestSeller = () => {
                   <div className="icon2">
                   <CiHeart/>
                   </div>
-                  <div className="icon3" >
+                  <div className="icon3" onClick={() => addCartItem(product)} >
                   <MdOutlineShoppingBag/>
                   </div>
                 </div>

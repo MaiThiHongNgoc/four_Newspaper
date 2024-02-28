@@ -6,8 +6,14 @@ import { IoIosSearch } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
 import { VscAccount } from "react-icons/vsc";
 import { MdOutlineShoppingBag } from "react-icons/md";
+import CartItem from '../../CartItem/CartItem';
+import { useShoppingContext } from '../../Context/ShoppingContext';
+import { formatCurrency } from '../../helpers/common';
+import CartIcon from './CartIcon';
 
-const Header = ({ addToCart }) => {
+const Header = () => {
+    const { cartItems, cartQty, totalPrice } = useShoppingContext()
+
     return (
         <div className='header-container'>
             <div className="logo-header">
@@ -25,7 +31,28 @@ const Header = ({ addToCart }) => {
                 <div className="icon-search"><IoIosSearch /></div>
                 <div className="icon-login"><VscAccount /></div>
                 <div className="icon-tym"><CiHeart /></div>
-                <div className="icon-cart" ><MdOutlineShoppingBag /></div>
+                <div className="icon-cart">
+                    {/* <MdOutlineShoppingBag /> */}
+                    {/* {cartQty > 0 && (
+                        <span className="cart-quantity">{cartQty}</span>
+                    )}
+                    <div className="cart-dropdown">
+                        {cartItems && Array.isArray(cartItems) && cartItems.length > 0 ? (
+                            cartItems.map(item => (
+                                <CartItem key={item.id} item={item} />
+                            ))
+                        ) : (
+                            <p>Your cart is empty.</p>
+                        )}
+                        <div className="cart-total">
+                            <strong>Total: {formatCurrency(totalPrice)}</strong>
+                        </div>
+                        <Link to="/checkout" className="btn btn-primary checkout-button">
+                            Checkout
+                        </Link>
+                    </div> */}
+                    <CartIcon/>
+                </div>
             </div>
         </div>
     );
