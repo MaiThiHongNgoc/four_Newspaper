@@ -90,7 +90,8 @@
     left: 50%;
     transform: translateX(-50%); // Căn giữa icon so với chiều rộng của product-item
     background-color: #ffffff;
-    border-radius: 50%;
+    //border-radius: 50%;
+    margin-right: 10px;
     padding: 5px;
     cursor: pointer;
     z-index: 1;
@@ -104,11 +105,13 @@
       width: 40px; // Tăng kích thước
       height: 40px; // Tăng kích thước
     }
-    .icon{
+    .icon1 , .icon2, .icon3{
 
       padding: 0.3rem;
       border-radius: 50%;
+      padding: 5px;
       }
+      
   }
 }
 
