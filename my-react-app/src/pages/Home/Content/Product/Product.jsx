@@ -2,11 +2,9 @@ import React, {useState} from 'react'
 import { dataProduct } from './Data/Data'
 import './Product.scss'
 import { Link, Outlet } from 'react-router-dom';
-import NewArrivals from './NewArrivals/NewArrivals';
  
 
 const Product = () => {
-
   return (
      <div className='product1'>
       <div className='product'>
@@ -19,7 +17,6 @@ const Product = () => {
    <Link to="/top-rates" className='product-link3'>Top Rate</Link>
    <Outlet/>
     </div>
-    
     </div>
   );
 }

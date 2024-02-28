@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Header from '../Home/Header/Header'
 const Pages = () => {
     return (
-        <div>Pages</div>
+        <div>
+            <Header/>
+            Pages</div>
     )
 }
 

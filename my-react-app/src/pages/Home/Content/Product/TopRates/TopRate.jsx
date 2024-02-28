@@ -4,8 +4,7 @@ import { dataProduct } from '../Data/Data3';
 import { IoIosSearch } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineShoppingBag } from "react-icons/md";
-
-const TopRate = () => {
+const TopRate = ( { addToCart }) => {
   const [hoveredImg, setHoveredImg] = useState(null); // Sử dụng state để lưu trữ đường dẫn của ảnh khi hover
   return (
     <div>
@@ -25,7 +24,7 @@ const TopRate = () => {
                   <div className="icon2">
                   <CiHeart/>
                   </div>
-                  <div className="icon3">
+                  <div className="icon3" onClick={() => addToCart(product)}>
                   <MdOutlineShoppingBag/>
                   </div>
                 </div>

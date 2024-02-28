@@ -25,7 +25,7 @@ const BestSeller = () => {
                   <div className="icon2">
                   <CiHeart/>
                   </div>
-                  <div className="icon3">
+                  <div className="icon3" >
                   <MdOutlineShoppingBag/>
                   </div>
                 </div>

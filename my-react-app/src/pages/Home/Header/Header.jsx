@@ -7,7 +7,7 @@ import { CiHeart } from "react-icons/ci";
 import { VscAccount } from "react-icons/vsc";
 import { MdOutlineShoppingBag } from "react-icons/md";
 
-const Header = () => {
+const Header = ({ addToCart }) => {
     return (
         <div className='header-container'>
             <div className="logo-header">
@@ -25,7 +25,7 @@ const Header = () => {
                 <div className="icon-search"><IoIosSearch /></div>
                 <div className="icon-login"><VscAccount /></div>
                 <div className="icon-tym"><CiHeart /></div>
-                <div className="icon-cart"><MdOutlineShoppingBag /></div>
+                <div className="icon-cart" ><MdOutlineShoppingBag /></div>
             </div>
         </div>
     );
