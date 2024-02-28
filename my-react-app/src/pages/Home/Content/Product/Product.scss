@@ -84,35 +84,40 @@
 
   .search-icon {
     display: flex;
-    justify-content: center; // Căn giữa các icon
+    justify-content: center; /* Căn giữa các icon */
     position: absolute;
     bottom: 35%;
     left: 50%;
-    transform: translateX(-50%); // Căn giữa icon so với chiều rộng của product-item
-    background-color: #ffffff;
-    //border-radius: 50%;
-    margin-right: 10px;
-    padding: 5px;
+    transform: translateX(-50%); /* Căn giữa icon so với chiều rộng của product-item */
+    margin-right: 40px;
+    padding: 10px;
+    border: 10px;
     cursor: pointer;
     z-index: 1;
-    &:hover{
-      color: #ffffff;
-      background-color: #58B720;
-    }
-
-    svg {
-      margin: 0 8px; // Tạo khoảng cách giữa các icon
-      width: 40px; // Tăng kích thước
-      height: 40px; // Tăng kích thước
-    }
-    .icon1 , .icon2, .icon3{
-
-      padding: 0.3rem;
-      border-radius: 50%;
-      padding: 5px;
-      }
-      
   }
+  
+  .search-icon svg {
+    margin: 0 8px; /* Tạo khoảng cách giữa các icon */
+    width: 40px; /* Tăng kích thước */
+    height: 40px; /* Tăng kích thước */
+  }
+  
+  .icon1, .icon2, .icon3 {
+    padding: 0.3rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex; /* Đảm bảo các items được căn giữa */
+    justify-content: center; /* Căn giữa nội dung */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+  }
+
+  
+  /* Áp dụng hiệu ứng hover cho từng icon */
+  .icon1:hover, .icon2:hover, .icon3:hover {
+    color: #ffffff;
+    background-color: #58B720;
+  }
+  
 }
 
 h4 {

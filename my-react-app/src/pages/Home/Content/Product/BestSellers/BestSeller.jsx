@@ -19,13 +19,13 @@ const BestSeller = () => {
               />
               {hoveredImg === product.id && ( // Hiển thị icon search chỉ khi hover vào sản phẩm
                 <div className="search-icon">
-                  <div className="icon">
+                  <div className="icon1">
                   <IoIosSearch/>
                   </div>
-                  <div className="icon">
+                  <div className="icon2">
                   <CiHeart/>
                   </div>
-                  <div className="icon">
+                  <div className="icon3">
                   <MdOutlineShoppingBag/>
                   </div>
                 </div>
