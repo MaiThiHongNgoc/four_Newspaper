@@ -86,7 +86,7 @@ const Footer = () => {
                          <li><a href="">Address Store</a></li>
                          <li><a href="">Privacy Policy</a></li>
                          <li><a href="">Receivers & Amplifiers</a></li>
-                         <li><a href="">Clothings</a></li>
+                        
                         </ul>
                         </div>
                   </div>

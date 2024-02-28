@@ -24,12 +24,15 @@
     text-align: center;
   }
   .product-link1  {
-    background-color: #58B720;
-    color: #ffffff;
     text-decoration: none;
     padding: 20px 20px ;
     border: 1px solid #58B720;
     font-size: 1.5rem;
+    color: #58B720;
+    &:hover {
+      background-color: #58B720;
+      color: #ffffff;
+    }
   }
   .product-link2  {
     text-decoration: none;
