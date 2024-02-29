@@ -95,8 +95,7 @@ const Footer = () => {
             <div className="container">
                   <div className="text-copyright">
                      © Copyright 2022 | 
-                    <a href="https://shopilaunch.com/" className="underline_hover-bold">Desero</a>
-                    <p>By</p>
+                    <a href="https://shopilaunch.com/" className="underline_hover-link">Desero by</a>
                     <a href="https://shopilaunch.com/" className="underline_hover-link">ShopiLaunch.</a>
                     <a href="https://www.shopify.com/?ref=shopifycenter" className="underline_hover-link">Powered by Shoppify.</a>
                   </div>

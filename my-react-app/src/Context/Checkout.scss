@@ -1,7 +1,24 @@
 /* checkout.css */
-
+.Cart-shopping{
+  text-align: center;
+  font-size: 2rem;
+  font-family: Jost;
+  color: #dc3545;
+  margin-top: 200px;
+}
+.Cart-shopping-to{
+  text-decoration: none;
+  font-family: Jost;
+  font-size: 2rem;
+  color: #dc3545;
+  margin-left: 50px;
+  &:hover{
+    color: #de8992;
+  }
+}
 .row {
-    margin-top: 20px;
+    margin-top: 150px;
+    margin-bottom: 300px;
   }
   
   table {
@@ -13,6 +30,8 @@
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    font-size: 1.5rem;
+    font-family: Jost;
   }
   
   th {
@@ -31,9 +50,41 @@
   
   .float-end {
     float: right;
+    margin-top: 20px;
+    margin-right: 150px;
+    padding: 20px 30px 20px 30px;
+    font-family: Jost;
+    font-size: 1.6rem;
   }
-  
-  .float-start {
+  .d-block{
+    background-color: #58B720;
+    margin-right: 1000px;
+    margin-top: 0;
+    &:hover{
+      background-color: #95c066;
+    }
+  }
+  .float-end .me-2 {
+    font-size: 2rem;
+  }
+  .btn-primary{
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #58B720;
+    color: #fff;
+    &:hover{
+      background-color: #95c066;
+    }
+  }
+  .float-start{
     float: left;
+    text-decoration: none;
+    margin-top: 90px;
+    margin-left: 140px;
+    padding: 20px 30px 20px 30px;
+    font-size: 1.6rem;
+    font-family: Jost;
   }
+ 
+
   

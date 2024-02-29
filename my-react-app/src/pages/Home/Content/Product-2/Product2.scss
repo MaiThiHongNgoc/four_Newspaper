@@ -1,11 +1,12 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    margin:0px -15px -15px 0px;
+    margin:0px ;
     padding-bottom: 400px;
+    max-width: 100%;
 }
 .content {
-    width: 458px;
+    width: 27%;
     height: 564px;
 }
 .banner-item {

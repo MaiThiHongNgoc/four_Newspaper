@@ -1,10 +1,11 @@
 /* Footer component */
 .footer_v2 {
     background-color: #f9f9f9;
-    padding-top: 0;
      display: flex;
     flex-direction: column;
     max-width: 100%;
+    margin-bottom: 0;
+    margin-top: 300px;
   }
   .footer{
     width: 40%;
@@ -23,8 +24,8 @@
   }
   
   .logo-top img {
-    max-width: 160px;
-    height: 60px;
+    width: auto;
+    height: 80px;
     padding-left: 20px;
     padding-top: 40px;
   }
@@ -212,15 +213,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
   
   .text-copyright {
-    font-size: 14px;
+    font-size: 1.2rem;
+    font-family: Jost;
   }
-  
+  .cart{
+    padding-right: 50px;
+  }
   .cart img {
     max-width: 100%;
     height: auto;
+  }
+  .underline_hover-link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: Jost;
+    color: #000000;
   }
 
 
