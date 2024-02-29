@@ -5,6 +5,12 @@ import { Link, Outlet } from 'react-router-dom';
  
 
 const Product = () => {
+  const [activeLink, setActiveLink] = useState(null);
+
+  const handleLinkClick = (linkName) => {
+    setActiveLink(linkName);
+  };
+
   return (
      <div className='product1'>
       <div className='product'>
@@ -12,11 +18,11 @@ const Product = () => {
       <p>__________________</p>
       </div>
       <div className="product-link">
-   <Link to="/newarrivals" className='product-link1'> New Arrivals</Link>
-   <Link to="/best-sellers" className='product-link2'>Best Sellers</Link>
-   <Link to="/top-rates" className='product-link3'>Top Rate</Link>
+        <Link to="/newarrivals" className={activeLink === 'newarrivals' ? 'product-link1 hover' : 'product-link1'} onClick={() => handleLinkClick('newarrivals')}> New Arrivals</Link>
+        <Link to="/best-sellers" className={activeLink === 'bestsellers' ? 'product-link2 hover' : 'product-link2'} onClick={() => handleLinkClick('bestsellers')}>Best Sellers</Link>
+        <Link to="/top-rates" className={activeLink === 'toprates' ? 'product-link3 hover' : 'product-link3'} onClick={() => handleLinkClick('toprates')}>Top Rate</Link>
+      </div>
    <Outlet/>
-    </div>
     </div>
   );
 }
