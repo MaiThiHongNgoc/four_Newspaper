@@ -32,25 +32,6 @@ const Header = () => {
                 <div className="icon-login"><VscAccount /></div>
                 <div className="icon-tym"><CiHeart /></div>
                 <div className="icon-cart">
-                    {/* <MdOutlineShoppingBag /> */}
-                    {/* {cartQty > 0 && (
-                        <span className="cart-quantity">{cartQty}</span>
-                    )}
-                    <div className="cart-dropdown">
-                        {cartItems && Array.isArray(cartItems) && cartItems.length > 0 ? (
-                            cartItems.map(item => (
-                                <CartItem key={item.id} item={item} />
-                            ))
-                        ) : (
-                            <p>Your cart is empty.</p>
-                        )}
-                        <div className="cart-total">
-                            <strong>Total: {formatCurrency(totalPrice)}</strong>
-                        </div>
-                        <Link to="/checkout" className="btn btn-primary checkout-button">
-                            Checkout
-                        </Link>
-                    </div> */}
                     <CartIcon/>
                 </div>
             </div>

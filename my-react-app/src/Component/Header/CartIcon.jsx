@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import CartItem from '../../CartItem/CartItem'; 
 import { formatCurrency } from '../../helpers/common';
 import { useShoppingContext } from '../../Context/ShoppingContext';
+import './CartIcon.scss'
 
 function CartIcon({ cartItems, totalPrice }) {
     const {  cartQty,  } = useShoppingContext();
