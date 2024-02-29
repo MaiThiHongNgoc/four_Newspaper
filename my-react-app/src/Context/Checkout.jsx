@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useShoppingContext } from '../Context/ShoppingContext';
 import { formatCurrency } from '../helpers/common';
+import './Checkout.scss'
+import { FaRegTrashCan } from "react-icons/fa6";
 
 const Checkout = () => {
     const navigate = useNavigate();
@@ -34,8 +36,8 @@ const Checkout = () => {
                 <tbody>
                     {cartItems.map(item => (
                         <tr key={item.id}>
-                            <td><img src={item.thumbnail} className="img-fluid rounded" alt={item.name} /></td>
-                            <td>{item.name}</td>
+                            <td><img src={item.img} className="img-fluid rounded" alt={item.title} /></td>
+                            <td>{item.title}</td>
                             <td>{formatCurrency(item.price)}</td>
                             <td>{item.qty}
                                 <button type="button" className="btn btn-sm btn-primary ms-3 me-1" onClick={() => decreaseQty(item.id)}><strong>-</strong></button>
@@ -44,7 +46,8 @@ const Checkout = () => {
                             <td>{formatCurrency(item.price * item.qty)}</td>
                             <td>
                                 <button className="btn btn-sm btn-danger btn-remove" onClick={() => removeCartItem(item.id)}>
-                                    <i className="fas fa-trash-alt"></i>
+                                    {/* <i className="fas fa-trash-alt"></i> */}
+                                    <FaRegTrashCan />
                                 </button>
                             </td>
                         </tr>

@@ -33,8 +33,9 @@ const Header = () => {
                 <div className="icon-tym"><CiHeart /></div>
                 <div className="icon-cart">
                     <CartIcon/>
+                    {/* <span>{cartQty} items</span> */}
                 </div>
-            </div>
+                </div>
         </div>
     );
 }
