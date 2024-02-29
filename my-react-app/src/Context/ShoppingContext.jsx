@@ -16,7 +16,19 @@ export const ShoppingContextProvider = ({ children }) => {
     });
 
     useEffect(() => {
+        // Lưu trữ dữ liệu vào localStorage mỗi khi cartItems thay đổi
         localStorage.setItem('shopping_cart', JSON.stringify(cartItems));
+
+        // Thêm sự kiện để lưu trữ sản phẩm khi người dùng thoát trang
+        const handleBeforeUnload = () => {
+            localStorage.setItem('shopping_cart', JSON.stringify(cartItems));
+        };
+        window.addEventListener('beforeunload', handleBeforeUnload);
+
+        // Cleanup handler khi component bị unmount
+        return () => {
+            window.removeEventListener('beforeunload', handleBeforeUnload);
+        };
     }, [cartItems]);
 
     const cartQty = cartItems.reduce((qty, item) => qty + item.qty, 0);
