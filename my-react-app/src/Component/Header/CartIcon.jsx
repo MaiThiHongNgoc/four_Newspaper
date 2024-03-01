@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { formatCurrency } from '../../helpers/common';
 import { useShoppingContext } from '../../Context/ShoppingContext';
 import './CartIcon.scss';
+import CheckOut from '../../Context/CheckOut';
 
 function CartIcon() {
      const { cartQty,cartItems, totalPrice} = useShoppingContext();
@@ -40,6 +41,9 @@ function CartIcon() {
                     </div>
                     <Link to="/ViewCart" className="btn btn-primary checkout-button">
                         View Cart
+                    </Link>
+                    <Link to="/CheckOut" className="btn btn-primary checkout-button">
+                        Check Out
                     </Link>
                 </div>
             )}

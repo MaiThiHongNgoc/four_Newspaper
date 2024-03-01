@@ -6,6 +6,7 @@ import './ViewCart.scss'
 import { FaRegTrashCan } from "react-icons/fa6";
 import Header from '../Component/Header/Header1';
 import Footer from '../Component/Footer/Footer';
+import CheckoutButton from './CheckOut';
 
 const ViewCart = () => {
     const navigate = useNavigate();
