@@ -19,6 +19,9 @@ const ViewCart = () => {
                 <div><h3 className='Cart-shopping'>Your cart is empty</h3>
                 <Link to="/" className='Cart-shopping-to'>Go back to shopping</Link>
                 </div>
+                <div className='imgWaning1'>
+                    <img className='imgWaning' src="https://scontent.fhan9-1.fna.fbcdn.net/v/t39.30808-6/430904308_776693657844813_4656452280797498056_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c42490&_nc_ohc=qm4IIpesJu0AX8Q1dlQ&_nc_ht=scontent.fhan9-1.fna&oh=00_AfCX0OTrvFRMGisNS0RNRlbk0Cld6sdTzsS5OqnRQgikpQ&oe=65E723C2" alt="" />
+                </div>
             </div>
         );
     }
