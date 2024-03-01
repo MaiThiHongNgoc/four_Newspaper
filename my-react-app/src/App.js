@@ -11,7 +11,7 @@ import NewArrivals from "./pages/Home/Content/Product/NewArrivals/NewArrivals";
 //import Search from "./pages/Search";
 import BestSeller from "./pages/Home/Content/Product/BestSellers/BestSeller";
 import TopRate from "./pages/Home/Content/Product/TopRates/TopRate";
-import Checkout from "./Context/Checkout";
+import ViewCart from "./Context/ViewCart";
 function App() {
 
 
@@ -32,7 +32,7 @@ function App() {
           <Route path='/Shop' element={<Shop />} />
           <Route path='/Pages' element={<Pages />} />
           <Route path='/Blogs' element={<Blogs />} />
-          <Route path='/checkout' element={<Checkout />} />
+          <Route path='/ViewCart' element={<ViewCart />} />
         </Routes>
 
       </BrowserRouter>

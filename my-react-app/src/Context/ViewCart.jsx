@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useShoppingContext } from '../Context/ShoppingContext';
+import { useShoppingContext } from './ShoppingContext';
 import { formatCurrency } from '../helpers/common';
-import './Checkout.scss'
+import './ViewCart.scss'
 import { FaRegTrashCan } from "react-icons/fa6";
 import Header from '../Component/Header/Header1';
 import Footer from '../Component/Footer/Footer';
 
-const Checkout = () => {
+const ViewCart = () => {
     const navigate = useNavigate();
     const { cartItems, totalPrice, increaseQty, decreaseQty, removeCartItem, clearCart } = useShoppingContext();
 
@@ -76,4 +76,4 @@ const Checkout = () => {
     );
 }
 
-export default Checkout;
+export default ViewCart;
