@@ -25,6 +25,7 @@ h1, h2 {
     padding: 20px 20px 20px 100px;
     border-radius: 5px;
     //box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-right: 2px solid rgba(0,0,0,0.1);
     width: 50%;
 }
 
@@ -96,30 +97,26 @@ label {
     display: block;
     margin-bottom: 10px;
 }
-
-input[type="checkbox"] {
-    margin-right: 5px;
+.productCheckout{
+    display:flex;
+    margin-top: 50px;
+    margin-left: 20px;
 }
 
-.CheckOutButton {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+.CheckoutConten{
+    writing-mode: horizontal-tb;
+    -webkit-writing-mode: horizontal-tb;
+    -ms-writing-mode: horizontal-tb;
 }
-
-.CheckOutButton:hover {
-    background-color: #0056b3;
+.CheckoutTitle,.CheckoutQty,.CheckoutPrice{
+    font-size: 1.5rem;
+    font-family: Jost;
+    color: #000000;
 }
-
-.error-message {
-    color: #ff0000;
-    margin-top: 5px;
-}
-
-.success-message {
-    color: #008000;
-    margin-top: 5px;
+.totalCheckOut12 {
+    text-align: right;
+    font-size: 2rem;
+    font-family: Jost;
+    color: rgb(232, 82, 82);
+    margin-right: 50px;
 }

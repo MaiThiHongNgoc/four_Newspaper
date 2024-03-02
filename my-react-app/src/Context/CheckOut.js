@@ -138,21 +138,21 @@ function CheckOut() {
                 <p className='Checkoutp1'>All transactions are secure and encrypted.</p>
                 {/* Thêm phương thức thanh toán tại đây khi có thể */}
             </form>
-            <div className="order-summary">
+            <div className="order-summary1">
                 {cartItems.map(item => (
-                    <div key={item.id} className="product">
-                        <img src={item.img} alt={item.title} style={{ width: '50px', height: '50px', marginRight: '10px' }} />
-                        <div>
-                            <p>{item.title}</p>
-                            <p>Quantity: {item.qty}</p>
-                            <p>Price:  {formatCurrency(item.price)}</p>
+                    <div key={item.id} className="productCheckout">
+                        <img src={item.img} alt={item.title} style={{ width: '100px', height: '100px', marginRight: '10px', border: '1px solid #ccc' }} />
+                        <div className='CheckoutConten'>
+                            <p className='CheckoutTitle' style={{ marginBottom: '0'}}>{item.title}</p>
+                            <p className='CheckoutQty' style={{ marginBottom: '0'}}>Qty:{item.qty}</p>
+                            <p className='CheckoutPrice' style={{ marginBottom: '0'}}>Price: {formatCurrency(item.price)}</p>
                         </div>
                         
                     </div>
                 ))}
             </div>
-            <div className='totalCheckOut'>
-                <strong>Total: {formatCurrency(totalPrice)}</strong>
+            <div className='totalCheckOut1'>
+                <strong className='totalCheckOut12'>Total: {formatCurrency(totalPrice)}</strong>
             </div>
         </div>
     );
