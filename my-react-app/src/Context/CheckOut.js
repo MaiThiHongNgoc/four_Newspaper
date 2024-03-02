@@ -55,7 +55,7 @@ function CheckOut() {
 
     return (
         <div className='checkoutpay'>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='Formcheckout'>
                 <h2>Contact Information</h2>
                 <input
                     type="text"
