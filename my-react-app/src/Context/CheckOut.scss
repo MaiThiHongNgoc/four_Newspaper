@@ -1,6 +1,8 @@
 /* styles.css */
 .checkoutpay{
     display: flex;
+    margin-top: 120px;
+    width: 100%;
 }
 body {
     font-family: Arial, sans-serif;
@@ -20,20 +22,76 @@ h1, h2 {
 }
 
 .Formcheckout {
-    background-color: #fff;
-    padding: 20px;
+    padding: 20px 20px 20px 100px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    //box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
 }
 
-input[type="text"], input[type="email"], select {
-    width: 100%;
+.CheckoutMail {
+    width: 80%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    height: 40px;
 }
-
+.CheckoutUs{
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px;
+}
+.CheckoutLast{
+    width: 37%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 35px;
+}
+.CheckoutFist{
+    width: 37%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 35px;
+    margin-left: 25px;
+}
+.CheckoutAddress{
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px;
+}
+.CheckoutCity{
+    width: 37%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 35px;
+}
+.CheckoutZip{
+    width: 37%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 35px;
+    margin-left: 25px;
+}
+.Checkoutp1{
+    font-size: 1rem;
+    color: #858181;
+    font-family: Jost;
+    text-align: left;
+}
 label {
     display: block;
     margin-bottom: 10px;

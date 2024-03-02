@@ -92,7 +92,7 @@ const Footer = () => {
                   </div>
           </div>
           <div className="copyright">
-            <div className="container">
+            <div className="container1">
                   <div className="text-copyright">
                      © Copyright 2022 | 
                     <a href="https://shopilaunch.com/" className="underline_hover-link">Desero by</a>

@@ -56,10 +56,10 @@ function CheckOut() {
     return (
         <div className='checkoutpay'>
             <form onSubmit={handleSubmit} className='Formcheckout'>
-                <h2>Contact Information</h2>
+                <h2>Contact </h2>
                 <input
                     type="text"
-                    name="emailOrPhone"
+                    name="emailOrPhone" className='CheckoutMail'
                     placeholder="Email or mobile phone number"
                     value={contactInfo.emailOrPhone}
                     onChange={handleContactChange}
@@ -77,24 +77,24 @@ function CheckOut() {
 
                 <h2>Delivery</h2>
                 <select
-                    name="country"
+                    name="country" className='CheckoutUs'
                     value={deliveryInfo.country}
                     onChange={handleDeliveryChange}
                     required
                 >
-                    <option value="US">United States</option>
+                    <option value="US" >United States</option>
                     {/* Thêm các quốc gia khác nếu cần */}
                 </select>
                 <input
                     type="text"
-                    name="firstName"
+                    name="firstName" className='CheckoutLast'
                     placeholder="First name (optional)"
                     value={deliveryInfo.firstName}
                     onChange={handleDeliveryChange}
                 />
                 <input
                     type="text"
-                    name="lastName"
+                    name="lastName" className='CheckoutFist'
                     placeholder="Last name"
                     value={deliveryInfo.lastName}
                     onChange={handleDeliveryChange}
@@ -102,7 +102,7 @@ function CheckOut() {
                 />
                 <input
                     type="text"
-                    name="address"
+                    name="address" className='CheckoutAddress'
                     placeholder="Address"
                     value={deliveryInfo.address}
                     onChange={handleDeliveryChange}
@@ -110,7 +110,7 @@ function CheckOut() {
                 />
                 <input
                     type="text"
-                    name="city"
+                    name="city" className='CheckoutCity'
                     placeholder="City"
                     value={deliveryInfo.city}
                     onChange={handleDeliveryChange}
@@ -118,7 +118,7 @@ function CheckOut() {
                 />
                 <input
                     type="text"
-                    name="zipCode"
+                    name="zipCode" className='CheckoutZip'
                     placeholder="ZIP code"
                     value={deliveryInfo.zipCode}
                     onChange={handleDeliveryChange}
@@ -135,11 +135,8 @@ function CheckOut() {
                 </label>
 
                 <h2>Payment</h2>
-                <p>All transactions are secure and encrypted.</p>
-                <p>This store can’t accept payments right now.</p>
+                <p className='Checkoutp1'>All transactions are secure and encrypted.</p>
                 {/* Thêm phương thức thanh toán tại đây khi có thể */}
-
-                <button type="submit" className='CheckOutButton'>Submit</button>
             </form>
             <div className="order-summary">
                 {cartItems.map(item => (

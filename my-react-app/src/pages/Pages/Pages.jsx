@@ -1,9 +1,9 @@
 import React from 'react'
-import Header from '../../Component/Header/Header1'
+import Header2 from '../../Component/Header/Header2/Header2'
 const Pages = () => {
     return (
         <div>
-            <Header/>
+            <Header2/>
             Pages</div>
     )
 }

@@ -39,10 +39,10 @@ function CartIcon() {
                     <div className="cart-total">
                         <strong>Total: {formatCurrency(totalPrice)}</strong>
                     </div>
-                    <Link to="/ViewCart" className="btn btn-primary checkout-button">
+                    <Link to="/ViewCart" className="btn1 btn-primary1 checkout-button1">
                         View Cart
                     </Link>
-                    <Link to="/CheckOut" className="btn btn-primary checkout-button">
+                    <Link to="/CheckOut" className="btn1 btn-primary1 checkout-button1">
                         Check Out
                     </Link>
                 </div>

@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from '../Component/Header/Header1';
-import Footer from '../Component/Footer/Footer';
+import Header2 from '../Component/Header/Header2/Header2';
+//import Footer from '../Component/Footer/Footer';
 import './Wishlist.scss';
 
 const Wishlist = () => {
 
   return (
     <div>
-      <Header />
+      <Header2 />
       <div className="slide-wishlist">
         <div className="imgWishlistContainer">
           <img className='imgWishlist' src="https://desero-store-demo.myshopify.com/cdn/shop/files/about-heading.png?v=1657248139" alt="" />
@@ -20,7 +20,7 @@ const Wishlist = () => {
             <span>Please login: Login-Register now?</span>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
