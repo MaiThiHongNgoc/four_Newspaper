@@ -4,7 +4,7 @@ import { useShoppingContext } from './ShoppingContext';
 import { formatCurrency } from '../helpers/common';
 
 function CheckOut() {
-    const { cartItems} = useShoppingContext();
+    const { cartItems, totalPrice} = useShoppingContext();
     const [contactInfo, setContactInfo] = useState({
         emailOrPhone: '',
         emailOffers: false
@@ -150,8 +150,12 @@ function CheckOut() {
                             <p>Quantity: {item.qty}</p>
                             <p>Price:  {formatCurrency(item.price)}</p>
                         </div>
+                        
                     </div>
                 ))}
+            </div>
+            <div className='totalCheckOut'>
+                <strong>Total: {formatCurrency(totalPrice)}</strong>
             </div>
         </div>
     );
