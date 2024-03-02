@@ -139,7 +139,7 @@ function CheckOut() {
                 <p>This store can’t accept payments right now.</p>
                 {/* Thêm phương thức thanh toán tại đây khi có thể */}
 
-                <button type="submit">Submit</button>
+                <button type="submit" className='CheckOutButton'>Submit</button>
             </form>
             <div className="order-summary">
                 {cartItems.map(item => (
