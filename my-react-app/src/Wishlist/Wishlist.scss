@@ -1,0 +1,48 @@
+/* Wishlist.scss */
+.imgWishlistContainer {
+    position: relative;
+  }
+  .text-wishlist{
+    font-size: 46px;
+    font-weight: 500;
+    line-height: 55.2px;
+    text-align: center;
+    text-size-adjust: 100%;
+    text-transform: capitalize;
+    font-family: 'Jost', sans-serif;
+
+
+    
+  }
+  .text-wishlist, .home-wishlist {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255) ; /* Màu văn bản của các tiêu đề */
+    /* Các thuộc tính CSS khác nếu cần thiết */
+  }
+  
+  .home-wishlist {
+    font-family: 'Jost', sans-serif;
+    top: calc(50% + 50px);
+    font-size: 17px;
+    text-size-adjust: 100%;
+    font-weight: 400;
+    text-align: center;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+  }
+/* Wishlist.scss */
+.bread-crumb {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -150px;
+    margin-top: 100px;
+  }
+  
+  .loginnow {
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+  }
+  

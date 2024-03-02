@@ -30,7 +30,7 @@ const Header = () => {
             <div className="components-header">
                 <div className="icon-search"><IoIosSearch /></div>
                 <div className="icon-login"><VscAccount /></div>
-                <div className="icon-tym"><CiHeart /></div>
+                <div className="icon-tym"><Link to="/Wishlist"><CiHeart className='icon-tym' /></Link></div>
                 <div className="icon-cart">
                     <CartIcon/>
                     {/* <span>{cartQty} items</span> */}
