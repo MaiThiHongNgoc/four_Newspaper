@@ -29,7 +29,7 @@ const Header = () => {
             </div>
             <div className="components-header">
                 <div className="icon-search"><IoIosSearch /></div>
-                <div className="icon-login"><VscAccount /></div>
+                <div className="icon-login"><Link to="/Register"><VscAccount className='icon-login'/></Link> </div>
                 <div className="icon-tym"><Link to="/Wishlist"><CiHeart className='icon-tym' /></Link></div>
                 <div className="icon-cart">
                     <CartIcon/>
