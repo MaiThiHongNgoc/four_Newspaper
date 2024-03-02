@@ -17,7 +17,7 @@ const Conten = () => {
                <OurBlogs/>
                {/* <Section/> */}
         <Product2/>
-        <Register/>
+        {/* <Register/> */}
     </div>
   )
 }

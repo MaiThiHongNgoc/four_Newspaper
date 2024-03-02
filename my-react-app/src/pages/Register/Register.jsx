@@ -17,17 +17,17 @@ const Register = () => {
                     <div className="mailrrr">
                         <form>
                             <div className="form-group">
-                            <input type="email" className="form-control" name="customer[email]" placeholder="Email adress" required />
+                            <input type="email" className="form_control" name="customer[email]" placeholder="Email adress" required />
                             </div>
 
                             <div className="form-group">
-                            <input type="password" className="form-control"  placeholder="Password" name="customer[password]" required />
+                            <input type="password" className="form_control"  placeholder="Password" name="customer[password]" required />
                             </div>
 
                             <div className="form-check">
                                 <a className="recoverpassword">Forgot your password?</a>
                             </div>
-                            <button type="submit" className="btn" value="Log In">Log In</button>
+                            <button type="submit" className="btn-login" value="Log In">Log In</button>
                         </form>
 
                     </div>
