@@ -2,10 +2,11 @@ import React from 'react'
 import "./Register.scss"
 const Register = () => {
     return (
-        <div className="background">
+        
 
-        {/* <div className="login-destop">
-
+        <div className="login-destop">
+            <div className="modal-overlay"></div>
+            
                 <div className="login-conten">
 
                     <div className="login-img">
@@ -36,8 +37,7 @@ const Register = () => {
                         </div>
                     </div>
                </div>
-            </div> */}
-        </div>
+            </div>
 
   )
 }
