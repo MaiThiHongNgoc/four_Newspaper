@@ -6,7 +6,7 @@ import './Wishlist.scss';
 const Wishlist = () => {
 
   return (
-    <div>
+    <div className='Wishlist'>
       <Header2 />
       <div className="slide-wishlist">
         <div className="imgWishlistContainer">
