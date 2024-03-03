@@ -1,6 +1,14 @@
 /* Wishlist.scss */
+.slide-wishlist{
+  margin-top: 110px;
+  width: 100%;
+}
 .imgWishlistContainer {
     position: relative;
+  }
+  .imgWishlist{
+    width: 100%;
+    height: auto;
   }
   .text-wishlist{
     font-size: 46px;
