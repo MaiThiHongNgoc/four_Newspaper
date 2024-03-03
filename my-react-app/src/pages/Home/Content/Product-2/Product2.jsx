@@ -29,9 +29,9 @@ const Product2 = () => {
                             <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
-                        <p>
+                        <div className="cast1">
                             <span className="price">$55.00</span>
-                        </p>
+                        </div>
                     </div>
 
                     <div className="product_item">
@@ -49,9 +49,9 @@ const Product2 = () => {
                             <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
-                        <p>
+                        <div className="cast2">
                             <span className="price">$56.00</span>
-                        </p>
+                        </div>
                     </div>
 
                     <div className="product_item">
@@ -69,9 +69,9 @@ const Product2 = () => {
                             <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
-                        <p>
+                        <div className="cast3">
                             <span className="price">$50.00</span>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,9 +102,9 @@ const Product2 = () => {
                             <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
-                        <p>
+                        <div className="cast4">
                             <span className="price">$55.00</span>
-                        </p>
+                        </div>
                     </div>
 
                     <div className="product_item">
@@ -122,9 +122,9 @@ const Product2 = () => {
                             <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
-                        <p>
+                        <div className="cast5">
                             <span className="price">$45.00</span>
-                        </p>
+                        </div>
                     </div>
 
                     <div className="product_item">
@@ -142,9 +142,9 @@ const Product2 = () => {
                             <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
-                        <p>
+                        <div className="cast6">
                             <span className="price">$40.00</span>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -174,9 +174,9 @@ const Product2 = () => {
                             <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
-                        <p>
+                        <div className="cast7">
                             <span className="price">$60.00</span>
-                        </p>
+                        </div>
                     </div>
 
                     <div className="product_item">
@@ -194,9 +194,9 @@ const Product2 = () => {
                             <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
-                        <p>
+                        <div className="cast8">
                             <span className="price">$55.00</span>
-                        </p>
+                        </div>
                     </div>
 
                     <div className="product_item">
@@ -214,9 +214,9 @@ const Product2 = () => {
                             <i className="icon_gold"><CiStar /></i>
                         </span>
                         <span className="caption">No reviews</span>
-                        <p>
+                        <div className="cast9">
                             <span className="price">$54.00</span>
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
