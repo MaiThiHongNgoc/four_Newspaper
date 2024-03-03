@@ -35,7 +35,8 @@ function App() {
           </Route>
           <Route path='/Menu' element={<Menu />} />
           <Route path='/Shop' element={<Shop />} />
-          <Route path='/Pages' element={<Pages />} />
+          <Route path='/Pages' element={<Pages />}>
+          </Route>
           <Route path='/Blogs' element={<Blogs />} />
           <Route path='/ViewCart' element={<ViewCart />} />
           <Route path='/CheckOut' element={<CheckOut />} />

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './CheckOut.scss';
 import { useShoppingContext } from './ShoppingContext';
 import { formatCurrency } from '../helpers/common';
+import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 
 function CheckOut() {
     const { cartItems, totalPrice} = useShoppingContext();
@@ -137,6 +138,30 @@ function CheckOut() {
                 <h2>Payment</h2>
                 <p className='Checkoutp1'>All transactions are secure and encrypted.</p>
                 {/* Thêm phương thức thanh toán tại đây khi có thể */}
+                <PayPalScriptProvider options={{ "client-id": "AaBnf2BFQfhk9WnYPWUKaRwhZ7mhD-tIyoETQ_MGfW7Wp2rELB9L75eGu5QHigGTUTyMAVZ3BQxlvtww" }}>
+                <div className="App-checkout">
+    <h1>Thanh toán bằng PayPal</h1>
+    <PayPalButtons
+      style={{ layout: 'vertical' }}
+      createOrder={(data, actions) => {
+        return actions.order.create({
+          purchase_units: [
+            {
+              amount: {
+                value: `${totalPrice}`, // Sử dụng giá trị totalPrice từ context
+              },
+            },
+          ],
+        });
+      }}
+      onApprove={(data, actions) => {
+        return actions.order.capture().then((details) => {
+          alert(`Transaction completed by ${details.payer.name.given_name}!`);
+        });
+      }}
+    />
+  </div>
+    </PayPalScriptProvider>
             </form>
             <div className="order-summary1">
                 {cartItems.map(item => (
@@ -154,6 +179,7 @@ function CheckOut() {
             <div className='totalCheckOut1'>
                 <strong className='totalCheckOut12'>Total: {formatCurrency(totalPrice)}</strong>
             </div>
+            
         </div>
     );
 }

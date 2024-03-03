@@ -6,8 +6,10 @@ import { BsPhoneVibrate } from "react-icons/bs";
 import { FiClock } from "react-icons/fi";
 import { IoMailOpenOutline } from "react-icons/io5";
 import axios from 'axios'
+import GoogleMapReact from 'google-map-react'
 
 const ContectUs = () => {
+    const MapComponent = ({ text }) => <div>{text}</div>;
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -83,7 +85,20 @@ const ContectUs = () => {
 
             </div>
 
-            <div className="Contect-map"></div>
+            <div className="Contect-map">
+            
+                 <GoogleMapReact
+                    bootstrapURLKeys={{ key: 'YOUR_API_KEY' }} // Thay YOUR_API_KEY bằng API key của bạn
+                    defaultCenter={{ lat: 10.8231, lng: 106.6297 }} // Tọa độ mặc định của bản đồ
+                   defaultZoom={12} // Zoom mặc định của bản đồ
+                 >
+               <MapComponent
+                  lat={10.8231}
+                  lng={106.6297}
+                  text="Đây là vị trí của bạn"
+               />
+                 </GoogleMapReact>
+            </div>
 
         </div>
 
