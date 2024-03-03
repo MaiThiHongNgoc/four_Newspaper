@@ -15,7 +15,9 @@ const Product = () => {
      <div className='product1'>
       <div className='product'>
       <h2>OUR BEST SELLER</h2>
+      <div className="produc-gc">
       <p>__________________</p>
+      </div>
       </div>
       <div className="product-link">
         <Link to="/newarrivals" className={activeLink === 'newarrivals' ? 'product-link1 hover' : 'product-link1'} onClick={() => handleLinkClick('newarrivals')}> New Arrivals</Link>
