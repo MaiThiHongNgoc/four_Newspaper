@@ -13,7 +13,6 @@ import CartIcon from './CartIcon';
 
 const Header = () => {
     const { cartItems, cartQty, totalPrice } = useShoppingContext()
-
     return (
         <div className='header-container'>
             <div className="logo-header">

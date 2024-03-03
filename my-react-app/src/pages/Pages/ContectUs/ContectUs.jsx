@@ -1,12 +1,37 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Header2 from '../../../Component/Header/Header2/Header2'
 import './ContectUs.scss'
 import { LuMapPin } from "react-icons/lu";
 import { BsPhoneVibrate } from "react-icons/bs";
 import { FiClock } from "react-icons/fi";
 import { IoMailOpenOutline } from "react-icons/io5";
+import axios from 'axios'
 
 const ContectUs = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        try {
+            const response = await axios.post('YOUR_API_ENDPOINT', {
+                name: name,
+                email: email,
+                message: message
+            });
+            console.log('Response:', response.data);
+            alert('Tin nhắn của bạn đã được gửi đi!');
+            // Reset form sau khi gửi
+            setName('');
+            setEmail('');
+            setMessage('');
+        } catch (error) {
+            console.error('Có lỗi xảy ra:', error);
+            alert('Xin lỗi, có lỗi xảy ra. Vui lòng thử lại sau.');
+        }
+    };
   return (
     <div className='Contect'>
        <Header2/>
@@ -63,7 +88,32 @@ const ContectUs = () => {
         </div>
 
         <div className="Contect-send">
-
+          <h5 className='Ct-send-title'>Send Us An Message</h5>
+          <div className="Ct-from">
+          <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    value={name} className='Ct-name'
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Your name..."
+                    required
+                />
+                <input
+                    type="email"
+                    value={email} className='Ct-email'
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Your mail..."
+                    required
+                />
+                <textarea
+                    value={message} className='Ct-mess'
+                    onChange={(e) => setMessage(e.target.value)}
+                    placeholder="Enter your message..."
+                    required
+                />
+                <button type="submit" className='Ct-button'>Send</button>
+            </form>
+          </div>
         </div>
 
         <div className="Contect-footer">
