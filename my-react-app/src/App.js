@@ -16,7 +16,7 @@ import CheckOut from "./Context/CheckOut";
 import Wishlist from "./Wishlist/Wishlist";
 import Header from "./Component/Header/Header1";
 import Footer from "./Component/Footer/Footer";
-import Register from "./pages/Register/Register";
+// import Register from "./pages/Register/Register";
 function App() {
 
 
@@ -40,7 +40,7 @@ function App() {
           <Route path='/ViewCart' element={<ViewCart />} />
           <Route path='/CheckOut' element={<CheckOut />} />
           <Route path='/Wishlist' element={<Wishlist />} />
-          <Route path='/Register' element={<Register />} />
+          {/* <Route path='/Register' element={<Register />} /> */}
         </Routes>
         <Footer/>
       </BrowserRouter>
