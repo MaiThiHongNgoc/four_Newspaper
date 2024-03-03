@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className="logo-top">
                         <img src="https://desero-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1657783401" alt="Desero - Organic Fruit & Juice Responsive Shopify Theme" className="img-fluid" />
                     </div>
-                    <p className="conten">Subscribe our newsletter and get <br/> discount 30% off</p>
+                    <p className="text-footer">Subscribe our newsletter and get <br/> discount 30% off</p>
                    
                     <div className="newletter_email">
                         <div className="form-group">
