@@ -30,7 +30,7 @@ const Header = () => {
             </div>
             <div className="components-header">
                 <div className="icon-search"><Search/></div>
-                <div className="icon-login"><VscAccount/> </div>
+                <div className="icon-login"><Register/> </div>
                 <div className="icon-tym"><Link to="/Wishlist"><CiHeart className='icon-tym' /></Link></div>
                 <div className="icon-cart">
                     <CartIcon/>
