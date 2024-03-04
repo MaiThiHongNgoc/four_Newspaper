@@ -1,13 +1,19 @@
-import React from 'react'
-import "./Search.scss"
+import React, { useState } from 'react';
+import "./Search.scss";
 import { CiSearch } from "react-icons/ci";
-import { FaXmark } from "react-icons/fa6";
+import { FaTimes } from "react-icons/fa";
+import { IoIosSearch } from "react-icons/io";
+
 const Search = () => {
+    const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
+    const toggleDropdown = () => setIsDropdownVisible(!isDropdownVisible);
+    const closeDropdown = () => setIsDropdownVisible(false); // Hàm để ẩn bảng search
+
     return (
         <div className="search">
-            <div className="search-eveland"></div>
-
-            <div className="active">
+            <IoIosSearch onClick={toggleDropdown} />
+            <div className={`search-eveland ${isDropdownVisible ? 'active' : ''}`}>
                 <div className="drawer">
                     <h3 className="drawer-title">Start typing and hit Enter</h3>
                 </div>
@@ -18,11 +24,11 @@ const Search = () => {
                 </form>
 
                 <div className="drawer-back">
-                    <a href="" className="close"><FaXmark /></a>
+                    <button className="close" onClick={closeDropdown}><FaTimes /></button>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Search
+export default Search;

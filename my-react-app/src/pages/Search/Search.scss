@@ -89,3 +89,28 @@
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
+
+/* Trạng thái ẩn mặc định của search-eveland */
+.search-eveland {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 0; /* Giảm chiều cao xuống 0 để không chiếm không gian */
+    background-color: #fff;
+    position: fixed;
+    overflow: hidden;
+    transition: all .5s;
+    z-index: 101;
+    padding-bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+/* Trạng thái hiển thị khi có class .active */
+.search-eveland.active {
+    height: 522px; /* Đặt lại chiều cao mong muốn khi hiển thị */
+    opacity: 1;
+    visibility: visible;
+    padding-bottom: 50px; /* Đặt lại padding nếu cần */
+}
