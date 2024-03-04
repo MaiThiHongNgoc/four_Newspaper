@@ -48,10 +48,17 @@
     width: 100%;
     flex-direction: row;
     margin-top: 100px;
+    justify-content: space-between;
+    display:flex;
 }
 .Contect-map{
     // width: 50%;
     // background-color: red;
+    flex: 2;
+}
+.Contect-title,.Contect-map{
+    flex: 1;
+    padding: 20px;
 }
 .Contect-title{
     width: 50%;
