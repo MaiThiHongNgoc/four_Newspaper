@@ -11,6 +11,7 @@ import { useShoppingContext } from '../../Context/ShoppingContext';
 import { formatCurrency } from '../../helpers/common';
 import CartIcon from './CartIcon';
 import Search from '../../pages/Search/Search';
+import Register from '../../pages/Register/Register';
 
 const Header = () => {
     const { cartItems, cartQty, totalPrice } = useShoppingContext()

@@ -1,12 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { VscAccount } from "react-icons/vsc";
+import { FaTimes } from "react-icons/fa";
+
 import "./Register.scss"
 const Register = () => {
-    
+    const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
+    const toggleDropdown = () => setIsDropdownVisible(!isDropdownVisible);
+    const closeDropdown = () => setIsDropdownVisible(false); // Hàm để ẩn bảng search
     return (
         
 
         <div className="login-destop">
-            <div className="modal-overlay"></div>
+            <VscAccount onClick={toggleDropdown}/>
+            {/* <div className='modal-overlay'> */}
+            <div className={`modal-overlay ${isDropdownVisible ? 'active' : ''}`}>
+            </div>
             
                 <div className="login-conten">
 
@@ -37,6 +46,9 @@ const Register = () => {
                             <a href="" className="create-account">Register now </a>
                         </div>
                     </div>
+                    <div className="drawer-back">
+                    <button className="close" onClick={closeDropdown}><FaTimes /></button>
+                </div>
                </div>
             </div>
 
