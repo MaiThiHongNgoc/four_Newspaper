@@ -1,0 +1,122 @@
+.AboutUs{
+    margin-top: 110px;
+    margin-bottom: 200px;
+}
+.imgAboutusContainer {
+    position: relative;
+  }
+  .imgAboutus{
+    width: 100%;
+    height: auto;
+  }
+  .text-Aboutus{
+    font-size: 46px;
+    font-weight: 500;
+    line-height: 55.2px;
+    text-align: center;
+    text-size-adjust: 100%;
+    text-transform: capitalize;
+    font-family: Jost;
+    padding-bottom: 60px;
+
+
+    
+  }
+  .text-Aboutus, .home-Aboutus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #fff ; /* Màu văn bản của các tiêu đề */
+    /* Các thuộc tính CSS khác nếu cần thiết */
+  }
+  
+  .home-Aboutus {
+    font-family: Jost;
+    top: calc(50% + 50px);
+    font-size: 3rem;
+    text-size-adjust: 100%;
+    font-weight: 400;
+    text-align: center;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+  }
+
+  .Aboutus-contaner{
+    width: 100%;
+    flex-direction: row;
+    margin-top: 100px;
+    justify-content: space-between;
+    display:flex;
+}
+.Abotus-image{
+    // width: 50%;
+    // background-color: red;
+    flex: 2;
+}
+.Aboutus-title,.Abotus-image{
+    flex: 1;
+   // padding: 20px;
+}
+.Aboutus-title{
+    width: 50%;
+    flex-direction: column;
+    padding-left: 60px;
+}
+.Aboutus-h6{
+    font-size: 4rem;
+    font-family: Jost;
+    color: #58B720;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+.Aboutus-p{
+    font-size: 1.8rem;
+    font-family: Jost;
+}
+.Aboutus-store{
+    margin-top: 100px;
+}
+.About-storeh6{
+    text-align: center;
+    font-size: 2.6rem;
+    font-family: Jost;
+}
+.About-Store1{
+    display: flex;
+}
+.About-store2,.About-store3,.About-store4{
+   padding-left: 150px;
+}
+.About-stp_2,.About-stp_3,.About-stp_4{
+    font-size: 1.3rem;
+    padding-top: 20px;
+}
+.About-sth4_2,.About-sth4_3,.About-sth4_4{
+    color: #58B720;
+}
+.Aboutus-team{
+    margin-top: 100px;
+}
+.About-team{
+    text-align: center;
+    font-size: 2.6rem;
+    font-family: Jost;
+}
+.About-NameTeam{
+    display: flex;
+}
+.About-name1,.About-name2,.About-name3{
+    margin-left: 180px;
+}
+.About-ten{
+    font-size: 1.3rem;
+    color: #000000;
+    text-align: center;
+}
+.About-cv{
+    text-align: center;
+    font-size: 1.2rem;
+}

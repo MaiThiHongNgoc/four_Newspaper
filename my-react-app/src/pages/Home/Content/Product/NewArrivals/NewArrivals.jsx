@@ -34,7 +34,7 @@ const NewArrivals = () => {
               )}
             </div>
             <h4>{product.title}</h4>
-            <p>${product.price.toFixed(2)}</p>
+            <p className='productP'>${product.price.toFixed(2)}</p>
           </div>
         ))}
       </div>

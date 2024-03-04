@@ -131,9 +131,6 @@ const ContectUs = () => {
           </div>
         </div>
 
-        <div className="Contect-footer">
-
-        </div>
 
     </div>
   )
