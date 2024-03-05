@@ -1,0 +1,288 @@
+.blog-img {
+    position: relative; /* Đặt phần tử cha làm khung chứa tương đối */
+    text-align: center; /* Căn giữa phần ảnh */
+    bottom: -150px;
+}
+.blog-page{
+    border-bottom: red;
+}
+.blog-img img{
+    width: 70%; /* Ảnh chiếm toàn bộ chiều rộng của phần tử cha */
+}
+.blogs-text span{
+    color:#95c066;
+}
+.content-blog {
+    position: absolute; /* Đặt vị trí tuyệt đối để có thể di chuyển lên trên phần ảnh */
+    top: 70%; /* Đặt vị trí ở giữa theo chiều dọc */
+    left: 50%; /* Đặt vị trí ở giữa theo chiều ngang */
+    bottom: 400px;
+    transform: translate(-50%, -50%); /* Điều chỉnh vị trí để căn giữa chính xác */
+    text-align: center; /* Căn giữa nội dung */
+}
+.content-blog h2{
+    font-family: 'Jost', sans-serif;
+    color: #ffffff;
+    margin-bottom: 0px;
+    font-size: 36px; /* Khoảng cách dưới của văn bản "Popular fruit juices today" */
+}
+.content-blog2 h3{
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+}
+.content-blog2 {
+    display: flex;
+    justify-content: center; /* Căn giữa các phần tử trong content-blog2 */
+}
+
+.content-blog2 .a1, .content-blog2 .a2, .content-blog2 .a3 {
+    margin: 0 10px; /* Khoảng cách giữa các phần tử trong content-blog2 */
+}
+.blog-mt{
+    width: 70%;
+    font-size: 14px;
+    color :#8a8a8a;
+    font-weight: 400;
+    line-height: 28px;
+    padding-left: 286px;
+    margin-top: 150px;
+    padding-bottom: 50px;
+}
+.blogs-text{
+    font-family: 'Jost', sans-serif;
+    position: absolute; /* Đặt vị trí tuyệt đối để có thể di chuyển lên trên phần ảnh */
+    top: 100px; /* Đặt vị trí ở trên phần ảnh */
+    left: 50%; /* Đặt vị trí ở giữa theo chiều ngang */
+    transform: translateX(-50%); /* Điều chỉnh vị trí để căn giữa theo chiều ngang */
+    color: #969696;; /* Màu chữ */
+    font-size: 14px; /* Cỡ chữ */
+    z-index: 1; /* Đặt vị trí trên cùng để chữ hiển thị trên phần ảnh */
+    margin-left: -555px;
+}
+.title-tag1{
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+.blog-left{
+    font-family: 'Jost', sans-serif;
+    display: flex;
+    margin-left:283px;
+}
+.blog-hover{
+    border: 1px solid #000;
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+    padding: 0 20px;
+    margin: 0 5px;
+    line-height: 40px;
+    margin-top: -9px;
+    letter-spacing: 1px;
+    &:hover{
+        background-color: #95c066;
+        color:#ffffff;
+    }
+}
+.blog-hover2{
+    border: 1px solid #000;
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+    padding: 0 20px;
+    margin: 0 5px;
+    line-height: 40px;
+    margin-top: -9px;
+    letter-spacing: 1px;
+    &:hover{
+        background-color: #95c066;
+        color:#ffffff;
+    }
+}
+.blog-hover3{
+    border: 1px solid #000;
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+    padding: 0 20px;
+    margin: 0 5px;
+    line-height: 40px;
+    margin-top: -9px;
+    letter-spacing: 1px;
+    &:hover{
+        background-color: #95c066;
+        color:#ffffff;
+    }
+}
+.blog-right{
+    display: flex;
+    margin-left: 1450px;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+.blog-icon1{
+    border: 1px ;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 15px;
+    margin: 0 -15px;
+    line-height: 35px;
+    margin-top: -15px;
+    letter-spacing: 1px;
+    background-color: #eeeeee;
+    &:hover{
+        background-color: #95c066;
+        color:#ffffff;
+    }
+}
+.blog-icon2{
+    border: 1px ;   
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 15px;
+    margin: 0 35px;
+    line-height: 35px;
+    margin-top: -15px;
+    letter-spacing: 1px;
+    background-color: #eeeeee;
+    &:hover{
+        background-color: #95c066;
+        color:#ffffff;
+    }
+}
+.blog-icon3{
+    border: 1px ;   
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 15px;
+    margin: 0 -15px;
+    line-height: 35px;
+    margin-top: -15px;
+    letter-spacing: 1px;
+    background-color: #eeeeee;
+    &:hover{
+        background-color: #95c066;
+        color:#ffffff;
+    }
+}
+.blog-gach{
+    // border-bottom: 0.1px solid #6c757d; /* Màu và kiểu gạch */
+    width: 1340px;
+    margin: 30px 0; /* Khoảng cách giữa gạch và các phần khác */
+    margin-left: 273px;
+}
+.previous-next-post{
+    display: flex;
+}
+.previous-post {
+    border-bottom: 1px solid #95c066;
+    color: #95c066;
+    margin-left: 270px;
+}
+.next-post{
+    border-bottom: 1px solid #95c066;
+    color: #95c066;
+    margin-left: 1180px;
+}
+.related-post{
+    color: #333;
+    font-size: 24px;
+    font-family: 'Jost', sans-serif;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-left: 890px;
+    margin-top: 40px;
+}
+.related-post-gach{
+    border-bottom: 1px solid #95c066;
+    width: 55%;
+}
+.related-content1 img{
+    width: 430px;
+    min-height: 300px;
+    object-fit: cover;
+}
+.related-content1{
+    margin-top: 40px;
+    margin-left: -880px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: Jost;
+}
+.related-new{
+    font : 14px Jost;
+    letter-spacing: 2px;
+    color: #95c066;
+}
+.popular{
+    font-size: 24px;
+}
+.popular span{
+    &:hover{
+        color: #95c066;
+        transition: 0.8s ease 0s;
+    }
+}
+
+.popular-gach{
+    border-bottom: 1px solid #e0e0e0;
+    width: 2%;
+}
+/* Sử dụng CSS selector phù hợp với thẻ <a> */
+.read-more-blog a {
+    color :#000;
+    border-bottom: 2px solid #000;
+    font-size: 15px;
+    text-decoration: none;
+    transition: border-color 0.3s; /* Thêm hiệu ứng chuyển động cho border-color */
+}
+
+/* Sử dụng CSS selector phù hợp với thẻ <a> khi hover */
+.read-more-blog:hover a {
+    color: #95c066;
+    border-color: #95c066; /* Màu của border-bottom khi hover */
+}
+
+.related-content2 img{
+    width: 430px;
+    min-height: 300px;
+    object-fit: cover;
+}
+.related-content2{
+    margin-top: -445px;
+    margin-left: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: Jost;
+}
+.popular-gach2{
+    border-bottom: 1px solid #e0e0e0;
+    width: 3%;
+}
+.related-content3 img{
+    width: 430px;
+    min-height: 300px;
+    object-fit: cover;
+}
+.related-content3{
+    margin-top: -443px;
+    margin-left: 980px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: Jost;
+}
+.popular-gach3{
+    border-bottom: 1px solid #e0e0e0;
+    width: 6%;
+}
+.related-content1 img,
+.related-content2 img,
+.related-content3 img {
+    transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển động cho transform */
+}
+
+.related-content1:hover img,
+.related-content2:hover img,
+.related-content3:hover img {
+    transform: scale(1.05); /* Kích thước ảnh sẽ tăng lên 105% khi hover */
+}

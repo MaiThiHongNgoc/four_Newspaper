@@ -19,7 +19,9 @@ import CheckOut from "./Context/CheckOut";
 import Wishlist from "./Wishlist/Wishlist";
 import Header from "./Component/Header/Header1";
 import Footer from "./Component/Footer/Footer";
-// import Register from "./pages/Register/Register";
+import Blogs2 from "./pages/Blogs/Blog2";
+import Blogs3 from "./pages/Blogs/Blog3";
+// import Register from "./pageis/Register/Register";
 function App() {
 
 
@@ -42,6 +44,8 @@ function App() {
                 <Route path="contact-us" element={<ContectUs/>}>Contact Us</Route>
                 <Route path="about-us" element={<AboutUs/>}>About Us</Route>
           </Route>
+          <Route path='/Blogs/blog3' element={<Blogs3 />} />
+          <Route path='/Blogs/blog2' element={<Blogs2 />} />
           <Route path='/Blogs' element={<Blogs />} />
           <Route path='/ViewCart' element={<ViewCart />} />
           <Route path='/CheckOut' element={<CheckOut />} />

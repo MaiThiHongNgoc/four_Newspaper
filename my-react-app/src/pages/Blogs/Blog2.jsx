@@ -13,10 +13,10 @@ const Blogs = () => {
             <p>Home-News-<span>Popular fruit juices today</span></p>
             </div>
             <div className="blog-img">
-                <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog1_1024x1024.png?v=1656905339" alt="" />
+                <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog2_1024x1024.png?v=1656905260" alt="" />
             </div>
             <div className="content-blog">
-                <h2>Popular fruit juices today</h2> 
+                <h2>What's so special about fruit juice?</h2> 
             <div className="content-blog2">
                 <div className="a1">
                     <h3>Desero-Store Admin</h3>
@@ -37,8 +37,8 @@ const Blogs = () => {
             <div className="blog-tag">
             <div className="blog-left">
                     <span className='title-tag1'>TAGS :</span>
-                <div className="blog-hover">
-                    Popular
+                <div className="blog-hover2">
+                    Fruit Jucie
                 </div>
             </div>
             <div className="blog-right">

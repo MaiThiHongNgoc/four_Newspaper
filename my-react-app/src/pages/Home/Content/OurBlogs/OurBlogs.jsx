@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import "./OurBlogs.scss";
 const OurBlogs = () => {
   return (
@@ -37,7 +37,7 @@ const OurBlogs = () => {
 
                 </p>
                 <div className="btn_readmore">
-                    <a className ="class" href="/blogs/news/popular-fruit-juices-today"> READ MORE</a>
+                    <a className ="class" href="http://localhost:3000/Blogs"> READ MORE</a>
                 </div>
            
         </div>
@@ -63,7 +63,7 @@ const OurBlogs = () => {
 
                 </p>
                 <div className="btn_readmore">
-                    <a className ="class" href="/blogs/news/popular-fruit-juices-today"> READ MORE</a>
+                    <a className ="class" href="http://localhost:3000/Blogs/blog2"> READ MORE</a>
                 </div>
             </div>
         </div>
