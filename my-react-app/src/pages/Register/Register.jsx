@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { VscAccount } from "react-icons/vsc";
-import { FaTimes } from "react-icons/fa";
+// import { FaTimes } from "react-icons/fa";
+import { FaXmark } from "react-icons/fa6";
 
 import "./Register.scss";
 
@@ -12,12 +13,12 @@ const Register = () => {
 
     return (
         <div className="login-destop">
-            <div className="icon-container" onClick={toggleDropdown}>
+            <div className="login-gister" onClick={toggleDropdown}>
                 <VscAccount />
             </div>
 
             {isDropdownVisible && (
-                <div className={`modal-overlay active`}>
+                <div className={`modal-overlay`}>
                     <div className="login-conten">
                         <div className="login-img">
                             <img src="https://desero-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1657783401" alt="" />
@@ -40,12 +41,12 @@ const Register = () => {
                         <div className="creat-my">
                             <div className="box-register">
                                 <span className="register">Don’t have an account?</span>
-                                <a href="/register" className="create-account">Register now</a>
+                                <a href="/register" className="create-account"> Register now</a>
                             </div>
                         </div>
-                        <div className="drawer-back">
-                            <button className="close" onClick={closeDropdown}><FaTimes /></button>
-                        </div>
+                    </div>
+                    <div className="">
+                        <a className="fill-white" onClick={closeDropdown}><FaXmark /></a>
                     </div>
                 </div>
             )}
