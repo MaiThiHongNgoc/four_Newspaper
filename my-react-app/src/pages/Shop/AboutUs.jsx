@@ -1,5 +1,5 @@
 import React from 'react'
-import Header2 from '../../../Component/Header/Header2/Header2'
+import Header2 from '../../Component/Header/Header2/Header2'
 import './AboutUs.scss'
 
 const AboutUs = () => {
@@ -10,7 +10,7 @@ const AboutUs = () => {
              <div className="imgAboutusContainer">
                  <img className='imgAboutus' src="https://desero-store-demo.myshopify.com/cdn/shop/files/about-heading.png?v=1657248139" alt="" />
                     <p className='text-Aboutus'>About Us</p>
-                    <h2 className='home-Aboutus'>Home-Pages-About Us</h2>
+                   
               </div>
 
               <div className="Aboutus-contaner">

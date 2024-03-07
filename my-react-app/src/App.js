@@ -5,12 +5,10 @@ import './App.css'
 
 import Home from "./pages/Home/Home";
 import Menu from "./pages/Menu/Menu";
-import Shop from "./pages/Shop/Shop";
+import AboutUs from "./pages/Shop/AboutUs";
 import Pages from "./pages/Pages/Pages";
 import Blogs from "./pages/Blogs/Blogs";
 import NewArrivals from "./pages/Home/Content/Product/NewArrivals/NewArrivals";
-import ContectUs from "./pages/Pages/ContectUs/ContectUs";
-import AboutUs from "./pages/Pages/AboutUs/AboutUs";
 //import Search from "./pages/Search";
 import BestSeller from "./pages/Home/Content/Product/BestSellers/BestSeller";
 import TopRate from "./pages/Home/Content/Product/TopRates/TopRate";
@@ -39,10 +37,8 @@ function App() {
             
           </Route>
           <Route path='/Menu' element={<Menu />} />
-          <Route path='/Shop' element={<Shop />} />
+          <Route path='/AboutUs' element={<AboutUs />} />
           <Route path='/Pages' element={<PagesWithTooltip />}>
-                <Route path="contact-us" element={<ContectUs/>}>Contact Us</Route>
-                <Route path="about-us" element={<AboutUs/>}>About Us</Route>
           </Route>
           <Route path='/Blogs/blog3' element={<Blogs3 />} />
           <Route path='/Blogs/blog2' element={<Blogs2 />} />

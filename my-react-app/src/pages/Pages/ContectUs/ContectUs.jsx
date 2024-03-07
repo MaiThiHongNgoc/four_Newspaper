@@ -41,7 +41,7 @@ const ContectUs = () => {
              <div className="imgContectContainer">
                  <img className='imgContect' src="https://desero-store-demo.myshopify.com/cdn/shop/files/about-heading.png?v=1657248139" alt="" />
                     <p className='text-Contectus'>Contact Us</p>
-                    <h2 className='home-Contectus'>Home-Pages-Contact Us</h2>
+                    
               </div>
         </div>
 

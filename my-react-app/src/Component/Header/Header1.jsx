@@ -23,8 +23,8 @@ const Header = () => {
             <div className="navbar-header">
                 <div className="navbar-header-home"> <Link to="/">HOME</Link></div>
                 <div className="navbar-header-menu"> <Link to="/Menu">MENU</Link></div>
-                <div className="navbar-header-shop"> <Link to="/Shop">SHOP</Link></div>
-                <div className="navbar-header-pages"> <Link to="/Pages">PAGES</Link></div>
+                <div className="navbar-header-shop"> <Link to="/AboutUs">ABOUT</Link></div>
+                <div className="navbar-header-pages"> <Link to="/Pages">CONTACT</Link></div>
                 <div className="navbar-header-blogs"> <Link to="/Blogs">BLOGS</Link></div>
 
             </div>
