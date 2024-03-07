@@ -38,7 +38,7 @@ function App() {
           </Route>
           <Route path='/Menu' element={<Menu />} />
           <Route path='/AboutUs' element={<AboutUs />} />
-          <Route path='/Pages' element={<PagesWithTooltip />}>
+          <Route path='/Pages' element={<Pages />}>
           </Route>
           <Route path='/Blogs/blog3' element={<Blogs3 />} />
           <Route path='/Blogs/blog2' element={<Blogs2 />} />
@@ -53,29 +53,6 @@ function App() {
     </div>
   );
 }
-
-
-function PagesWithTooltip() {
-  const [showTooltip, setShowTooltip] = useState(false);
-
-  return (
-    // <div onMouseEnter={() => setShowTooltip(true)} onMouseLeave={() => setShowTooltip(false)}>
-    <div onMouseEnter={() => { setShowTooltip(true); console.log('Mouse Enter'); }} onMouseLeave={() => { setShowTooltip(false); console.log('Mouse Leave'); }}>
-
-      <Pages />
-      {/* {showTooltip && (
-            <div className="tooltip">
-              <div className={`tooltip-content ${showTooltip ? 'show' : ''}`}>
-                <Link to="/Pages/contact-us">Contact Us</Link>
-                <Link  to="/Pages/contact-us" >About Us</Link>
-              </div>
-           </div>
-      )} */}
-    </div>
-  );
-}
-
-
 
 export default App;
 
