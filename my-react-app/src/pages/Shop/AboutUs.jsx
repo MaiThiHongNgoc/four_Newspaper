@@ -1,4 +1,4 @@
-import React from 'react'
+  import React from 'react'
 import Header2 from '../../Component/Header/Header2/Header2'
 import './AboutUs.scss'
 

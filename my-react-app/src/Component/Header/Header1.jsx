@@ -12,7 +12,6 @@ import { formatCurrency } from '../../helpers/common';
 import CartIcon from './CartIcon';
 import Search from '../../pages/Search/Search';
 import Register from '../../pages/Register/Register';
-
 const Header = () => {
     const { cartItems, cartQty, totalPrice } = useShoppingContext()
     return (
@@ -26,7 +25,6 @@ const Header = () => {
                 <div className="navbar-header-shop"> <Link to="/AboutUs">ABOUT</Link></div>
                 <div className="navbar-header-pages"> <Link to="/Pages">CONTACT</Link></div>
                 <div className="navbar-header-blogs"> <Link to="/Blogs">BLOGS</Link></div>
-
             </div>
             <div className="components-header">
                 <div className="icon-search"><Search/></div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header2 from '../Component/Header/Header2/Header2';
 //import Footer from '../Component/Footer/Footer';
 import './Wishlist.scss';
@@ -17,7 +18,10 @@ const Wishlist = () => {
       </div>
       <div className="bread-crumb">
         <div className="loginnow">
-            <span>Please login: Login-Register now?</span>
+            <span>Please login:</span>
+            <div className="login-link">
+           <span className="wishlist-link"> <Link to="/Register2">Login-Register now?</Link></span>
+            </div>
         </div>
       </div>
       {/* <Footer /> */}
