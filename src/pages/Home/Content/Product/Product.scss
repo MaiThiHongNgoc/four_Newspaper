@@ -1,0 +1,167 @@
+
+.product1{
+  //padding-top: 400px;
+}
+
+.product h2{
+  text-align: center;
+  font-size: 2rem;
+  font-family: Jost;
+}
+.productP{
+  text-align: center;
+  font-size: 1.4rem;
+  border-bottom: 20px;
+  padding-top: -20px;
+}
+.product-link{
+  font-family: Jost;
+  text-align: center;
+  padding-bottom: 80px;
+  padding-top: 30px;
+  justify-content: center;
+}
+.product-link1.hover,
+.product-link2.hover,
+.product-link3.hover {
+  background-color: #58B720;
+  color: #ffffff;
+}
+.product-link li {
+  padding: 10px;
+  text-align: center;
+}
+.product-link1  {
+  text-decoration: none;
+    padding: 20px 20px ;
+    border: 1px solid #58B720;
+    font-size: 1.5rem;
+    color: #58B720;
+    &:hover {
+      background-color: #58B720;
+      color: #ffffff;
+    }
+}
+.product-link2  {
+  text-decoration: none;
+  padding: 20px 20px ;
+  border: 1px solid #58B720;
+  font-size: 1.5rem;
+  color: #58B720;
+  &:hover {
+    background-color: #58B720;
+    color: #ffffff;
+  }
+}
+.product-link3  {
+  text-decoration: none;
+  padding: 20px 20px ;
+  border: 1px solid #58B720;
+  font-size: 1.5rem;
+  color: #58B720;
+  &:hover {
+    background-color: #58B720;
+    color: #ffffff;
+  }
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px;
+}
+
+.product-item {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 15px;
+  box-sizing: border-box;
+  position: relative; // Đặt vị trí tương đối để icon có thể được đặt một cách chính xác
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 3s ease;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
+  .search-icon {
+    display: flex;
+    justify-content: center; /* Căn giữa các icon */
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%); /* Căn giữa icon so với chiều rộng của product-item */
+    margin-right: 40px;
+    padding: 10px;
+    border: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .search-icon svg {
+    margin: 0 8px; /* Tạo khoảng cách giữa các icon */
+    width: 40px; /* Tăng kích thước */
+    height: 40px; /* Tăng kích thước */
+  }
+  
+  .icon1, .icon2, .icon3 {
+    padding: 0.3rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex; /* Đảm bảo các items được căn giữa */
+    justify-content: center; /* Căn giữa nội dung */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+  }
+
+  
+  /* Áp dụng hiệu ứng hover cho từng icon */
+  .icon1:hover, .icon2:hover, .icon3:hover {
+    color: #ffffff;
+    background-color: #58B720;
+  }
+  
+}
+
+h4 {
+  color: #000;
+  margin-top: 10px;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: normal;
+  &:hover{
+    color: #58B720;
+  }
+}
+
+.produc-gc {
+  color: #58B720;
+  font-family: Jost;
+  margin-top: -20px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .product-item {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

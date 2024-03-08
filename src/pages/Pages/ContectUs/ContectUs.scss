@@ -1,0 +1,137 @@
+.Contect{
+    margin-top: 110px;
+    width: 100%;
+    background-color: #fff;
+}
+.imgContectContainer {
+    position: relative;
+  }
+  .imgContect{
+    width: 100%;
+    height: auto;
+  }
+  .text-Contectus{
+    font-size: 46px;
+    font-weight: 500;
+    line-height: 55.2px;
+    text-align: center;
+    text-size-adjust: 100%;
+    text-transform: capitalize;
+    font-family: Jost;
+    padding-bottom: 60px;
+
+
+    
+  }
+  .text-Contectus, .home-Contectus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #fff ; /* Màu văn bản của các tiêu đề */
+    /* Các thuộc tính CSS khác nếu cần thiết */
+  }
+  
+  .home-Contectus {
+    font-family: Jost;
+    top: calc(50% + 50px);
+    font-size: 3rem;
+    text-size-adjust: 100%;
+    font-weight: 400;
+    text-align: center;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+  }
+
+.Contect-contaner{
+    width: 100%;
+    flex-direction: row;
+    margin-top: 100px;
+    justify-content: space-between;
+    display:flex;
+}
+.Contect-map{
+    // width: 50%;
+    // background-color: red;
+    flex: 2;
+}
+.Contect-title,.Contect-map{
+    flex: 1;
+    padding: 20px;
+}
+.Contect-title{
+    width: 50%;
+    flex-direction: column;
+    padding-left: 60px;
+}
+.Ct-h2{
+    font-size: 2.4rem;
+    font-family: Jost;
+    color: #000000;
+}
+.Ct-p{
+    font-size: 1.5rem;
+    color: #323030;
+    font-family: Jost;
+    text-align: left;
+}
+
+.icon-ct1, .icon-ct2,.icon-ct3,.icon-ct4{
+    display: flex;
+    padding-top: 20px;
+}
+.icon-ct-address1{
+    width: 50px;
+    height: 50px;
+}
+.icon-address2{
+    width: 50px;
+    height: 50px;
+}
+.icon-ct-tt1,.icon-ct-tt2,.icon-ct-tt3,.icon-ct-tt4{
+    font-size: 1.8rem;
+    color: #000000;
+    font-family: Jost;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.icon-ct-p1,.icon-ct-p2,.icon-ct-p3,.icon-ct-p4{
+    font-size: 1.5rem;
+    font-family: Jost;
+    color: #323030;
+    text-align: left;
+}
+.Ct-send-title{
+    font-size: 2rem;
+    font-family: Jost;
+    color: #000000;
+    text-align: center;
+}
+.Ct-name,.Ct-email {
+    width: 35%;
+    height: 40px;
+    margin-left: 150px;
+}
+.Ct-mess{
+    width: 80%;
+    height: 180px;
+    margin-top: 30px;
+    margin-left: 150px;
+}
+.Ct-button{
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    margin-left: 750px;
+    margin-top: 30px;
+    color: #fff;
+    background-color: #58B720;
+    margin-bottom: 100px;
+    border: 1px solid #58B720;
+    &:hover{
+        background-color: #fff;
+        color: #58B720;
+    }
+}

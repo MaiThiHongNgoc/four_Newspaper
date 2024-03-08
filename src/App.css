@@ -1,0 +1,36 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer; /* Đổi hình con trỏ thành hình tay khi di chuột qua */
+  background-color: #333;
+}
+
+.tooltip .tooltip-content {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0; /* Ẩn ban đầu */
+  transition: opacity 0.3s ease-in-out; /* Hiệu ứng hiển thị mượt mà */
+}
+
+
+
+.tooltip-content {
+  visibility: hidden; /* Mặc định là ẩn */
+  /* các thuộc tính khác giữ nguyên */
+}
+
+/* Thêm class dựa trên state trong React để kiểm soát việc hiển thị */
+.tooltip-content.show {
+  visibility: visible;
+  opacity: 1;
+}

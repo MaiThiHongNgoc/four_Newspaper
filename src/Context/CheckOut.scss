@@ -1,0 +1,128 @@
+/* styles.css */
+.checkoutpay{
+    display: flex;
+    margin-top: 120px;
+    width: 100%;
+}
+// .container {
+//     max-width: 800px;
+//     margin: 0 auto;
+//     padding: 20px;
+// }
+
+h1, h2 {
+    color: #333;
+}
+
+.Formcheckout {
+    padding: 20px 20px 20px 100px;
+    border-radius: 5px;
+    //box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-right: 2px solid rgba(0,0,0,0.1);
+    width: 50%;
+}
+
+.CheckoutMail {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px;
+}
+.CheckoutUs{
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px;
+}
+.CheckoutLast{
+    width: 37%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 35px;
+}
+.CheckoutFist{
+    width: 37%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 35px;
+    margin-left: 25px;
+}
+.CheckoutAddress{
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px;
+}
+.CheckoutCity{
+    width: 37%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 35px;
+}
+.CheckoutZip{
+    width: 37%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 35px;
+    margin-left: 25px;
+}
+.Checkoutp1{
+    font-size: 1rem;
+    color: #858181;
+    font-family: Jost;
+    text-align: left;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+.productCheckout{
+    display:flex;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.CheckoutConten{
+    writing-mode: horizontal-tb;
+    -webkit-writing-mode: horizontal-tb;
+    -ms-writing-mode: horizontal-tb;
+}
+.CheckoutTitle,.CheckoutQty,.CheckoutPrice{
+    font-size: 1.5rem;
+    font-family: Jost;
+    color: #000000;
+}
+.totalCheckOut12 {
+    text-align: right;
+    font-size: 2rem;
+    font-family: Jost;
+    color: rgb(232, 82, 82);
+    margin-right: 50px;
+}
+.App-checkout{
+    margin-top: 50px;
+}
+.checkout-bill{
+    text-align: right;
+    padding: 20px;
+}
+.Submit-bill{
+    background-color: rgb(28, 25, 229);
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+}
