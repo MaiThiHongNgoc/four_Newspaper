@@ -20,6 +20,9 @@ import Footer from "./Component/Footer/Footer";
 import Blogs2 from "./pages/Blogs/Blog2";
 import Blogs3 from "./pages/Blogs/Blog3";
 import Register2 from "./pages/Registernow/Register2";
+import Bill from "./Bill/Bill.jsx";
+import PrivateRoute from "./PrivateRoute.js";
+import Logout from "./Logout.js";
 // import Register from "./pageis/Register/Register";
 function App() {
 
@@ -40,14 +43,16 @@ function App() {
           <Route path='/Register2' element={<Register2 />} />
           <Route path='/Menu' element={<Menu />} />
           <Route path='/AboutUs' element={<AboutUs />} />
-          <Route path='/Pages' element={<PagesWithTooltip />}>
+          <Route path='/Pages' element={<Pages />}>
           </Route>
           <Route path='/Blogs/blog3' element={<Blogs3 />} />
           <Route path='/Blogs/blog2' element={<Blogs2 />} />
           <Route path='/Blogs' element={<Blogs />} />
           <Route path='/ViewCart' element={<ViewCart />} />
-          <Route path='/CheckOut' element={<CheckOut />} />
+          <Route path='/CheckOut' element={<PrivateRoute> <CheckOut /></PrivateRoute>} />
           <Route path='/Wishlist' element={<Wishlist />} />
+          <Route path="/Bill" element={<Bill/>}/>
+          <Route path="/Logout" element={<Logout/>} />
           {/* <Route path='/Register' element={<Register />} /> */}
         </Routes>
         <Footer/>
@@ -55,29 +60,6 @@ function App() {
     </div>
   );
 }
-
-
-function PagesWithTooltip() {
-  const [showTooltip, setShowTooltip] = useState(false);
-
-  return (
-    // <div onMouseEnter={() => setShowTooltip(true)} onMouseLeave={() => setShowTooltip(false)}>
-    <div onMouseEnter={() => { setShowTooltip(true); console.log('Mouse Enter'); }} onMouseLeave={() => { setShowTooltip(false); console.log('Mouse Leave'); }}>
-
-      <Pages />
-      {/* {showTooltip && (
-            <div className="tooltip">
-              <div className={`tooltip-content ${showTooltip ? 'show' : ''}`}>
-                <Link to="/Pages/contact-us">Contact Us</Link>
-                <Link  to="/Pages/contact-us" >About Us</Link>
-              </div>
-           </div>
-      )} */}
-    </div>
-  );
-}
-
-
 
 export default App;
 

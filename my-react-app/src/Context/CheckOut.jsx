@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './CheckOut.scss';
-import { useShoppingContext } from './ShoppingContext';
-import { formatCurrency } from '../helpers/common';
+import { useShoppingContext } from './ShoppingContext.jsx';
+import { formatCurrency } from '../helpers/common.js';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
+import BillPage from '../Bill/Bill.jsx';
+import { Link } from 'react-router-dom';
 
 function CheckOut() {
     const { cartItems, totalPrice} = useShoppingContext();
@@ -162,6 +164,11 @@ function CheckOut() {
     />
   </div>
     </PayPalScriptProvider>
+            <div className='checkout-bill'>
+            <Link to="/Bill" className="Submit-bill">
+                        Submit
+              </Link>
+            </div>
             </form>
             <div className="order-summary1">
                 {cartItems.map(item => (

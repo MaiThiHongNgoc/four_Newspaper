@@ -9,7 +9,7 @@ import { formatCurrency } from '../../../helpers/common';
 import CartIcon from '../CartIcon';
 import Search from '../../../pages/Search/Search';
 import Register from '../../../pages/Register/Register';
-
+import { LuLogOut } from "react-icons/lu";
 const Header2 = () => {
     const { cartItems, cartQty, totalPrice } = useShoppingContext()
 
@@ -35,6 +35,7 @@ const Header2 = () => {
                     <CartIcon/>
                     {/* <span>{cartQty} items</span> */}
                 </div>
+                <div className='icon-out'> <Link to="/Logout"><LuLogOut /></Link></div>
                 </div>
         </div>
     );
