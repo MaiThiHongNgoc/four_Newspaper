@@ -32,6 +32,8 @@ class BillPage extends React.Component {
         <button onClick={() => this.addItem('Item 1', 10)}>Add Item 1</button>
         <button onClick={() => this.addItem('Item 2', 20)}>Add Item 2</button>
         {/* Add more buttons for additional items */}
+
+        
       </div>
     );
   }
