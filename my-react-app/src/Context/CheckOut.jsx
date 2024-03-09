@@ -5,6 +5,7 @@ import { formatCurrency } from '../helpers/common.js';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 import BillPage from '../Bill/Bill.jsx';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function CheckOut() {
     const { cartItems, totalPrice} = useShoppingContext();
@@ -22,8 +23,9 @@ function CheckOut() {
         saveInfo: false
     });
     const [paymentInfo, setPaymentInfo] = useState({
-        paymentMethod: ''
+        paymentMethod: 'paypal'
     });
+    const navigate = useNavigate();
 
     const handleContactChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -54,6 +56,9 @@ function CheckOut() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Xử lý logic khi người dùng nhấn nút "Submit" ở đây
+        if (paymentInfo.paymentMethod === 'cod'){
+            navigate('/Bill');
+        }
     };
 
     return (
@@ -140,6 +145,31 @@ function CheckOut() {
                 <h2>Payment</h2>
                 <p className='Checkoutp1'>All transactions are secure and encrypted.</p>
                 {/* Thêm phương thức thanh toán tại đây khi có thể */}
+                 
+                 <div className='payment-methods'>
+                    <label>
+                    <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="paypal"
+                            checked={paymentInfo.paymentMethod === 'paypal'}
+                            onChange={handlePaymentChange}
+                        />
+                        PayPal
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="cod"
+                            checked={paymentInfo.paymentMethod === 'cod'}
+                            onChange={handlePaymentChange}
+                        />
+                        Thanh toán khi nhận hàng
+                    </label>
+                 </div>
+
+
                 <PayPalScriptProvider options={{ "client-id": "AaBnf2BFQfhk9WnYPWUKaRwhZ7mhD-tIyoETQ_MGfW7Wp2rELB9L75eGu5QHigGTUTyMAVZ3BQxlvtww" }}>
                 <div className="App-checkout">
     <h1>Thanh toán bằng PayPal</h1>
