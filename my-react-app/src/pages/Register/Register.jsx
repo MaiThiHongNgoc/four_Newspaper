@@ -12,11 +12,8 @@ const Register = () => {
     const closeDropdown = () => setIsDropdownVisible(false);
 
     return (
-        <div className="login-destop">
-            <div className="login-gister" onClick={toggleDropdown}>
+            <div className="login-desktop" onClick={toggleDropdown}>
                 <VscAccount />
-            </div>
-
             {isDropdownVisible && (
                 <div className={`modal-overlay`}>
                     <div className="login-conten">
