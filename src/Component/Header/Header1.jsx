@@ -2,10 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Header.scss'
 import 'react-icons'
-import { IoIosSearch } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
-import { VscAccount } from "react-icons/vsc";
-import { MdOutlineShoppingBag } from "react-icons/md";
 import CartItem from '../../CartItem/CartItem';
 import { useShoppingContext } from '../../Context/ShoppingContext';
 import { formatCurrency } from '../../helpers/common';

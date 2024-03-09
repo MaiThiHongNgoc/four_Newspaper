@@ -1,40 +1,98 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Bill.scss'
 
-class BillPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [],
-      total: 0
-    };
-    this.addItem = this.addItem.bind(this);
-  }
+const BillPage =()=>{
+  const [customerInfo, setCustomerInfo] = useState({
+    name: '',
+    email: '',
+    address: '',
+  });
 
-  addItem(title, price) {
-    const newItem = { title, price };
-    this.setState(prevState => ({
-      items: [...prevState.items, newItem],
-      total: prevState.total + price
-    }));
-  }
+  const [products, setProducts] = useState([]);
 
-  render() {
-    return (
-      <div className='Bill'>
-        <h1>Bill</h1>
-        <ul>
-          {this.state.items.map((item, index) => (
-            <li key={index}>{item.title}: ${item.price}</li>
-          ))}
-        </ul>
-        <p>Total: ${this.state.total}</p>
-        <button onClick={() => this.addItem('Item 1', 10)}>Add Item 1</button>
-        <button onClick={() => this.addItem('Item 2', 20)}>Add Item 2</button>
-        {/* Add more buttons for additional items */}
+  const handleCustomerInfoChange = (e) => {
+    const { name, value } = e.target;
+    setCustomerInfo({ ...customerInfo, [name]: value });
+
+
+
+    // hello comment
+  };
+
+  const handleAddProduct = () => {
+    setProducts([...products, { name: '', price: 0 }]);
+  };
+
+  const handleProductChange = (index, e) => {
+    const { name, value } = e.target;
+    const newProducts = [...products];
+    newProducts[index][name] = value;
+    setProducts(newProducts);
+  };
+
+  const handleRemoveProduct = (index) => {
+    const newProducts = [...products];
+    newProducts.splice(index, 1);
+    setProducts(newProducts);
+  };
+
+  return (
+    <div className='Bill'>
+      <h1>Hóa Đơn</h1>
+      <div>
+        <h2>Thông Tin Khách Hàng</h2>
+        <input
+          type="text"
+          name="name"
+          placeholder="Tên"
+          value={customerInfo.name}
+          onChange={handleCustomerInfoChange}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={customerInfo.email}
+          onChange={handleCustomerInfoChange}
+        />
+        <textarea
+          name="address"
+          placeholder="Địa chỉ"
+          value={customerInfo.address}
+          onChange={handleCustomerInfoChange}
+        ></textarea>
       </div>
-    );
-  }
+      <div>
+        <h2>Sản Phẩm</h2>
+        {products.map((product, index) => (
+          <div key={index}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Tên sản phẩm"
+              value={product.name}
+              onChange={(e) => handleProductChange(index, e)}
+            />
+            <input
+              type="number"
+              name="price"
+              placeholder="Giá"
+              value={product.price}
+              onChange={(e) => handleProductChange(index, e)}
+            />
+            <button onClick={() => handleRemoveProduct(index)}>Xóa</button>
+          </div>
+        ))}
+        <button onClick={handleAddProduct}>Thêm Sản Phẩm</button>
+      </div>
+      <div>
+        <h2>Tổng Cộng:</h2>
+        <p>
+          {products.reduce((total, product) => total + parseFloat(product.price), 0)} VND
+        </p>
+      </div>
+    </div>
+  );
 }
 
 export default BillPage;
