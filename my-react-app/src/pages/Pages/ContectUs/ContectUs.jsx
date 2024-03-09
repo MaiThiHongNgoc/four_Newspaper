@@ -85,19 +85,18 @@ const ContectUs = () => {
 
             </div>
 
-            <div className="Contect-map">
             
-                 <GoogleMapReact
-                    bootstrapURLKeys={{ key: 'YOUR_API_KEY' }} // Thay YOUR_API_KEY bằng API key của bạn
-                    defaultCenter={{ lat: 10.8231, lng: 106.6297 }} // Tọa độ mặc định của bản đồ
-                   defaultZoom={12} // Zoom mặc định của bản đồ
-                 >
-               <MapComponent
-                  lat={10.8231}
-                  lng={106.6297}
-                  text="Đây là vị trí của bạn"
-               />
-                 </GoogleMapReact>
+            
+            <div className="ContactUs-map">
+                 <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0969490731823!2d105.77971427343383!3d21.028806487780436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b32b842a37%3A0xe91a56573e7f9a11!2zOGEgVMO0biBUaOG6pXQgVGh1eeG6v3QsIE3hu7kgxJDDrG5oLCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSAxMDAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1710004422263!5m2!1svi!2s" 
+                     width="600"
+                     height="900"
+                     style={{ border: 0 }}
+                     allowFullScreen=""
+                     loading="lazy">
+                 </iframe>
+     
             </div>
 
         </div>

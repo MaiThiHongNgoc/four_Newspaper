@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 function CheckOut() {
-    const { cartItems, totalPrice} = useShoppingContext();
+    const { cartItems, totalPrice, placeOrder, setOrderStatus} = useShoppingContext();
     const [contactInfo, setContactInfo] = useState({
         emailOrPhone: '',
         emailOffers: false
@@ -52,12 +52,37 @@ function CheckOut() {
             [name]: value
         }));
     };
+    const {updateCustomerInfo} = useShoppingContext();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         // Xử lý logic khi người dùng nhấn nút "Submit" ở đây
-        if (paymentInfo.paymentMethod === 'cod'){
-            navigate('/Bill');
+
+        //tiến hành thanh toán dựa trên phương thức được chọn
+        updateCustomerInfo({
+            name: deliveryInfo.firstName + ' ' + deliveryInfo.lastName, // Ví dụ, tùy chỉnh theo cấu trúc của bạn
+            email: contactInfo.emailOrPhone, // Giả sử emailOrPhone chứa email
+            address: deliveryInfo.address + ', ' + deliveryInfo.city + ', ' + deliveryInfo.zipCode
+        });
+        
+        if (paymentInfo.paymentMethod === 'cod') {
+            // Ví dụ: Lưu thông tin đơn hàng vào cơ sở dữ liệu (nếu cần)
+            // Sau đó chuyển hướng đến trang Hóa đơn/Thank You Page
+            const orderDetails = {
+                contactInfo,
+                deliveryInfo,
+                cartItems,
+                totalPrice,
+            };
+            // Lưu orderDetails vào cơ sở dữ liệu hoặc state quản lý (tùy thuộc vào yêu cầu)
+            // Giả định chúng ta đã lưu và có id của đơn hàng là '12345'
+            //cập nhập trạng thái đơn hàng
+            setOrderStatus("Pending");
+            // tiến hành đặt hàng
+            placeOrder();
+
+            navigate('/Bill', { state: { orderDetails } }); // Chuyển hướng người dùng cùng với chi tiết đơn hàng
+            //clearCart(); // Xóa giỏ hàng sau khi chuyển hướng
         }
     };
 
@@ -194,11 +219,9 @@ function CheckOut() {
     />
   </div>
     </PayPalScriptProvider>
-            <div className='checkout-bill'>
-            <Link to="/Bill" className="Submit-bill">
-                        Submit
-              </Link>
-            </div>
+                <div className='checkout-bill'>
+                    <button type="submit" className="Submit-bill">Submit</button>
+                </div>
             </form>
             <div className="order-summary1">
                 {cartItems.map(item => (

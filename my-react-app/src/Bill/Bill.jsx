@@ -1,99 +1,58 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { useShoppingContext } from '../Context/ShoppingContext';
+import { formatCurrency } from '../helpers/common';
 import './Bill.scss'
 
-const BillPage =()=>{
-  const [customerInfo, setCustomerInfo] = useState({
-    name: '',
-    email: '',
-    address: '',
-  });
+const BillPage = () => {
+  const { cartItems, totalPrice, customerInfo, orders } = useShoppingContext();
+  console.log(orders);
 
-  const [products, setProducts] = useState([]);
+  // Lấy đơn hàng cuối cùng từ danh sách đơn hàng
+  const currentOrder = orders[orders.length - 1];
 
-  const handleCustomerInfoChange = (e) => {
-    const { name, value } = e.target;
-    setCustomerInfo({ ...customerInfo, [name]: value });
-
-
-
-    // hello comment
-  };
-
-  const handleAddProduct = () => {
-    setProducts([...products, { name: '', price: 0 }]);
-  };
-
-  const handleProductChange = (index, e) => {
-    const { name, value } = e.target;
-    const newProducts = [...products];
-    newProducts[index][name] = value;
-    setProducts(newProducts);
-  };
-
-  const handleRemoveProduct = (index) => {
-    const newProducts = [...products];
-    newProducts.splice(index, 1);
-    setProducts(newProducts);
+  // Kiểm tra xem có đơn hàng hiện tại không và hiển thị chi tiết nếu có
+  const renderOrderDetails = () => {
+    if (currentOrder) {
+      return (
+        <div className='bill-conten'>
+          <h2 className='bill-h2'>Order Details</h2>
+          <p className='bill-p'>Order ID: {currentOrder.id}</p>
+          <p className='bill-p'>Order Date: {new Date(currentOrder.date).toLocaleString()}</p>
+          <p className='bill-p'>Order Status: {currentOrder.status}</p>
+          <h3 className='bill-h3'>Customer Information</h3>
+          <p className='bill-p'>Name: {currentOrder.customer.name}</p>
+          <p className='bill-p'>Email: {currentOrder.customer.email}</p>
+          <p className='bill-p'>Address: {currentOrder.customer.address}</p>
+          <h3 className='bill-h3'>Items Purchased</h3>
+          {currentOrder.items.map((item, index) => (
+            <div key={index} className='item-bill'>
+              <p  className='bill-p'>{item.title} (Qty: {item.qty}) - {formatCurrency(item.price * item.qty)}</p>
+            </div>
+          ))}
+          <div className='total-price-bill'>
+            <h3 className='bill-price'>Total Price</h3>
+            <p className='bill-p-price'>{formatCurrency(currentOrder.total)}</p>
+          </div>
+        </div>
+      );
+    } else {
+      return <p  className='bill-p-fail'>No order found.</p>;
+    }
   };
 
   return (
     <div className='Bill'>
-      <h1>Hóa Đơn</h1>
-      <div>
-        <h2>Thông Tin Khách Hàng</h2>
-        <input
-          type="text"
-          name="name"
-          placeholder="Tên"
-          value={customerInfo.name}
-          onChange={handleCustomerInfoChange}
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={customerInfo.email}
-          onChange={handleCustomerInfoChange}
-        />
-        <textarea
-          name="address"
-          placeholder="Địa chỉ"
-          value={customerInfo.address}
-          onChange={handleCustomerInfoChange}
-        ></textarea>
+       <div className='shipping-status'>
+        <h2 className='Bill-title'>Shipping Status</h2>
+        {/* Hiển thị trạng thái của đơn hàng hiện tại */}
+        <p className='shipping-status-text'>{currentOrder ? currentOrder.status : 'No order found'}</p>
       </div>
-      <div>
-        <h2>Sản Phẩm</h2>
-        {products.map((product, index) => (
-          <div key={index}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Tên sản phẩm"
-              value={product.name}
-              onChange={(e) => handleProductChange(index, e)}
-            />
-            <input
-              type="number"
-              name="price"
-              placeholder="Giá"
-              value={product.price}
-              onChange={(e) => handleProductChange(index, e)}
-            />
-            <button onClick={() => handleRemoveProduct(index)}>Xóa</button>
-          </div>
-        ))}
-        <button onClick={handleAddProduct}>Thêm Sản Phẩm</button>
-      </div>
-      <div>
-        <h2>Tổng Cộng:</h2>
-        <p>
-          {products.reduce((total, product) => total + parseFloat(product.price), 0)} VND
-        </p>
-      </div>
+      
+      {/* Hiển thị chi tiết đơn hàng */}
+      {renderOrderDetails()}
     </div>
   );
-}
+};
 
 export default BillPage;
 

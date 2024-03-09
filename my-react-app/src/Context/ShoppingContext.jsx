@@ -4,9 +4,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 const ShoppingContext = createContext({});
 
 // Custom hook để sử dụng context
-export const useShoppingContext = () => {
-    return useContext(ShoppingContext);
-};
+export const useShoppingContext = () => useContext(ShoppingContext);
 
 // Component Provider
 export const ShoppingContextProvider = ({ children }) => {
@@ -15,80 +13,68 @@ export const ShoppingContextProvider = ({ children }) => {
         return jsonCartData ? JSON.parse(jsonCartData) : [];
     });
 
+    const [customerInfo, setCustomerInfo] = useState({ name: 'hongngoc', email: 'hongngoc200509@gmail.com', address: 'ninh binh' });
+    const [orders, setOrders] = useState([]);
+    const [orderStatus, setOrderStatus] = useState(""); // Thêm state để lưu trạng thái đơn hàng
+     
     useEffect(() => {
-        // Lưu trữ dữ liệu vào localStorage mỗi khi cartItems thay đổi
         localStorage.setItem('shopping_cart', JSON.stringify(cartItems));
-
-        // Thêm sự kiện để lưu trữ sản phẩm khi người dùng thoát trang
-        const handleBeforeUnload = () => {
-            localStorage.setItem('shopping_cart', JSON.stringify(cartItems));
-        };
-        window.addEventListener('beforeunload', handleBeforeUnload);
-
-        // Cleanup handler khi component bị unmount
-        return () => {
-            window.removeEventListener('beforeunload', handleBeforeUnload);
-        };
     }, [cartItems]);
 
     const cartQty = cartItems.reduce((qty, item) => qty + item.qty, 0);
+    const totalPrice = cartItems.reduce((total, item) => total + item.price * item.qty, 0);
 
-    const totalPrice = cartItems.reduce((total, item) => total + item.qty * item.price, 0);
-
-    const increaseQty = (id) => {
-        const currentCartItem = cartItems.find(item => item.id === id);
-        if (currentCartItem) {
-            const newItems = cartItems.map(item => {
-                if (item.id === id) {
-                    return { ...item, qty: item.qty + 1 };
-                } else {
-                    return item;
-                }
-            });
-            setCartItems(newItems);
-        }
+    const updateCustomerInfo = (info) => {
+        setCustomerInfo(info);
     };
 
-    const decreaseQty = (id) => {
-        const currentCartItem = cartItems.find(item => item.id === id);
-        if (currentCartItem) {
-            if (currentCartItem.qty === 1) {
-                removeCartItem(id);
-            } else {
-                const newItems = cartItems.map(item => {
-                    if (item.id === id) {
-                        return { ...item, qty: item.qty - 1 };
-                    } else {
-                        return item;
-                    }
-                });
-                setCartItems(newItems);
+    const placeOrder = () => {
+        const newOrder = {
+            id: orders.length + 1,
+            items: cartItems,
+            customer: customerInfo,
+            total: totalPrice,
+            date: new Date().toISOString(),
+            status:orderStatus
+        };
+        setOrders([...orders, newOrder]);
+        // Xóa giỏ hàng sau khi đặt hàng
+        setCartItems([]);
+    };
+
+    const updateOrderStatus = (orderId, newStatus) => {
+        setOrders(orders.map(order => {
+            if (order.id === orderId) {
+                return { ...order, status: newStatus };
             }
-        }
+            return order;
+        }));
     };
 
     const addCartItem = (product) => {
-        if (product) {
-            const currentCartItem = cartItems.find(item => item.id === product.id);
-            if (currentCartItem) {
-                const newItems = cartItems.map(item => {
-                    if (item.id === product.id) {
-                        return { ...item, qty: item.qty + 1 };
-                    } else {
-                        return item;
-                    }
-                });
-                setCartItems(newItems);
-            } else {
-                const newItem = { ...product, qty: 1 };
-                setCartItems([...cartItems, newItem]);
-            }
+        const existingItem = cartItems.find(item => item.id === product.id);
+        if (existingItem) {
+            setCartItems(cartItems.map(item => item.id === product.id ? { ...item, qty: item.qty + 1 } : item));
+        } else {
+            setCartItems([...cartItems, { ...product, qty: 1 }]);
         }
     };
 
     const removeCartItem = (id) => {
-        const newItems = cartItems.filter(item => item.id !== id);
-        setCartItems(newItems);
+        setCartItems(cartItems.filter(item => item.id !== id));
+    };
+
+    const increaseQty = (id) => {
+        setCartItems(cartItems.map(item => item.id === id ? { ...item, qty: item.qty + 1 } : item));
+    };
+
+    const decreaseQty = (id) => {
+        setCartItems(cartItems.map(item => {
+            if (item.id === id) {
+                return item.qty > 1 ? { ...item, qty: item.qty - 1 } : item;
+            }
+            return item;
+        }).filter(item => item.qty !== 0));
     };
 
     const clearCart = () => {
@@ -105,7 +91,13 @@ export const ShoppingContextProvider = ({ children }) => {
                 decreaseQty,
                 addCartItem,
                 removeCartItem,
-                clearCart
+                clearCart,
+                updateCustomerInfo,
+                placeOrder,
+                updateOrderStatus,
+                orders,
+                orderStatus,
+                setOrderStatus
             }}
         >
             {children}
