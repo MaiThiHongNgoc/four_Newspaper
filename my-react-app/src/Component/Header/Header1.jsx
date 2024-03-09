@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import './Header.scss'
 import 'react-icons'
@@ -12,6 +12,30 @@ import Register from '../../pages/Register/Register';
 import { LuLogOut } from "react-icons/lu";
 const Header = () => {
     const { cartItems, cartQty, totalPrice } = useShoppingContext()
+    const [isMenuVisible, setIsMenuVisible] = useState(false);
+    const [currentCategory, setCurrentCategory] = useState('');
+    const [currentProduct, setCurrentProduct] = useState([]);
+    const products = {
+        Juice: [ {name:'- Vegetable Juice', path:'/VegetableJuice' },
+        {name: "- Juice", path:'/Juice'}], // Bạn có thể thêm một số sản phẩm mẫu vào đây để kiểm tra
+        Protein: [{path:'/Protein'}],
+        Smoothies: [{path:'/Smoothies'}],
+    };
+
+    const handleMouseEnter = (category) => {
+        setCurrentCategory(category);
+        setCurrentProduct(products[category]);
+        setIsMenuVisible(true);
+      };
+    
+      const handleMouseLeave = () => {
+        setIsMenuVisible(false);
+      };
+    
+      const handleMenuItemClick = (product) => {
+        // Xử lý hành động khi người dùng chọn nước uống, ví dụ: chuyển hướng đến trang chi tiết sản phẩm
+        console.log('Selected product:', product);
+      };
     return (
         <div className='header-container'>
             <div className="logo-header">
@@ -19,7 +43,25 @@ const Header = () => {
             </div>
             <div className="navbar-header">
                 <div className="navbar-header-home"> <Link to="/">HOME</Link></div>
-                <div className="navbar-header-menu"> <Link to="/Menu">MENU</Link></div>
+                <div className="navbar-header-menu">
+          <Link to="/Menu" onMouseEnter={() => setIsMenuVisible(true)} onMouseLeave={() => setIsMenuVisible(false)}>MENU</Link>
+          {isMenuVisible && (
+            <div className="dropdown-content" onMouseEnter={() => setIsMenuVisible(true)} onMouseLeave={() => setIsMenuVisible(false)}>
+              {Object.entries(products).map(([category, items], index) => (
+                <div key={category} className="menu-category">
+                  <strong>{category}</strong>
+                  <ul>
+                    {items.map((item, idx) => (
+                      <li key={item.name} >
+                          <Link to={item.path} onClick={() => setIsMenuVisible(false)}>{item.name}</Link>
+                        </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
                 <div className="navbar-header-shop"> <Link to="/AboutUs">ABOUT</Link></div>
                 <div className="navbar-header-pages"> <Link to="/Pages">CONTACT</Link></div>
                 <div className="navbar-header-blogs"> <Link to="/Blogs">BLOGS</Link></div>

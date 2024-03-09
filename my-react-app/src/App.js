@@ -4,7 +4,6 @@ import './App.css'
 
 
 import Home from "./pages/Home/Home";
-import Menu from "./pages/Menu/Menu";
 import AboutUs from "./pages/Shop/AboutUs";
 import Pages from "./pages/Pages/Pages";
 import Blogs from "./pages/Blogs/Blogs";
@@ -23,6 +22,10 @@ import Register2 from "./pages/Registernow/Register2";
 import Bill from "./Bill/Bill.jsx";
 import PrivateRoute from "./PrivateRoute.js";
 import Logout from "./Logout.js";
+import Smoothies from "./pages/Menu/Smoothies/Smoothies.jsx"
+import Juice from "./pages/Menu/Juice/Juice.jsx"
+import Protein from "./pages/Menu/Protein/Protein.jsx"
+import VegetableJuice from "./pages/Menu/Vegetable Juice/VegetableJuice.jsx"
 // import Register from "./pageis/Register/Register";
 function App() {
 
@@ -41,7 +44,14 @@ function App() {
             
           </Route>
           <Route path='/Register2' element={<Register2 />} />
-          <Route path='/Menu' element={<Menu />} />
+
+
+          <Route path='/Smoothies' element={<Smoothies />} />
+          <Route path='/Juice' element={<Juice />} />
+          <Route path='/Protein' element={<Protein />} />
+          <Route path='/VegetableJuice' element={<VegetableJuice />} />
+
+
           <Route path='/AboutUs' element={<AboutUs />} />
           <Route path='/Pages' element={<Pages />}>
           </Route>
