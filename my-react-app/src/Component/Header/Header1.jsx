@@ -18,8 +18,8 @@ const Header = () => {
     const products = {
         Juice: [ {name:'- Vegetable Juice', path:'/VegetableJuice' },
         {name: "- Juice", path:'/Juice'}], // Bạn có thể thêm một số sản phẩm mẫu vào đây để kiểm tra
-        Protein: [{path:'/Protein'}],
-        Smoothies: [{path:'/Smoothies'}],
+        Protein: [{name:'Protein',path:'/Protein'}],
+        Smoothies: [{name:'Smoothies',path:'/Smoothies'}],
     };
 
     const handleMouseEnter = (category) => {

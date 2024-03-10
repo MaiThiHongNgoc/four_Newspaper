@@ -105,9 +105,6 @@
 .menu-category strong {
     color: #333; /* Màu chữ cho tiêu đề của từng danh mục */
     cursor:pointer ;
-    &:hover{
-        color: #58B720;
-    }
 }
 
 .menu-category ul {
