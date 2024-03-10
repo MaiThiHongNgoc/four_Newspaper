@@ -66,4 +66,23 @@
     color: #f00;
     text-align: center;
   }
+
+  .bill-icon{
+    display:flex;
+  }
+  .load-bill,.cook-bill,.bike-bill{
+    display:flex;
+    flex-direction: column;
+    height: 100px;
+  }
+  .bill-icon-1{
+    width: 40px;
+    height: 40px;
+    color: #58B720;
+    text-align: center;
+    
+  }
+  .load-bill-p{
+    margin: 10px;
+  }
   

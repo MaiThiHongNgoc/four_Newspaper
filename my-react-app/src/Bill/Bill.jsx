@@ -2,6 +2,11 @@ import React from 'react';
 import { useShoppingContext } from '../Context/ShoppingContext';
 import { formatCurrency } from '../helpers/common';
 import './Bill.scss'
+// import { PiArrowFatLinesRightLight } from "react-icons/pi";
+import { MdOutlineDownloadDone } from "react-icons/md";
+import { PiCookingPotFill } from "react-icons/pi";
+import { FaMotorcycle } from "react-icons/fa6";
+import { IoHome } from "react-icons/io5";
 
 const BillPage = () => {
   const { cartItems, totalPrice, customerInfo, orders } = useShoppingContext();
@@ -15,10 +20,20 @@ const BillPage = () => {
     if (currentOrder) {
       return (
         <div className='bill-conten'>
+          <h2 className='bill-h2'>Order Status: {currentOrder.status}</h2>
+          <div className='bill-icon'>
+            <div className='load-bill'><MdOutlineDownloadDone className='bill-icon-1'/> <p className='load-bill-p'>The order has been processed.</p></div>
+          {/* <PiArrowFatLinesRightLight className='icon-bill-2'/> */}
+          <div className='cook-bill'><PiCookingPotFill className='bill-icon-1'/><p className='cook-bill-p'>The seller is preparing.</p></div>
+          {/* <PiArrowFatLinesRightLight /> */}
+          <div className='bike-bill'><FaMotorcycle className='bill-icon-1'/> <p className='bike-bill-p'>On the way to deliver to you.</p></div>
+          {/* <PiArrowFatLinesRightLight /> */}
+          <div className='home-bill'><IoHome className='bill-icon-1'/></div>
+          </div>
+           
           <h2 className='bill-h2'>Order Details</h2>
           <p className='bill-p'>Order ID: {currentOrder.id}</p>
           <p className='bill-p'>Order Date: {new Date(currentOrder.date).toLocaleString()}</p>
-          <p className='bill-p'>Order Status: {currentOrder.status}</p>
           <h3 className='bill-h3'>Customer Information</h3>
           <p className='bill-p'>Name: {currentOrder.customer.name}</p>
           <p className='bill-p'>Email: {currentOrder.customer.email}</p>
