@@ -84,5 +84,11 @@ export const dataProduct = [
     title: "Green grapes juice",
     price :59.00
     },
+    {
+        id:16,
+        img: "https://desero-store-demo.myshopify.com/cdn/shop/products/14.1.png?v=1656902680",
+        title: "Apple Smoothie",
+        price :50.00
+        },
 
 ]

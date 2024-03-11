@@ -43,7 +43,7 @@ const Header2 = () => {
             <div className="navbar-header">
                 <div className="navbar-header-home"> <Link to="/">HOME</Link></div>
                 <div className="navbar-header-menu">
-          <Link to="/Menu" >MENU</Link>
+          <Link  >MENU</Link>
           {/* {isMenuVisible && (
             <div className="dropdown-content" onMouseEnter={() => setIsMenuVisible(true)} onMouseLeave={() => setIsMenuVisible(false)}>
               {Object.entries(products).map(([category, items], index) => (
