@@ -29,13 +29,17 @@ export const ShoppingContextProvider = ({ children }) => {
     };
 
     const placeOrder = () => {
+        const deliveryTime = new Date(); // Lấy thời gian hiện tại
+        deliveryTime.setMinutes(deliveryTime.getMinutes() + 60); // Thêm 60 phút để tính toán thời gian giao hàng
+
         const newOrder = {
             id: orders.length + 1,
             items: cartItems,
             customer: customerInfo,
             total: totalPrice,
             date: new Date().toISOString(),
-            status:orderStatus
+            status:orderStatus,
+            deliveryTime: deliveryTime.toISOString() // Thêm thời gian giao hàng dự kiến vào đơn hàng
         };
         setOrders([...orders, newOrder]);
         // Xóa giỏ hàng sau khi đặt hàng

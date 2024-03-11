@@ -34,6 +34,10 @@ const BillPage = () => {
           <h2 className='bill-h2'>Order Details</h2>
           <p className='bill-p'>Order ID: {currentOrder.id}</p>
           <p className='bill-p'>Order Date: {new Date(currentOrder.date).toLocaleString()}</p>
+          {/* Thêm hiển thị thời gian giao hàng dự kiến */}
+          {currentOrder.deliveryTime && (
+            <p className='bill-p'>Estimated Delivery Time: {new Date(currentOrder.deliveryTime).toLocaleString()}</p>
+          )}
           <h3 className='bill-h3'>Customer Information</h3>
           <p className='bill-p'>Name: {currentOrder.customer.name}</p>
           <p className='bill-p'>Email: {currentOrder.customer.email}</p>
