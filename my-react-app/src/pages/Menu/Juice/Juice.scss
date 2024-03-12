@@ -22,14 +22,53 @@
     margin-bottom: 50px;
     margin-top: 30px;
   }
-  .juice-navbar a{
+  .juice-navbar1.hover,
+  .juice-navbar2.hover,
+  .juice-navbar3.hover,
+  .juice-navbar4.hover{
+    color: #58B720;
+  }
+  .juice-navbar1{
     text-decoration: none;
     color: #000000;
     font-family: Jost;
     font-size: 30px;
     padding-left: 20px;
     padding-top: 20px;
-    &:hover{ 
+    &:hover{
+        color: #58B720;
+    }
+  }
+  .juice-navbar2{
+    text-decoration: none;
+    color: #000000;
+    font-family: Jost;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    &:hover{
+        color: #58B720;
+    }
+  }
+  .juice-navbar3{
+    text-decoration: none;
+    color: #000000;
+    font-family: Jost;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    &:hover{
+        color: #58B720;
+    }
+  }
+  .juice-navbar4{
+    text-decoration: none;
+    color: #000000;
+    font-family: Jost;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    &:hover{
         color: #58B720;
     }
   }
