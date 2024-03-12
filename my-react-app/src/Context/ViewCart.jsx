@@ -46,7 +46,7 @@ const ViewCart = () => {
                 <tbody>
                     {cartItems.map(item => (
                         <tr key={item.id}>
-                            <td><img src={item.img} className="img-fluid rounded" alt={item.title} /></td>
+                            {/* <td><img src={item.img} className="img-fluid rounded" alt={item.title} /></td> */}
                             <td>{item.title}</td>
                             <td>{formatCurrency(item.price)}</td>
                             <td>

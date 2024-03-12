@@ -3,11 +3,15 @@ import { Link } from 'react-router-dom'
 import { dataProduct } from '../Data/Data';
 import { IoIosSearch } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
+import { useWishlistContext } from '../../../../../Wishlist/WishlistContext';
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { useShoppingContext } from '../../../../../Context/ShoppingContext';
+import Wishlist2 from '../../../../../Wishlist/Wishlist2';
+
 const NewArrivals = () => {  
     const [hoveredImg, setHoveredImg] = useState(null); // Sử dụng state để lưu trữ đường dẫn của ảnh khi hover
     const { addCartItem } = useShoppingContext(); // Destructure để lấy ra hàm addCartItem từ context
+    const {addWishlistItem}= useWishlistContext();
 
   return (
     <div>
@@ -24,7 +28,7 @@ const NewArrivals = () => {
                   <div className="icon1">
                   <IoIosSearch/>
                   </div>
-                  <div className="icon2">
+                  <div className="icon2" onClick={() =>addWishlistItem(product)}>
                   <CiHeart/>
                   </div>
                   <div className="icon3" onClick={() => addCartItem(product)}>
