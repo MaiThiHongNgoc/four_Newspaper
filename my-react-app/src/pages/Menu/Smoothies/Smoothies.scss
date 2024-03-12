@@ -1,0 +1,86 @@
+.Smoothies-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    margin: 0 auto;
+    width: 100%; // chiếm 4/5 màn hình
+    margin-top: 110px;
+    margin-bottom: 100px;
+  }
+  .Smoothies-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    right: 0;
+    width: 50%;
+    list-style: none;
+    padding-left: 30px;
+    left: 0;
+    border-radius: 3px;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+  .Smoothies-navbar a{
+    text-decoration: none;
+    color: #000000;
+    font-family: Jost;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    &:hover{
+        color: #58B720;
+    }
+  }
+  
+  .Smoothies-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; // Khoảng cách giữa các sản phẩm
+    width: 80%;
+    
+  }
+  
+  .Smoothies-card {
+    flex: 1 1 calc(33.333% - 20px); // Mỗi card sẽ chiếm 1/3 hàng và trừ đi khoảng cách
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  }
+  
+  .Smoothies-image {
+    width: 100%;
+    max-width: 250px; // Giới hạn kích thước ảnh
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .Smoothies-details {
+    text-align: center;
+    color:#58B720;
+    font-size: 1.2rem;
+  }
+  
+  .add-to-cart-button-Smoothies {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+  

@@ -55,9 +55,22 @@ export const dataProduct = [
     price :61.00
     },
     {
-    id:9,
+    id:10,
     img: "https://cdn.tgdd.vn/2021/08/CookRecipe/GalleryStep/thanh-pham-805.jpg", 
     title: "Squash juice",
     price :64.00
     },
+    {
+        id:11,
+        img: "https://ngaymoionline.com.vn/stores/news_dataimages/ngaymoionlinecomvn/052020/12/07/top-6-loai-nuoc-ep-rau-cu-giup-thoi-bay-nang-nong-ngay-he-06-.3140.jpg", 
+        title: "Carrot juice",
+        price :44.00
+        },
+        {
+            id:12,
+            img: "https://file.hstatic.net/200000342937/file/cac-loai-nuoc-ep-rau-cu-tot-cho-suc-khoe-1_092e88b43dae4de9a9869bb7f5efb603_grande.png", 
+            title: "Cabbage juice",
+            price :54.00
+            },
+            
 ]

@@ -19,6 +19,8 @@ const Juice = () => {
         <div className='juice-link-to'><Link to="/Protein">Protein</Link></div>
         <div className='juice-link-to'><Link to="/Smoothies">Smoothies</Link></div>
       </div>
+
+      
     
     <div className="juice-list">
     {dataProduct.map(product => (
