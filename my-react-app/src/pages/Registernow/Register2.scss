@@ -1,48 +1,49 @@
+/* Container for the registration form */
 .register-abc {
-    height: 530px;
+    height: 600px;
+    box-shadow: 0 4px 8px #95c066;
+    border-radius: 10px; /* Rounded corners for a softer look */
+    overflow: hidden; /* Ensures nothing spills out of the container */
+    width: 800px;
+    justify-content: center;
+    align-items: center;
 }
+
+/* Main container for the registration and login forms */
 .register-body {
-    width: 1519px;
+    width: 100%;
     height: 504px;
     display: flex;
-     
-    //justify-content: center;
-    //align-items: start;
+    justify-content: center;
+    margin-top: 80px;
 }
-.register-container,.regiter-login {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-left: 40px;
-    margin-right: 40px;
+
+/* Container for individual forms */
+.register-container, .register-login {
     flex: 1 1 500px;
-    max-width: 50%;
+    max-width: 100%;
 }
-.regisrer-2 {
-    width: 1488px;
-    height: 404px;
+
+/* Styling for registration and login form components */
+.register-2 {
+    width: 100%;
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
-    // text-align: center;
-    margin-right: -25px;
-    margin-left: -25px;
-    margin-bottom: 100px;
-    margin-top: 100px;
+    margin: 100px auto; /* Adjust margin for spacing */
+    margin-top: 110px; /* Additional margin-top for spacing */
+}
 
-}
 .register-col {
-    padding-top: 100px;
-    // width: 100%;
-    // position: relative;
+    padding-top: 100px; /* Additional padding-top for spacing */
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 0 15px;
 }
+
 .register-text {
-    width: 570px;
-    height: 20px;
-    font-size: 20px;
-    font-family: jost;
+    width: 100%;
+    font-size: 1.8rem;
+    font-family: Jost, sans-serif;
     text-decoration: uppercase;
     font-weight: 600;
     padding-bottom: 50px;
@@ -50,53 +51,46 @@
     line-height: 1.2;
     margin: 0;
 }
+
 .register-pencil {
     margin-right: 1rem;
 }
-.regiter-post {
-    width: 570px;
-    height: 235px;
+
+.register-post {
+    width: 100%;
+    height: 300px;
     margin-bottom: 0;
 }
+
 .register-group {
-    // width: 600px;
-    // height: 38px;
     margin-bottom: 1rem;
     display: flex;
+    height: 80px;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
 }
+
 .register-group-col {
-    // padding-top: 5px;
-    font-family: jost;
-    font-size: 16px;
+    font-family: Jost, sans-serif;
+    font-size: 1.4rem;
     font-weight: 500;
     cursor: pointer;
-    padding-top: calc(0.375rem + 1px);
-    padding-bottom: calc(0.375rem + 1px);
-    margin-bottom: 0;
+    padding: calc(0.375rem + 1px) ;
     flex: 0 0 25%;
     max-width: 25%;
-    padding-right: 15px;
-    padding-left: 15px;
-    display: inline-block;
-    flex: 1;
+    justify-content: space-between;
 }
+
 .register-label {
-    // width: 450px;
-    // height: 38px;
-    // flex: 0 0 75%;
     max-width: 75%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 0 15px;
     flex: 1;
 }
+
 .register-jsx {
-    font-family: Jost;
+    font-family: Jost, sans-serif;
     border: none;
     border-bottom: 1px solid #ccc;
-    border-radius: 0;
+    border-radius: 4px; /* Slightly rounded edges for inputs */
     width: 100%;
     height: calc(2.25rem + 2px);
     padding: 0.375rem 0.75rem;
@@ -107,13 +101,17 @@
     background-clip: padding-box;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     box-sizing: border-box;
+    height: 60px;
 }
+
 .register-center {
     text-align: center;
     margin-top: 3rem;
+    height: 60px;
 }
+
 .register-dark {
-    border-radius: 0;
+    border-radius: 4px; /* Slightly rounded edges for buttons */
     padding: 12px 40px;
     background-color: #111;
     text-transform: uppercase;
@@ -122,118 +120,229 @@
     overflow: hidden;
     border: none;
     letter-spacing: .2em;
-    font-size: 14px;
+    font-size: 1.3rem;
     font-weight: 400;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
     line-height: 1.5;
     font-family: inherit;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: background-color .3s ease; /* Smooth background color transition */
     display: block;
     width: max-content;
     margin: auto;
-
-}
-.register-dark:hover {
     cursor: pointer;
-    background-color: #95c066;
+    height: 100%;
 }
+
+.register-dark:hover {
+    background-color: #95c066; /* Lighter shade for hover state */
+}
+
 .register-forgot {
-    width: 570px;
+    width: 100%;
     height: 24px;
+    margin-top: 40px;
     text-align: center;
-    margin-top: -28px;
     display: flex;
-    justify-content: space-between; /* Căn các mục ở hai bên */
+    justify-content: space-between;
 }
-.register-app{
+
+.register-app {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1.2rem;
     color: #111;
-    display: block; /* Hiển thị dạng block để chiếm đầy bề rộng của container */
-    width: max-content; /* Chiều rộng phụ thuộc vào nội dung bên trong */
+    display: block;
+    width: max-content;
     margin: auto;
 }
-.register-app:hover{
+
+.register-app:hover {
     color: #95c066;
 }
-.regiter-nav {
+
+.register-nav {
     flex: 0 0 8.333333%;
     max-width: 8.333333%;
     width: 100%;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 550px;
+    padding: 0 15px;
 }
-.regiter-login {
-    position: absolute;
+
+/* Styling for login form container */
+.register-login {
     top: 0;
-    right: calc(3.33% - 10px); /* Đẩy div lên phía trên và nằm ở 1/3 bên phải */
-    // background-color: #f0f0f0;
+    right: calc(3.33% - 10px);
     padding: 10px;
     transform: translateY(24%);
     padding-top: 100px;
     flex: 0 0 41.666667%;
     max-width: 41.666667%;
-    // width: 100%;
-    // position: relative;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 0 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Rounded corners for a softer look */
+    overflow: hidden; /* Ensures nothing spills out of the container */
+    height: 600px;
+    margin-bottom: 100px;
 }
+
 .register-customer {
-    width: 570px;
-    height: 304px;
+    height: 600px;
+    box-shadow: 0 4px 8px #95c066;
+    border-radius: 10px;
+    width: 800px;
 }
+
 .register-title {
-    width: 570px;
-    height: 20px;
-    font-size: 20px;
-    font-family: jost;
+    font-size: 1.8rem;
+    font-family: Jost, sans-serif;
     text-decoration: uppercase;
     font-weight: 600;
     padding-bottom: 50px;
     text-align: center;
     line-height: 1.2;
     color: inherit;
-    margin: 0;
+    padding-top: 80px;
 }
-.register-methos {
-    width: 570px;
+
+.register-methods {
+    width: 100%;
     height: 235px;
     margin-bottom: 0;
 }
+
 .register-gost {
-    width: 570px;
+    width: 100%;
     height: 24px;
     margin-top: 1.5rem;
     justify-content: center;
     display: flex;
-    // justify-content: space-between; /* Căn các mục ở hai bên */
 }
+
 .register-leftx {
     padding-right: 0.5rem;
 }
-.register-return {
+
+.register-return, .register-cover {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1.2rem;
     color: #000;
-    display: block; /* Hiển thị dạng block để chiếm đầy bề rộng của container */
-    width: max-content; /* Chiều rộng phụ thuộc vào nội dung bên trong */
+    display: block;
+    width: max-content;
     margin: auto;
 }
-.register-return:hover {
+
+.register-return:hover, .register-cover:hover {
     color: #95c066;
 }
-.register-cover {
+
+.error-message {
+    color: #ff6b6b; /* More noticeable error color */
+    text-align: center; /* Center-align error messages */
+    margin-top: 20px; /* Space above the error message */
+}
+
+/* Container for the flipping effect */
+.flip-container {
+    perspective: 1000px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    transition: transform 0.6s;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(360deg);
+    position: absolute;
+    display: none;
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+}
+
+.flip-container.hover .flipper, .flip-container.flip .flipper {
+    transform: rotateY(180deg);
+}
+
+/* Styling for the flip control */
+.flip-control {
+    position: relative;
+    display: inline-block;
+    padding:10px 20px;
+    margin-top: 5px;
+    border: none;
+    cursor: pointer;
+    color: #58B720;
     text-decoration: none;
-    font-size: 14px;
-    color: #000;
-    display: block; /* Hiển thị dạng block để chiếm đầy bề rộng của container */
-    width: max-content; /* Chiều rộng phụ thuộc vào nội dung bên trong */
-    margin: auto;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    border: 2px solid #58B720;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    
 }
-.register-cover:hover {
-    color: #95c066;
+
+.flip-control::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid black;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100%;
+    margin-right: 15px;
+}
+
+.flip-control.flip::before {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+
+.app2{
+    margin-top: 150px;
+    margin-bottom: 100px;
+    text-align: center;
+    justify-content: center;
+}
+.app2-home{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #58B720;
+    &:hover{
+        color: #2b6609;
+    }
 }
