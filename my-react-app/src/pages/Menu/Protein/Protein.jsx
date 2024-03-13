@@ -13,11 +13,13 @@ const Protein = () => {
   const { addCartItem } = useShoppingContext();
   return (
     <div className="Protein-page">
-      <div className="Contect-header">
-             <div className="imgContectContainer">
-                 <img className='imgContect' src="https://desero-store-demo.myshopify.com/cdn/shop/files/about-heading.png?v=1657248139" alt="" />
-              </div>
+      
+        <div className="contect-title">
+          <div className="contect-name">
+            <h2 className="contect-h2">Products</h2>
+          </div>
         </div>
+      
       <div className='Protein-navbar'>
         <Link to="/VegetableJuice" className={activeLink === 'vegatablejuice' ? 'Protein-navbar1 hover' : 'Protein-navbar1'} onClick={() => handleLinkClick('vegatablejuice')}> Vegatable Juice</Link>
         <Link to="/Juice" className={activeLink === 'juice' ? 'Protein-navbar2 hover' : 'Protein-navbar2'} onClick={() => handleLinkClick('juice')}>Juice</Link>

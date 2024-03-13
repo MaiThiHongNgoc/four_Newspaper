@@ -1,3 +1,33 @@
+.contect-title {
+  background-image: url(https://desero-store-demo.myshopify.com/cdn/shop/files/about-heading.png?v=1657248139);
+  background-position: center;
+  background-size: cover;
+  padding: 150px 0;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+.contect-name {
+  width: 1519px;
+  height: 75px;
+}
+.contect-h2 {
+  font-size: 60px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: Jost;
+  position: relative;
+  color: #fff ;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  margin-top: 0;
+  display: block;
+  margin: 0 0 0.5rem;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+// trình sửa phần ảnh
+
 .Smoothies-page {
     display: flex;
     flex-direction: column;
