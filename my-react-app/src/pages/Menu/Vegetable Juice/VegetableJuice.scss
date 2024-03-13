@@ -22,7 +22,24 @@
     margin-bottom: 50px;
     margin-top: 30px;
   }
-  .VegetableJuice-navbar a{
+  .VegetableJuice-navbar1,
+  .VegetableJuice-navbar2,
+  .VegetableJuice-navbar3,
+  .VegetableJuice-navbar4{
+    color: #58B720;
+  }
+  .VegetableJuice-navbar1{
+    text-decoration: none;
+    color: #58B720;
+    font-family: Jost;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    &:hover{
+        color: #58B720;
+    }
+  }
+  .VegetableJuice-navbar2{
     text-decoration: none;
     color: #000000;
     font-family: Jost;
@@ -33,7 +50,28 @@
         color: #58B720;
     }
   }
-  
+  .VegetableJuice-navbar3{
+    text-decoration: none;
+    color: #000000;
+    font-family: Jost;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    &:hover{
+        color: #58B720;
+    }
+  }
+  .VegetableJuice-navbar4{
+    text-decoration: none;
+    color: #000000;
+    font-family: Jost;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    &:hover{
+        color: #58B720;
+    }
+  }
   .VegetableJuice-list {
     display: flex;
     flex-wrap: wrap;

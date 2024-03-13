@@ -1,10 +1,15 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { dataProduct } from '../../../Data/DataPr.js'
 import {Link} from 'react-router-dom'
 import './Protein.scss'
 import { useShoppingContext } from '../../../Context/ShoppingContext'
 
 const Protein = () => {
+  const [activeLink, setActiveLink] = useState(null);
+
+  const handleLinkClick = (linkName) => {
+    setActiveLink(linkName);
+  };
   const { addCartItem } = useShoppingContext();
   return (
     <div className="Protein-page">
@@ -14,14 +19,14 @@ const Protein = () => {
               </div>
         </div>
       <div className='Protein-navbar'>
-        <div className='Protein-link-to'><Link to="/VegetableJuice">Vegetable Juice</Link></div>
-        <div className='Protein-link-to'><Link to="/Juice">Juice</Link></div>
-        <div className='Protein-link-to'><Link to="/Protein">Protein</Link></div>
-        <div className='Protein-link-to'><Link to="/Smoothies">Smoothies</Link></div>
+        <Link to="/VegetableJuice" className={activeLink === 'vegatablejuice' ? 'Protein-navbar1 hover' : 'Protein-navbar1'} onClick={() => handleLinkClick('vegatablejuice')}> Vegatable Juice</Link>
+        <Link to="/Juice" className={activeLink === 'juice' ? 'Protein-navbar2 hover' : 'Protein-navbar2'} onClick={() => handleLinkClick('juice')}>Juice</Link>
+        <Link to="/Protein" className={activeLink === 'protein' ? 'Protein-navbar3 hover' : 'Protein-navbar3'} onClick={() => handleLinkClick('protein')}>Protein</Link>
+        <Link to="/Smoothies" className={activeLink === 'smoothies ' ? 'Protein-navbar4 hover' : 'Protein-navbar4'} onClick={() => handleLinkClick('smoothies')}>Smoothies</Link>
       </div>
 
       
-    
+
     <div className="Protein-list">
     {dataProduct.map(product => (
         <div key={product.id} className="Protein-card">
