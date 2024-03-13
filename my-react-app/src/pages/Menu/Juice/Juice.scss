@@ -79,6 +79,7 @@
     justify-content: space-between;
     gap: 20px; // Khoảng cách giữa các sản phẩm
     width: 80%;
+    align-items: stretch;
     
   }
   
@@ -98,20 +99,20 @@
   .juice-image {
     width: 100%;
     max-width: 250px; // Giới hạn kích thước ảnh
-    height: auto;
+    height: 250px;
     border-radius: 5px;
   }
   
   .juice-details {
     text-align: center;
-    color:#58B720;
+    color: #333;
     font-size: 1.2rem;
   }
   
   .add-to-cart-button-juice {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #58B720;
     color: white;
     border: none;
     border-radius: 5px;
@@ -119,7 +120,7 @@
     transition: background-color 0.2s;
   
     &:hover {
-      background-color: #0056b3;
+      background-color: #89e654;
     }
   }
   
