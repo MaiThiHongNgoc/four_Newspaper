@@ -3,6 +3,7 @@ import { FaTimes } from "react-icons/fa";
 import axios from 'axios'; 
 import "./Register.scss";
 import { RxAvatar } from "react-icons/rx";
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
@@ -52,7 +53,7 @@ const Register = () => {
 
         // Gửi dữ liệu đăng ký đến server bằng Axios
         try {
-            const response = await axios.post('http://localhost/register.php', JSON.stringify ({
+            const response = await axios.post('http://localhost:3000/admin/server/register.php', JSON.stringify ({
                 email: email,
                 password: password,
                 username: username,
@@ -72,6 +73,10 @@ const Register = () => {
 
     const handleDropdownClick = (e) => {
         e.stopPropagation(); // Ngăn chặn sự kiện onClick từ việc lan ra và đóng form
+    };
+
+    const handleCloseDropdown = () => {
+        closeDropdown();
     };
 
     return (
@@ -99,6 +104,7 @@ const Register = () => {
                             </div>
                             {error && <div className="error">{error}</div>}
                             <button type="submit" className="btn-register" >Register</button>
+                            <p className='register-pp'>Already have an account? <Link to="/Register2" onClick={handleCloseDropdown}>Login here</Link></p>
                         </form>
                     </div>
                 </div>
