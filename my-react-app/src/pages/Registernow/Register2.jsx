@@ -191,12 +191,12 @@ const App2 = () => {
       {!isFlipped ? (
         <>
           <Register2 onRegister={handleRegister} />
-          <button onClick={toggleForm} className="flip-control">Log In</button>
+          <button onClick={toggleForm} className="flip-control">Login</button>
         </>
       ) : (
         <>
           <LoginPage onLogin={handleLogin} />
-          <button onClick={toggleForm} className="flip-control">Sign In</button>
+          <button onClick={toggleForm} className="flip-control">Sign</button>
         </>
       )}
     </div>

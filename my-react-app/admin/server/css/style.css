@@ -1,14 +1,4 @@
-.modal-overlay {
-    width: 500px;
-    height: 650px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffffff;
-    z-index: 2;
-    text-align: center;
-}
+/* register */
 
 .register-content {
     width: 365px;
@@ -22,7 +12,7 @@
 .login-img img {
     width: 160px;
     height: 39px;
-    margin: auto; /* Ensure center alignment */
+    margin: auto; /* Đảm bảo canh giữa */
 }
 
 .login-img {
@@ -35,12 +25,14 @@
     color: #111;
 }
 
-.mailrrr, .form-check, .creat-my {
-    width: 365px; /* Uniform width for child elements */
+.mailrrr,
+.form-check,
+.creat-my {
+    width: 365px; /* Đảm bảo chiều rộng đồng đều cho các phần tử con */
 }
 
 .form-group {
-   margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .form_control {
@@ -53,6 +45,7 @@
     border: 1px solid #ced4da;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
+
 .form-check {
     font-size: 14px;
     padding-left: 0;
@@ -60,6 +53,7 @@
     position: relative;
     display: block;
 }
+
 .recoverpassword {
     color: #c5c4c4;
     text-decoration: none;
@@ -80,6 +74,7 @@
     border: none;
     cursor: pointer;
 }
+
 .btn-register:hover {
     background-color: #95c066;
 }
@@ -93,7 +88,8 @@
     font-size: 14px;
 }
 
-.register, .create-account {
+.register,
+.create-account {
     font-size: 14px;
 }
 
@@ -101,18 +97,69 @@
     color: #c5c4c4;
     text-decoration: none;
 }
-.fill-white {
-    margin-top: 80px;
-    font-size: 20px;
-    position: absolute;
-    color: #000;
-    top: -25px;
-    right: 0;
-    transition: all .5s ease;
-    display: inline-block;
-    text-decoration: none;
+
+
+
+/* login */
+
+/* CSS cho form đăng nhập */
+.register-login {
+    width: 365px;
+    height: 446px;
+    background-color: #ffffff;
+    margin: auto;
+    transform: translateY(17%);
+    text-align: center;
+    margin-top: 100px;
 }
-.fill-white:hover {
-    background-color: #95c066;
-    color: #000;
+
+.register-title {
+    text-align: center;
+}
+
+.register-group {
+    margin-bottom: 20px;
+}
+
+.register-group-col {
+    display: inline-block;
+    width: 120px;
+}
+
+.register-label {
+    display: inline-block;
+}
+
+.register-jsx {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.register-center {
+    text-align: center;
+}
+
+.register-dark {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 60px;
+    &:hover{
+        background-color: #95c066;
+    }
+}
+
+.register-dark:hover {
+    background-color: #555;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
 }

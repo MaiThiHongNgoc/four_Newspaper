@@ -1,6 +1,6 @@
 .Bill {
     font-family: Arial, sans-serif;
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -8,6 +8,8 @@
     margin-top: 210px;
     margin-bottom: 100px;
     border: 1px solid #58B720;
+    margin-left:40px;
+    margin-right: 40px;
   }
   
   .Bill-title {
@@ -69,11 +71,13 @@
 
   .bill-icon{
     display:flex;
+    max-width: 100%;
   }
   .load-bill,.cook-bill,.bike-bill{
     display:flex;
     flex-direction: column;
     height: 100px;
+    width: 500px;
   }
   .bill-icon-1{
     width: 40px;
@@ -84,5 +88,8 @@
   }
   .load-bill-p{
     margin: 10px;
+  }
+  .bill-conten{
+    padding: 50px;
   }
   

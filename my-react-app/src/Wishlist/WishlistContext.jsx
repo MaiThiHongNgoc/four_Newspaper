@@ -14,6 +14,12 @@ export const WishlistContextProvider = ({ children }) => {
     }, [wishlistItems]);
 
     const addWishlistItem = (product) => {
+        // Kiểm tra nếu addWishlistItem không phải là một function
+        if (typeof addWishlistItem !== 'function') {
+            console.error('addWishlistItem không phải là một function');
+            return; // Không làm gì nếu không phải là một function
+        }
+
         const existingItem = wishlistItems.find(item => item.id === product.id);
         if (existingItem) {
             setWishlistItems(wishlistItems.map(item => item.id === product.id ? { ...item, qty: item.qty + 1 } : item));
@@ -46,6 +52,7 @@ export const WishlistContextProvider = ({ children }) => {
     return (
         <WishlistContext.Provider
             value={{
+                wishlistItems, // Add this line to provide the wishlist items to the context
                 increasetQty,
                 decreasetQty,
                 addWishlistItem,
