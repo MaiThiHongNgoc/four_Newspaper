@@ -33,7 +33,7 @@ const OurBlogs = () => {
                 </h4>
                 <p className="conten">
                     
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at...
+                Currently, there are many types of healthy juices such as carrot, orange, and watermelon juice. However, the combination of various fruits and vegetables creates surprisingly...
 
                 </p>
                 <div className="btn_readmore">
@@ -58,9 +58,7 @@ const OurBlogs = () => {
                 </span>
                 </h4>
                 <p className="conten">
-                    
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at...
-
+                Fruit juice is unique due to its concentration of vitamins, minerals, and antioxidants derived from fresh fruits. Unlike sugary sodas or artificial ...
                 </p>
                 <div className="btn_readmore">
                     <a className ="class" href="http://localhost:3000/Blogs/blog2"> READ MORE</a>
