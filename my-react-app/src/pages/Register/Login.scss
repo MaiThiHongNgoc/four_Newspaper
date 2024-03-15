@@ -1,0 +1,91 @@
+/* Login.scss */
+
+/* Login.scss */
+
+/* Container for the login form */
+.login-page {
+    max-width: 55%;
+    margin-top: 210px;
+    margin-bottom: 100px;
+    margin-left: 400px;
+}
+
+/* Form styling */
+.login-form {
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Error message */
+.error-message {
+    margin-top: 10px;
+    color: #ff0000;
+    font-size: 14px;
+}
+.login-page-h2{
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+}
+
+/* Label style */
+.form-group label {
+    display: block;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+
+/* Input field style */
+.login-mail,
+.login-pass {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Show password button style */
+.show-password-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 35px;
+}
+
+/* Login button style */
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 35px;
+}
+
+.login-button:hover {
+    background-color: #95c066;
+}
+
+/* Register link style */
+.register-pp {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.register-pp a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-pp a:hover {
+    text-decoration: underline;
+}

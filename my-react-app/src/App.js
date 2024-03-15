@@ -27,7 +27,10 @@ import Smoothies from "./pages/Menu/Smoothies/Smoothies.jsx"
 import Juice from "./pages/Menu/Juice/Juice.jsx"
 import Protein from "./pages/Menu/Protein/Protein.jsx"
 import VegetableJuice from "./pages/Menu/Vegetable Juice/VegetableJuice.jsx"
-import { WishlistContextProvider } from "./Wishlist/WishlistContext.jsx";
+
+import LoginPage from "./pages/Register/Login.jsx";
+import Admin from "./Admin/Admin.jsx";
+//import { WishlistContextProvider } from "./Wishlist/WishlistContext.jsx";
 // import Register from "./pageis/Register/Register";
 function App() {
 
@@ -35,7 +38,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-<WishlistContextProvider>
+{/* <WishlistContextProvider> */}
         <Header/> 
         <Routes>
           <Route path='/' element={<Home />} >
@@ -46,6 +49,9 @@ function App() {
             
           </Route>
           <Route path='/Register2' element={<Register2 />} />
+          <Route path='/Login' element={<LoginPage />} />
+          <Route path='/Admin' element={<Admin />} />
+
 
 
           <Route path='/Smoothies' element={<Smoothies />} />
@@ -70,7 +76,8 @@ function App() {
           {/* <Route path='/Register' element={<Register />} /> */}
         </Routes>
         
-        <Footer/></WishlistContextProvider>
+        <Footer/>
+        {/* </WishlistContextProvider> */}
       </BrowserRouter>
     </div>
   );

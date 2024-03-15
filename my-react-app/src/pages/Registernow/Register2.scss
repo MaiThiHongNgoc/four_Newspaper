@@ -1,29 +1,17 @@
-/* Container for the registration form */
-.register-abc {
-    height: 600px;
-    box-shadow: 0 4px 8px #95c066;
-    border-radius: 10px; /* Rounded corners for a softer look */
-    overflow: hidden; /* Ensures nothing spills out of the container */
-    width: 800px;
-    justify-content: center;
-    align-items: center;
-}
 
-/* Main container for the registration and login forms */
-.register-body {
-    width: 100%;
-    height: 504px;
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
+.register-container1 {
+    max-width: 55%;
+    margin-top: 210px;
+    margin-bottom: 100px;
+    margin-left: 400px;
 }
-
-/* Container for individual forms */
-.register-container, .register-login {
-    flex: 1 1 500px;
-    max-width: 100%;
+.register-form{
+    
 }
-
+.register-h2{
+    text-align:center;
+    font-size:1.6rem;
+}
 /* Styling for registration and login form components */
 .register-2 {
     width: 100%;
@@ -98,7 +86,6 @@
     line-height: 1.5;
     color: #495057;
     background-color: #fff;
-    background-clip: padding-box;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     box-sizing: border-box;
     height: 60px;
@@ -169,180 +156,9 @@
     padding: 0 15px;
 }
 
-/* Styling for login form container */
-.register-login {
-    top: 0;
-    right: calc(3.33% - 10px);
-    padding: 10px;
-    transform: translateY(24%);
-    padding-top: 100px;
-    flex: 0 0 41.666667%;
-    max-width: 41.666667%;
-    min-height: 1px;
-    padding: 0 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; /* Rounded corners for a softer look */
-    overflow: hidden; /* Ensures nothing spills out of the container */
-    height: 600px;
-    margin-bottom: 100px;
-}
-
-.register-customer {
-    height: 600px;
-    box-shadow: 0 4px 8px #95c066;
-    border-radius: 10px;
-    width: 800px;
-}
-
-.register-title {
-    font-size: 1.8rem;
-    font-family: Jost, sans-serif;
-    text-decoration: uppercase;
-    font-weight: 600;
-    padding-bottom: 50px;
-    text-align: center;
-    line-height: 1.2;
-    color: inherit;
-    padding-top: 80px;
-}
-
-.register-methods {
-    width: 100%;
-    height: 235px;
-    margin-bottom: 0;
-}
-
-.register-gost {
-    width: 100%;
-    height: 24px;
-    margin-top: 1.5rem;
-    justify-content: center;
-    display: flex;
-}
-
-.register-leftx {
-    padding-right: 0.5rem;
-}
-
-.register-return, .register-cover {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: #000;
-    display: block;
-    width: max-content;
-    margin: auto;
-}
-
-.register-return:hover, .register-cover:hover {
-    color: #95c066;
-}
-
 .error-message {
     color: #ff6b6b; /* More noticeable error color */
     text-align: center; /* Center-align error messages */
     margin-top: 20px; /* Space above the error message */
 }
 
-/* Container for the flipping effect */
-.flip-container {
-    perspective: 1000px;
-    margin-top: 200px;
-    margin-bottom: 100px;
-    transition: transform 0.6s;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.flipper {
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-}
-
-.front, .back {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.front {
-    z-index: 2;
-    transform: rotateY(0deg);
-}
-
-.back {
-    transform: rotateY(360deg);
-    position: absolute;
-    display: none;
-    -webkit-transform: rotateY(360deg);
-    -moz-transform: rotateY(360deg);
-    -ms-transform: rotateY(360deg);
-    -o-transform: rotateY(360deg);
-}
-
-.flip-container.hover .flipper, .flip-container.flip .flipper {
-    transform: rotateY(180deg);
-}
-
-/* Styling for the flip control */
-.flip-control {
-    position: relative;
-    display: inline-block;
-    padding:10px 20px;
-    margin-top: 5px;
-    border: none;
-    cursor: pointer;
-    color: #58B720;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin-bottom: 50px;
-    border: 2px solid #58B720;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    
-}
-
-.flip-control::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 8px solid black;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 100%;
-    margin-right: 15px;
-}
-
-.flip-control.flip::before {
-    transform: translateY(-50%) rotate(180deg);
-}
-
-
-.app2{
-    margin-top: 150px;
-    margin-bottom: 100px;
-    text-align: center;
-    justify-content: center;
-}
-.app2-home{
-    text-decoration: none;
-    font-size: 1.3rem;
-    color: #58B720;
-    &:hover{
-        color: #2b6609;
-    }
-}

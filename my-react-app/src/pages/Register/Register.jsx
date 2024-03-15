@@ -104,7 +104,7 @@ const Register = () => {
                             </div>
                             {error && <div className="error">{error}</div>}
                             <button type="submit" className="btn-register" >Register</button>
-                            <p className='register-pp'>Already have an account? <Link to="/Register2" onClick={handleCloseDropdown}>Login here</Link></p>
+                            <p className='register-pp'>Already have an account? <Link to="/Login" onClick={handleCloseDropdown}>Login here</Link></p>
                         </form>
                     </div>
                 </div>
