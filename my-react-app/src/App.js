@@ -65,12 +65,20 @@ function App() {
           <Route path='/AboutUs' element={<AboutUs />} />
           <Route path='/Pages' element={<Pages />}>
           </Route>
-          <Route path='/Blogs/blog6' element={<Blogs6/>} />
-          <Route path='/Blogs/blog5' element={<Blogs5 />} />
-          <Route path='/Blogs/blog4' element={<Blogs4 />} />
-          <Route path='/Blogs/blog3' element={<Blogs3 />} />
-          <Route path='/Blogs/blog2' element={<Blogs2 />} />
-          <Route path='/Blogs' element={<Blogs />} />
+          
+
+
+
+          <Route path='/Blogs' element={<Blogs />} > 
+          <Route path='blog6' element={<Blogs6/>} />
+          <Route path='blog5' element={<Blogs5 />} />
+          <Route path='blog4' element={<Blogs4 />} />
+          <Route path='blog3' element={<Blogs3 />} />
+          <Route path='blog2' element={<Blogs2 />} />
+          </Route>
+
+
+
           <Route path='/ViewCart' element={<ViewCart />} />
           <Route path='/CheckOut' element={<PrivateRoute> <CheckOut /></PrivateRoute>} />
           <Route path='/Wishlist' element={<Wishlist />}/>

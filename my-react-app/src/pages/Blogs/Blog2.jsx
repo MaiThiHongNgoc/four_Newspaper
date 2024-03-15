@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaPinterestP } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 import Header2 from '../../Component/Header/Header2/Header2';
 const Blogs = () => {
     return (
@@ -164,7 +165,7 @@ const Blogs = () => {
                     <hr className='popular-gach3'></hr>
                     </div>
                     <div className="read-more-blog">
-                        <a className="blog-link3"href="http://localhost:3000/Blogs/blog6">Read more</a>
+                        <Link className="blog-link3" to="/Blog/blog6">Read more</Link>
                     </div>
                     </div>
                     </div>

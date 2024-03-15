@@ -18,13 +18,10 @@ if ($conn->connect_error) {
     die(json_encode(['status' => 'error', 'message' => 'Database connection failed']));
 }
 
-// Lấy dữ liệu JSON gửi từ ứng dụng React
-$data = json_decode(file_get_contents('php://input'), true);
-
-// Kiểm tra email và mật khẩu đã được cung cấp không
-if(isset($data['email']) && isset($data['password'])) {
-    $email = $data['email'];
-    $password = $data['password'];
+// Kiểm tra xem dữ liệu đã được gửi từ React hay chưa
+if(isset($_POST['email']) && isset($_POST['password'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
     // Prepare statement to avoid SQL injection
     $stmt = $conn->prepare("SELECT * FROM user_form WHERE email = ?");
@@ -36,7 +33,7 @@ if(isset($data['email']) && isset($data['password'])) {
         $user = $result->fetch_assoc();
         // Verify password
         if (password_verify($password, $user['password'])) {
-            echo json_encode(['status' => 'success', 'message' => 'Login successful']);
+            echo json_encode(['status' => 'success', 'message' => 'Login successful', 'userType' => $user['user_type']]);
         } else {
             echo json_encode(['status' => 'error', 'message' => 'Invalid email or password']);
         }
@@ -51,6 +48,7 @@ if(isset($data['email']) && isset($data['password'])) {
 
 $conn->close();
 ?>
+
 
 
 
