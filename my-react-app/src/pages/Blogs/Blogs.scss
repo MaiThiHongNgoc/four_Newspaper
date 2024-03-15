@@ -3,14 +3,26 @@
     text-align: center; /* Căn giữa phần ảnh */
     bottom: -150px;
 }
-.blog-page{
-    border-bottom: red;
-}
 .blog-img img{
+    margin-top: 35px;
     width: 70%; /* Ảnh chiếm toàn bộ chiều rộng của phần tử cha */
 }
 .blogs-text span{
     color:#95c066;
+}
+.content-blog-6 {
+    position: absolute; /* Đặt vị trí tuyệt đối để có thể di chuyển lên trên phần ảnh */
+    top: 75%; /* Đặt vị trí ở giữa theo chiều dọc */
+    left: 50%; /* Đặt vị trí ở giữa theo chiều ngang */
+    bottom: 400px;
+    transform: translate(-50%, -50%); /* Điều chỉnh vị trí để căn giữa chính xác */
+    text-align: center; /* Căn giữa nội dung */
+}
+.content-blog-6 h2{
+    font-family: 'Jost', sans-serif;
+    color: #ffffff;
+    margin-bottom: 0px;
+    font-size: 36px; /* Khoảng cách dưới của văn bản "Popular fruit juices today" */
 }
 .content-blog {
     position: absolute; /* Đặt vị trí tuyệt đối để có thể di chuyển lên trên phần ảnh */
@@ -46,19 +58,19 @@
     font-weight: 400;
     line-height: 28px;
     padding-left: 286px;
-    margin-top: 150px;
+    margin-top: 175px;
     padding-bottom: 50px;
 }
 .blogs-text{
     font-family: 'Jost', sans-serif;
     position: absolute; /* Đặt vị trí tuyệt đối để có thể di chuyển lên trên phần ảnh */
-    top: 100px; /* Đặt vị trí ở trên phần ảnh */
+    top: 115px; /* Đặt vị trí ở trên phần ảnh */
     left: 50%; /* Đặt vị trí ở giữa theo chiều ngang */
     transform: translateX(-50%); /* Điều chỉnh vị trí để căn giữa theo chiều ngang */
     color: #969696;; /* Màu chữ */
-    font-size: 14px; /* Cỡ chữ */
+    font-size: 1.2rem; /* Cỡ chữ */
     z-index: 1; /* Đặt vị trí trên cùng để chữ hiển thị trên phần ảnh */
-    margin-left: -555px;
+    margin-left: -515px;
 }
 .title-tag1{
     letter-spacing: 3px;
@@ -234,14 +246,20 @@
     border-bottom: 2px solid #000;
     font-size: 15px;
     text-decoration: none;
-    transition: border-color 0.3s; /* Thêm hiệu ứng chuyển động cho border-color */
+    transition: border-color 0.3s; /* Thêm hiệu ứng chuyển động cho border-color */ 
 }
 /* Sử dụng CSS selector phù hợp với thẻ <a> khi hover */
 .read-more-blog:hover a {
     color: #95c066;
     border-color: #95c066; /* Màu của border-bottom khi hover */
 }
-
+.related-content .pagination{
+    // margin-top: 20px;
+}
+.related-content{
+    margin-left: -55px;
+    margin-bottom: 80px;
+}
 .related-content2 img{
     width: 430px;
     min-height: 300px;
@@ -249,7 +267,7 @@
 }
 .related-content2{
     margin-top: -445px;
-    margin-left: 50px;
+    margin-left: 35px;
     text-align: center;
     margin-bottom: 10px;
     font-family: Jost;
@@ -265,23 +283,82 @@
 }
 .related-content3{
     margin-top: -443px;
-    margin-left: 980px;
+    margin-left: 950px;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     font-family: Jost;
 }
 .popular-gach3{
     border-bottom: 1px solid #e0e0e0;
     width: 6%;
 }
+.related-content4 img{
+    width: 430px;
+    min-height: 300px;
+    object-fit: cover;
+}
+.related-content4{
+    max-width: 500px;
+    margin-top: 40px;
+    margin-left:288px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: Jost;
+}
+.related-content5 img{
+    width: 430px;
+    min-height: 300px;
+    object-fit: cover;
+}
+.related-content5{
+    margin-top: -484px;
+    margin-left: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: Jost;
+}
+.related-content6 img{
+    width: 430px;
+    min-height: 300px;
+    object-fit: cover;
+}
+.related-content6{
+    margin-top: -483px;
+    margin-left: 975px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: Jost;
+}
 .related-content1 img,
 .related-content2 img,
-.related-content3 img {
+.related-content3 img,
+.related-content4 img,
+.related-content5 img,
+.related-content6 img{
     transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển động cho transform */
 }
 
 .related-content1:hover img,
 .related-content2:hover img,
-.related-content3:hover img {
+.related-content3:hover img,
+.related-content4:hover img
+.related-content5:hover img
+.related-content6:hover img{
     transform: scale(1.05); /* Kích thước ảnh sẽ tăng lên 105% khi hover */
+}
+
+.swiper{
+    margin-bottom: 40px;
+}
+.swiper-pagination-bullet-active {
+    background-color: black !important; 
+    width: 10px !important;
+    height: 10px !important;
+}
+.swiper-pagination-bullet{
+    width: 10px !important;
+    height: 10px !important;
+}
+.swiper-pagination {
+    margin-left: -10px !important;
 }

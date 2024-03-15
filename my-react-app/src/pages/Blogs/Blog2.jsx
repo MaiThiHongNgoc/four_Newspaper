@@ -1,6 +1,10 @@
 import React from 'react';
 import './Blogs.scss';
 import 'react-icons';
+import { Pagination} from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaPinterestP } from "react-icons/fa";
@@ -33,7 +37,7 @@ const Blogs = () => {
             </div>
              <div className="blog-mt">
                 <p>
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                Fruit juice is unique due to its concentration of vitamins, minerals, and antioxidants derived from fresh fruits. Unlike sugary sodas or artificial beverages, fruit juice offers a natural source of hydration packed with essential nutrients. Additionally, the diverse flavors and combinations of fruits create a refreshing and flavorful beverage that appeals to a wide range of tastes. Furthermore, the process of juicing preserves the nutritional integrity of the fruits, allowing consumers to enjoy the full benefits of vitamins, enzymes, and phytonutrients present in the fruits. Overall, fruit juice stands out for its health-promoting properties, natural sweetness, and versatility in taste combinations.
                 </p>
             </div>
             <div className="blog-tag">
@@ -68,41 +72,104 @@ const Blogs = () => {
                 <span>RELATED POST</span>
                 <hr className="related-post-gach"/>
             </div>
-            <div className="related-content">
-                <div className="related-content1">
-                <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog1_1024x1024.png?v=1656905339" alt="" />
-                    <h2 className='related-new'>NEWS</h2>
-                    <div className="popular">
-                    <span>Popular fruit juices today</span>
-                    <hr className='popular-gach'></hr>
-                    </div>
-                    <div className="read-more-blog">
-                        <a className='blog-link1' href='http://localhost:3000/Blogs'>Read more</a>
-                    </div>
-                    </div>
-                </div>
-                <div className="related-content2">
-                    <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog2_1024x1024.png?v=1656905260" alt="" />
-                    <h2 className='related-new'>NEWS</h2>
-                    <div className="popular">
-                    <span>What's so special about fruit juice?</span>
+            <Swiper
+            slidesPerView={1}
+            spaceBetween={10}
+            pagination={{
+            clickable: true,
+            }}
+            breakpoints={{
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
+            }}
+            modules={[Pagination]}
+        >
+            <div className='swiper'></div>
+            <SwiperSlide>
+                <div className="related-content">
+                    <div className="related-content1">
+                    <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog1_1024x1024.png?v=1656905339" alt="" />
+                        <h2 className='related-new'>NEWS</h2>
+                        <div className="popular">
+                        <span>Popular fruit juices today</span>
+                        <hr className='popular-gach'></hr>
+                        </div>
+                        <div className="read-more-blog">
+                            <a className='blog-link1' href='http://localhost:3000/Blogs'>Read more</a>
+                        </div>
+                        </div>
+                        <div className="related-content2">
+                        <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog2_1024x1024.png?v=1656905260" alt="" />
+                        <h2 className='related-new'>NEWS</h2>
+                        <div className="popular">
+                        <span>What's so special about fruit juice?</span>
+                        <hr className='popular-gach2'></hr>
+                        </div>
+                        <div className="read-more-blog">
+                            <a classname="blog-link2"href="http://localhost:3000/Blogs/blog2">Read more</a>
+                        </div>
+                        </div>
+                        <div className="related-content3">
+                        <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog3_1024x1024.png?v=1656905178" alt="" />
+                        <h2 className='related-new'>NEWS</h2>
+                        <div className="popular">
+                        <span>How to make a delicious juice</span>
+                        <hr className='popular-gach3'></hr>
+                        </div>
+                        <div className="read-more-blog">
+                            <a className="blog-link3"href="http://localhost:3000/Blogs/blog3">Read more</a>
+                        </div>
+                        </div>
+                        </div>
+                        </SwiperSlide>
+                <SwiperSlide>
+                    <div className="related-content">
+                        <div className="related-content4">
+                            <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog4_1024x1024.png?v=1656905078" alt="" />
+                        <h2 className='related-new'>NEWS</h2>
+                        <div className="popular">
+                        <span>Completely Natural Extracts</span>
+                        <hr className='popular-gach'></hr>
+                        </div>
+                        <div className="read-more-blog">
+                            <a className='blog-link1' href='http://localhost:3000/Blogs/blog4'>Read more</a>
+                        </div>
+                        </div>
+                        <div className="related-content5">
+                        <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog5_1024x1024.png?v=1656905027" alt="" />
+                        <h2 className='related-new'>NEWS</h2>
+                        <div className="popular">
+                        <span>Fruit Juice Is Very Good For Health</span>
                     <hr className='popular-gach2'></hr>
                     </div>
                     <div className="read-more-blog">
-                        <a classname="blog-link2"href="http://localhost:3000/Blogs/blog2">Read more</a>
+                        <a classname="blog-link2"href="http://localhost:3000/Blogs/blog5">Read more</a>
                     </div>
-                </div>
-                <div className="related-content3">
-                    <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog3_1024x1024.png?v=1656905178" alt="" />
+                    </div>
+                    <div className="related-content6">
+                    <img src="https://cdnphoto.dantri.com.vn/J9iymj1m6m9Z91MRFZUHgGzfVYk=/zoom/1200_630/2022/08/19/nuocep-crop-1660864747363.jpeg" alt="" />
                     <h2 className='related-new'>NEWS</h2>
                     <div className="popular">
-                    <span>How to make a delicious juice</span>
+                    <span>Fiber-enriched Fruit Juice</span>
                     <hr className='popular-gach3'></hr>
                     </div>
                     <div className="read-more-blog">
-                        <a className="blog-link3"href="http://localhost:3000/Blogs/blog3">Read more</a>
+                        <a className="blog-link3"href="http://localhost:3000/Blogs/blog6">Read more</a>
                     </div>
-                </div>
+                    </div>
+                    </div>
+                    </SwiperSlide>
+      </Swiper>
             </div>
             </div>
     )

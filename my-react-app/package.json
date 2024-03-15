@@ -21,6 +21,7 @@
     "react-slideshow-image": "^4.3.0",
     "react-spring": "^9.7.3",
     "sass": "^1.71.1",
+    "swiper": "^11.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

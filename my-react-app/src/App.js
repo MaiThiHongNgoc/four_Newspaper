@@ -27,7 +27,9 @@ import Smoothies from "./pages/Menu/Smoothies/Smoothies.jsx"
 import Juice from "./pages/Menu/Juice/Juice.jsx"
 import Protein from "./pages/Menu/Protein/Protein.jsx"
 import VegetableJuice from "./pages/Menu/Vegetable Juice/VegetableJuice.jsx"
-
+import Blogs4 from "./pages/Blogs/Blog4";
+import Blogs5 from "./pages/Blogs/Blog5";
+import Blogs6 from "./pages/Blogs/Blog6";
 import LoginPage from "./pages/Register/Login.jsx";
 import Admin from "./Admin/Admin.jsx";
 //import { WishlistContextProvider } from "./Wishlist/WishlistContext.jsx";
@@ -63,6 +65,9 @@ function App() {
           <Route path='/AboutUs' element={<AboutUs />} />
           <Route path='/Pages' element={<Pages />}>
           </Route>
+          <Route path='/Blogs/blog6' element={<Blogs6/>} />
+          <Route path='/Blogs/blog5' element={<Blogs5 />} />
+          <Route path='/Blogs/blog4' element={<Blogs4 />} />
           <Route path='/Blogs/blog3' element={<Blogs3 />} />
           <Route path='/Blogs/blog2' element={<Blogs2 />} />
           <Route path='/Blogs' element={<Blogs />} />

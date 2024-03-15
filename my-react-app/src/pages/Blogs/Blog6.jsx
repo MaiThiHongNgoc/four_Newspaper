@@ -13,15 +13,16 @@ const Blogs = () => {
     return (
         <div className="blog-page">
             <Header2/>
+
             <div className="blog-all">
             <div className="blogs-text">
             <p>Home-News-<span>Popular fruit juices today</span></p>
             </div>
             <div className="blog-img">
-                <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog3_1024x1024.png?v=1656905178" alt="" />
+                <img src="https://cdnphoto.dantri.com.vn/J9iymj1m6m9Z91MRFZUHgGzfVYk=/zoom/1200_630/2022/08/19/nuocep-crop-1660864747363.jpeg" alt="" />
             </div>
-            <div className="content-blog">
-                <h2>How to make a delicious juice</h2> 
+            <div className="content-blog-6">
+                <h2>Fiber-enriched Fruit Juice</h2> 
             <div className="content-blog2">
                 <div className="a1">
                     <h3>Desero-Store Admin</h3>
@@ -35,15 +36,15 @@ const Blogs = () => {
             </div>
             </div>
              <div className="blog-mt">
-                <p> 
-                To create a delicious fruit juice or smoothie, the essential condition is to select fresh and ripe fruits, then prepare them accordingly. For juice, it's important to use a juicer, while for smoothies, a blender is needed to finely chop the fruits (adding a bit of water if necessary). The final step is to add ice to the drink; for smoothies, you can also add ice directly into the blender to create a refreshing beverage for hot summer days.
+                <p>
+                Fruit juice is highly beneficial for health due to its rich content of vitamins such as A, C, and K, as well as essential minerals like potassium, magnesium, and folate, which bolster the immune system. Furthermore, it serves multiple purposes such as aiding weight loss, antioxidation to protect against damage and prevent diseases. Additionally, it supports digestion as a great source of dietary fiber, reducing the risk of constipation. Therefore, to ensure good health, it's advisable to cultivate a habit of drinking fruit juice and maintaining moderate exercise.
                 </p>
             </div>
             <div className="blog-tag">
             <div className="blog-left">
                     <span className='title-tag1'>TAGS :</span>
                 <div className="blog-hover">
-                    How To Make Juice
+                Fruit Jucie
                 </div>
             </div>
             <div className="blog-right">
@@ -71,7 +72,31 @@ const Blogs = () => {
                 <span>RELATED POST</span>
                 <hr className="related-post-gach"/>
             </div>
-            <div className="related-content-all">
+         
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={10}
+        pagination={{
+          clickable: true,
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+        }}
+        modules={[Pagination]}
+      >
+           <div className='swiper'></div>
+        <SwiperSlide>
             <div className="related-content">
                 <div className="related-content1">
                 <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog1_1024x1024.png?v=1656905339" alt="" />
@@ -84,8 +109,7 @@ const Blogs = () => {
                         <a className='blog-link1' href='http://localhost:3000/Blogs'>Read more</a>
                     </div>
                     </div>
-                </div>
-                <div className="related-content2">
+                    <div className="related-content2">
                     <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog2_1024x1024.png?v=1656905260" alt="" />
                     <h2 className='related-new'>NEWS</h2>
                     <div className="popular">
@@ -95,8 +119,8 @@ const Blogs = () => {
                     <div className="read-more-blog">
                         <a classname="blog-link2"href="http://localhost:3000/Blogs/blog2">Read more</a>
                     </div>
-                </div>
-                <div className="related-content3">
+                    </div>
+                    <div className="related-content3">
                     <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog3_1024x1024.png?v=1656905178" alt="" />
                     <h2 className='related-new'>NEWS</h2>
                     <div className="popular">
@@ -106,11 +130,50 @@ const Blogs = () => {
                     <div className="read-more-blog">
                         <a className="blog-link3"href="http://localhost:3000/Blogs/blog3">Read more</a>
                     </div>
-                </div>
-                </div>
+                    </div>
+                    </div>
+                    </SwiperSlide>
+            <SwiperSlide>
+                <div className="related-content">
+                    <div className="related-content4">
+                        <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog4_1024x1024.png?v=1656905078" alt="" />
+                    <h2 className='related-new'>NEWS</h2>
+                    <div className="popular">
+                    <span>Completely Natural Extracts</span>
+                    <hr className='popular-gach'></hr>
+                    </div>
+                    <div className="read-more-blog">
+                        <a className='blog-link1' href='http://localhost:3000/Blogs/blog4'>Read more</a>
+                    </div>
+                    </div>
+                    <div className="related-content5">
+                    <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog5_1024x1024.png?v=1656905027" alt="" />
+                    <h2 className='related-new'>NEWS</h2>
+                    <div className="popular">
+                    <span>Fruit Juice Is Very Good For Health</span>
+                    <hr className='popular-gach2'></hr>
+                    </div>
+                    <div className="read-more-blog">
+                        <a classname="blog-link2"href="http://localhost:3000/Blogs/blog5">Read more</a>
+                    </div>
+                    </div>
+                    <div className="related-content6">
+                    <img src="https://cdnphoto.dantri.com.vn/J9iymj1m6m9Z91MRFZUHgGzfVYk=/zoom/1200_630/2022/08/19/nuocep-crop-1660864747363.jpeg" alt="" />
+                    <h2 className='related-new'>NEWS</h2>
+                    <div className="popular">
+                    <span>Fiber-enriched Fruit Juice</span>
+                    <hr className='popular-gach3'></hr>
+                    </div>
+                    <div className="read-more-blog">
+                        <a className="blog-link3"href="http://localhost:3000/Blogs/blog6">Read more</a>
+                    </div>
+                    </div>
+                    </div>
+                    </SwiperSlide>
+      </Swiper>
+    </div>
             </div>
-            </div>
-    )
+    );
 }
 
 export default Blogs

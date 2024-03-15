@@ -19,10 +19,10 @@ const Blogs = () => {
             <p>Home-News-<span>Popular fruit juices today</span></p>
             </div>
             <div className="blog-img">
-                <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog1_1024x1024.png?v=1656905339" alt="" />
+                <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog4_1024x1024.png?v=1656905078" alt="" />
             </div>
             <div className="content-blog">
-                <h2>Popular fruit juices today</h2> 
+                <h2>Completely Natural Extracts</h2> 
             <div className="content-blog2">
                 <div className="a1">
                     <h3>Desero-Store Admin</h3>
@@ -37,14 +37,14 @@ const Blogs = () => {
             </div>
              <div className="blog-mt">
                 <p>
-                Currently, there are many types of healthy juices such as carrot, orange, and watermelon juice. However, the combination of various fruits and vegetables creates surprisingly delicious flavors like orange juice with carrots, pear juice with apples, and watermelon juice with cucumber. These combinations result in richness and delicious aroma for everyone to enjoy.
+                Our products are made from 100% natural ingredients, meticulously inspected before being crafted into juices delivered to you. The fruits are sourced directly from orchards, and we've committed to farmers not using harmful pesticides, verified by health safety certifications. You can trust in using our products entirely because they are made entirely from natural ingredients.
                 </p>
             </div>
             <div className="blog-tag">
             <div className="blog-left">
                     <span className='title-tag1'>TAGS :</span>
                 <div className="blog-hover">
-                    Popular
+                Fruit Jucie
                 </div>
             </div>
             <div className="blog-right">
