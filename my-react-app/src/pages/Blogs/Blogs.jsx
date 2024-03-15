@@ -9,7 +9,28 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaPinterestP } from "react-icons/fa";
 import Header2 from '../../Component/Header/Header2/Header2';
+import { Link } from 'react-router-dom';
 const Blogs = () => {
+    const handleClick = () => {
+        // Load lại trang khi chuyển từ Blog1 sang Blog2
+        window.location.href = '/Blogs/blog2';
+    };
+    const handleClick2 = () => {
+        // Load lại trang khi chuyển từ Blog1 sang Blog3
+        window.location.href = '/Blogs/blog3';
+    };
+    const handleClick3 = () => {
+        // Load lại trang khi chuyển từ Blog1 sang Blog4
+        window.location.href = '/Blogs/blog4';
+    }; 
+    const handleClick4 = () => {
+        // Load lại trang khi chuyển từ Blog1 sang Blog5
+        window.location.href = '/Blogs/blog5';
+    }; 
+    const handleClick5 = () => {
+        // Load lại trang khi chuyển từ Blog1 sang Blog6
+        window.location.href = '/Blogs/blog6';
+    };
     return (
         <div className="blog-page">
             <Header2/>
@@ -105,7 +126,7 @@ const Blogs = () => {
                         <hr className='popular-gach'></hr>
                         </div>
                         <div className="read-more-blog">
-                            <a className='blog-link1' href='http://localhost:3000/Blogs'>Read more</a>
+                            <Link className="blog-link1" to="/Blogs">Read more</Link>
                         </div>
                         </div>
                         <div className="related-content2">
@@ -116,7 +137,7 @@ const Blogs = () => {
                         <hr className='popular-gach2'></hr>
                         </div>
                         <div className="read-more-blog">
-                            <a classname="blog-link2"href="http://localhost:3000/Blogs/blog2">Read more</a>
+                            <Link className="blog-link2" to="/Blogs/blog2" onClick={handleClick}>Read more</Link>
                         </div>
                         </div>
                         <div className="related-content3">
@@ -127,7 +148,7 @@ const Blogs = () => {
                         <hr className='popular-gach3'></hr>
                         </div>
                         <div className="read-more-blog">
-                            <a className="blog-link3"href="http://localhost:3000/Blogs/blog3">Read more</a>
+                            <Link className="blog-link3" to="/Blogs/blog3" onClick={handleClick2}>Read more</Link>
                         </div>
                         </div>
                         </div>
@@ -142,7 +163,7 @@ const Blogs = () => {
                         <hr className='popular-gach'></hr>
                         </div>
                         <div className="read-more-blog">
-                            <a className='blog-link1' href='http://localhost:3000/Blogs/blog4'>Read more</a>
+                            <Link className="blog-link1" to="/Blogs/blog4"onClick={handleClick3}>Read more</Link>
                         </div>
                         </div>
                         <div className="related-content5">
@@ -153,8 +174,8 @@ const Blogs = () => {
                     <hr className='popular-gach2'></hr>
                     </div>
                     <div className="read-more-blog">
-                        <a classname="blog-link2"href="http://localhost:3000/Blogs/blog5">Read more</a>
-                    </div>
+                    <Link className="blog-link2" to="/Blogs/blog5" onClick={handleClick4}>Read more</Link>         
+                        </div>
                     </div>
                     <div className="related-content6">
                     <img src="https://cdnphoto.dantri.com.vn/J9iymj1m6m9Z91MRFZUHgGzfVYk=/zoom/1200_630/2022/08/19/nuocep-crop-1660864747363.jpeg" alt="" />
@@ -164,7 +185,7 @@ const Blogs = () => {
                     <hr className='popular-gach3'></hr>
                     </div>
                     <div className="read-more-blog">
-                        <a className="blog-link3"href="http://localhost:3000/Blogs/blog6">Read more</a>
+                        <Link className="blog-link3" to="/Blogs/blog6" onClick={handleClick5}>Read more</Link>
                     </div>
                     </div>
                     </div>

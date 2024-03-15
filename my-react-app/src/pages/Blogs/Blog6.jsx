@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom'; // Import useHistory
 import './Blogs.scss';
 import 'react-icons';
 import { Pagination} from 'swiper/modules';
@@ -9,7 +10,29 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaPinterestP } from "react-icons/fa";
 import Header2 from '../../Component/Header/Header2/Header2';
+import { Link } from 'react-router-dom';
+
 const Blogs = () => {
+    const handleClick = () => {
+        // Load lại trang khi chuyển từ Blog6 sang Blog1
+        window.location.href = '/Blogs';
+    };
+    const handleClick2 = () => {
+        // Load lại trang khi chuyển từ Blog6 sang Blog2
+        window.location.href = '/Blogs/blog2';
+    };
+    const handleClick3 = () => {
+        // Load lại trang khi chuyển từ Blog6 sang Blog3
+        window.location.href = '/Blogs/blog3';
+    };
+    const handleClick4 = () => {
+        // Load lại trang khi chuyển từ Blog6 sang Blog4
+        window.location.href = '/Blogs/blog4';
+    };
+    const handleClick5 = () => {
+        // Load lại trang khi chuyển từ Blog6 sang Blog5
+        window.location.href = '/Blogs/blog5';
+    };
     return (
         <div className="blog-page">
             <Header2/>
@@ -96,66 +119,66 @@ const Blogs = () => {
         modules={[Pagination]}
       >
            <div className='swiper'></div>
-        <SwiperSlide>
-            <div className="related-content">
-                <div className="related-content1">
-                <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog1_1024x1024.png?v=1656905339" alt="" />
-                    <h2 className='related-new'>NEWS</h2>
-                    <div className="popular">
-                    <span>Popular fruit juices today</span>
-                    <hr className='popular-gach'></hr>
-                    </div>
-                    <div className="read-more-blog">
-                        <a className='blog-link1' href='http://localhost:3000/Blogs'>Read more</a>
-                    </div>
-                    </div>
-                    <div className="related-content2">
-                    <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog2_1024x1024.png?v=1656905260" alt="" />
-                    <h2 className='related-new'>NEWS</h2>
-                    <div className="popular">
-                    <span>What's so special about fruit juice?</span>
-                    <hr className='popular-gach2'></hr>
-                    </div>
-                    <div className="read-more-blog">
-                        <a classname="blog-link2"href="http://localhost:3000/Blogs/blog2">Read more</a>
-                    </div>
-                    </div>
-                    <div className="related-content3">
-                    <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog3_1024x1024.png?v=1656905178" alt="" />
-                    <h2 className='related-new'>NEWS</h2>
-                    <div className="popular">
-                    <span>How to make a delicious juice</span>
-                    <hr className='popular-gach3'></hr>
-                    </div>
-                    <div className="read-more-blog">
-                        <a className="blog-link3"href="http://localhost:3000/Blogs/blog3">Read more</a>
-                    </div>
-                    </div>
-                    </div>
-                    </SwiperSlide>
-            <SwiperSlide>
+           <SwiperSlide>
                 <div className="related-content">
-                    <div className="related-content4">
-                        <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog4_1024x1024.png?v=1656905078" alt="" />
-                    <h2 className='related-new'>NEWS</h2>
-                    <div className="popular">
-                    <span>Completely Natural Extracts</span>
-                    <hr className='popular-gach'></hr>
-                    </div>
-                    <div className="read-more-blog">
-                        <a className='blog-link1' href='http://localhost:3000/Blogs/blog4'>Read more</a>
-                    </div>
-                    </div>
-                    <div className="related-content5">
-                    <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog5_1024x1024.png?v=1656905027" alt="" />
-                    <h2 className='related-new'>NEWS</h2>
-                    <div className="popular">
-                    <span>Fruit Juice Is Very Good For Health</span>
+                    <div className="related-content1">
+                    <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog1_1024x1024.png?v=1656905339" alt="" />
+                        <h2 className='related-new'>NEWS</h2>
+                        <div className="popular">
+                        <span>Popular fruit juices today</span>
+                        <hr className='popular-gach'></hr>
+                        </div>
+                        <div className="read-more-blog">
+                        <Link className="blog-link1" to="/Blogs"onClick={handleClick}>Read more</Link>
+                        </div>
+                        </div>
+                        <div className="related-content2">
+                        <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog2_1024x1024.png?v=1656905260" alt="" />
+                        <h2 className='related-new'>NEWS</h2>
+                        <div className="popular">
+                        <span>What's so special about fruit juice?</span>
+                        <hr className='popular-gach2'></hr>
+                        </div>
+                        <div className="read-more-blog">
+                            <Link className="blog-link2" to="/Blogs/blog2"onClick={handleClick2}>Read more</Link>
+                        </div>
+                        </div>
+                        <div className="related-content3">
+                        <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog3_1024x1024.png?v=1656905178" alt="" />
+                        <h2 className='related-new'>NEWS</h2>
+                        <div className="popular">
+                        <span>How to make a delicious juice</span>
+                        <hr className='popular-gach3'></hr>
+                        </div>
+                        <div className="read-more-blog">
+                            <Link className="blog-link3" to="/Blogs/blog3"onClick={handleClick3}>Read more</Link>
+                        </div>
+                        </div>
+                        </div>
+                        </SwiperSlide>
+                <SwiperSlide>
+                    <div className="related-content">
+                        <div className="related-content4">
+                            <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog4_1024x1024.png?v=1656905078" alt="" />
+                        <h2 className='related-new'>NEWS</h2>
+                        <div className="popular">
+                        <span>Completely Natural Extracts</span>
+                        <hr className='popular-gach'></hr>
+                        </div>
+                        <div className="read-more-blog">
+                            <Link className="blog-link1" to="/Blogs/blog4"onClick={handleClick4}>Read more</Link>
+                        </div>
+                        </div>
+                        <div className="related-content5">
+                        <img src="https://desero-store-demo.myshopify.com/cdn/shop/articles/blog5_1024x1024.png?v=1656905027" alt="" />
+                        <h2 className='related-new'>NEWS</h2>
+                        <div className="popular">
+                        <span>Fruit Juice Is Very Good For Health</span>
                     <hr className='popular-gach2'></hr>
                     </div>
                     <div className="read-more-blog">
-                        <a classname="blog-link2"href="http://localhost:3000/Blogs/blog5">Read more</a>
-                    </div>
+                    <Link className="blog-link2" to="/Blogs/blog5"onClick={handleClick5}>Read more</Link>         
+                        </div>
                     </div>
                     <div className="related-content6">
                     <img src="https://cdnphoto.dantri.com.vn/J9iymj1m6m9Z91MRFZUHgGzfVYk=/zoom/1200_630/2022/08/19/nuocep-crop-1660864747363.jpeg" alt="" />
@@ -165,7 +188,7 @@ const Blogs = () => {
                     <hr className='popular-gach3'></hr>
                     </div>
                     <div className="read-more-blog">
-                        <a className="blog-link3"href="http://localhost:3000/Blogs/blog6">Read more</a>
+                        <Link className="blog-link3"  to="/Blogs/blog6" >Read more</Link>
                     </div>
                     </div>
                     </div>
