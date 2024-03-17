@@ -1,0 +1,163 @@
+.productdetails-crumb {
+    max-width: 80%;
+    margin-top: 100px;
+    font-size: 20px;
+    margin-left: 150px;
+    font-family: Jost;
+    display: flex;
+}
+.productdetails-img{
+    width: 45%;
+
+}
+.textproduct{
+    justify-content: center;
+    width: 100%;
+}
+.productdetails-crumb span{
+    color: #95c066
+}
+.productdetails-all{
+    width: 100%;
+    display: flex;
+}
+.productdetails-imgmax{
+    width: 810px;
+}
+.productdetails-imgmin {
+    display: flex;
+    margin-left: 100px;
+    justify-content: space-between; /* Các ảnh sẽ căn cách đều nhau */
+    flex-wrap: wrap; /* Các ảnh sẽ tự động xuống dòng nếu không đủ không gian */
+    margin-top: 20px; /* Điều chỉnh khoảng cách từ phần imgmax */
+    padding: 0 20px; /* Điều chỉnh padding để giữa khoảng cách giữa các ảnh */
+}
+.productdetails-imgmin img {
+    width: calc(25% - 10px); /* Đặt chiều rộng cho mỗi ảnh */
+    height: auto; /* Đảm bảo tỷ lệ tự nhiên của ảnh */
+    margin-bottom: 20px; /* Điều chỉnh khoảng cách dưới cùng của mỗi ảnh */
+    object-fit: cover; /* Hiển thị toàn bộ ảnh mà không bị biến dạng */
+    border: 1px solid #eaeaea; /* Định dạng viền cho mỗi ảnh */
+    transition: border-color 0.3s ease; /* Hiệu ứng chuyển đổi màu viền */
+}
+.productdetails-imgmin img.hover {
+    border-color: #95c066; /* Màu viền khi được chọn */
+}
+.productdetails-imgmax img{
+    width: 810px;
+    margin-left: 200px;
+    max-width:65%;
+    justify-content: left !important;
+}
+.productdetails-info{
+    margin-left: 200px;
+    width: 26%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start !important; /* Căn về đầu */
+}
+.productdetails-gach{
+    border-bottom: 1px solid #000;
+}
+.productdetails-size{
+    display: flex;
+}
+// .productdetails-size h3 {
+//     font-family: Jost;
+//     font-size: 15px;
+//     border: 1px solid #000; /* Định dạng border */
+//     border-radius: 0px; /* Border radius */
+//     margin-left: 30px;
+//     margin-top: 0;
+//     width: 15px; /* Chiều rộng */
+//     height: 15px; /* Chiều cao */
+//     padding: 10px; /* Thêm padding */
+// }
+.productdetails-size1.hover,
+.productdetails-size2.hover{
+    color:black;
+    background-color: #95c066;
+}
+.productdetails-size2{
+    font-family: Jost;
+    font-size: 15px;
+    border: 1px solid #000; /* Định dạng border */
+    border-radius: 0px; /* Border radius */
+    margin-left: 30px;
+    margin-top: 0;
+    width: 15px; /* Chiều rộng */
+    height: 15px; /* Chiều cao */
+    padding: 10px; /* Thêm padding */
+}
+.productdetails-size1 h3{
+    font-family: Jost;
+    font-size: 15px;
+    border: 1px solid ; /* Định dạng border */
+    border-radius: 0px; /* Border radius */
+    margin-left: 30px;
+    margin-top: 0;
+    width: 15px; /* Chiều rộng */
+    height: 15px; /* Chiều cao */
+    padding: 10px; /* Thêm padding */
+}
+
+
+.productdetails-size p {
+    font-family: Jost;
+    border: 1px solid #000; /* Định dạng border */
+    border-radius: 0; /* Border radius */
+    margin-top: 0;
+    margin-left: 30px;
+    width: 15px; /* Chiều rộng */
+    height: 15px; /* Chiều cao */
+    padding: 10px; /* Thêm padding */
+}
+
+
+.productdetails-size span{
+    font-size: 17px;
+    font-family: jost;
+    margin-top: 3px;
+    height: 30px;
+    min-width: 50px;
+    border-bottom: 1px solid #000;
+}
+.quantity-button {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 20px; /* Điều chỉnh kích thước font cho nút */
+}
+.productdetails-addtocard {
+    width: 50%;
+    margin-top: -40px;
+    margin-left: 150px;
+    color: white;
+    background-color: #95c066;
+    height: 50px;
+    text-align: center; /* Căn giữa nội dung theo chiều ngang */
+    line-height: 50px; /* Đặt line-height bằng chiều cao của phần tử */
+}
+
+.productdetails-addtocard:hover {
+    color: white;
+    background-color: black;
+}
+.productdetails-buynow {
+    width: 50%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    color: white;
+    background-color: black;
+    height: 50px;
+    text-align: center; /* Căn giữa nội dung theo chiều ngang */
+    line-height: 50px; /* Đặt line-height bằng chiều cao của phần tử */
+}
+.productdetails-card{
+    border-bottom: 1px solid black;
+}
+.productdetails-buynow:hover {
+    color: white;
+    background-color: #95c066;
+}
+
