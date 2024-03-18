@@ -81,7 +81,7 @@ const Register = () => {
 
     return (
         <div className="register-desktop" onClick={toggleDropdown}>
-            <RxAvatar />
+            <div className="register-Rx"><RxAvatar /></div>
             {isDropdownVisible && (
                 <div className={`modal-overlay`} ref={dropdownRef} onClick={closeDropdown}>
                     <div className="register-content" onClick={handleDropdownClick}>

@@ -52,6 +52,7 @@
     width: 15%;
     padding-right: 100px;
     font-size: 2rem;
+    // cursor: pointer;
 }
 .cart-quantity{
     border-radius: 50%;
@@ -64,6 +65,12 @@
 }
 .icon-tym{
     color:black;
+}
+.icon-search {
+    cursor: pointer;
+}
+.icon-login {
+    cursor: pointer;
 }
 
 

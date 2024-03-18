@@ -7,6 +7,7 @@ import { MdOutlineDownloadDone } from "react-icons/md";
 import { PiCookingPotFill } from "react-icons/pi";
 import { FaMotorcycle } from "react-icons/fa6";
 import { IoHome } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const BillPage = () => {
   const { cartItems, totalPrice, customerInfo, orders } = useShoppingContext();
@@ -69,6 +70,7 @@ const BillPage = () => {
       
       {/* Hiển thị chi tiết đơn hàng */}
       {renderOrderDetails()}
+      <Link to="/Evaluate">Evaluate</Link>
     </div>
   );
 };
