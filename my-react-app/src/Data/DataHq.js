@@ -1,5 +1,5 @@
-export const dataProduct2 = [
-    // Nước ép hoa quảy
+export const dataProduct =[
+    // Nướsc ép hoa quảy
     {
    id:13,
    img: "https://blog.ptlvina.com/wp-content/uploads/2021/02/nuoc-ep-cam-6.jpg", 
@@ -90,5 +90,4 @@ export const dataProduct2 = [
         title: "Apple Smoothie",
         price :50.00
         },
-
 ]

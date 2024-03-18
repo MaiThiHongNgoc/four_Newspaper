@@ -1,44 +1,32 @@
 import React, { useState } from 'react';
 import './ProductDetails.scss';
-import { useShoppingContext } from '../../../Context/ShoppingContext';
-import { dataProduct } from '../../../Data/DataSt';
 
 const ProductDetails = () => {
     const [quantity, setQuantity] = useState(1);
-    const [largeImage, setLargeImage] = useState("https://desero-store-demo.myshopify.com/cdn/shop/products/13.1.png?v=1656902509");
+    const [largeImage, setLargeImage] = useState("https://blog.ptlvina.com/wp-content/uploads/2021/02/nuoc-ep-cam-6.jpg");
     const [activeImg, setActiveImg] = useState(null); // State để theo dõi ảnh đang được chọn
-    const [activeLink, setActiveLink] = useState(null);
-    const { addCartItem } = useShoppingContext();
-
-    const handleLinkClick = (linkName) => {
-        setActiveLink(linkName);
-    };
 
     const handleImageClick = (newSrc) => {
         setLargeImage(newSrc); // Cập nhật hình ảnh lớn khi click vào ảnh nhỏ
         setActiveImg(newSrc); // Cập nhật ảnh đang được chọn
     };
-
+    
     const decreaseQuantity = () => {
         if (quantity > 1) {
             setQuantity(quantity - 1);
         }
-    };
+    }
 
     const increaseQuantity = () => {
         setQuantity(quantity + 1);
-    };
-
-    const handleAddToCart = () => {
-        addCartItem(dataProduct); // Thêm sản phẩm vào giỏ hàng
-    };
+    }
 
     return (
         <div>
             <div className='producthome'>
                 <div className='textproduct'>
                     <div className="productdetails-crumb">
-                        <p>Home-<span>Synthetic smoothies</span></p>
+                        <p>Home-<span>Orange juice</span></p>
                     </div>
                 </div>
                 <div className="productdetails-all">
@@ -47,29 +35,29 @@ const ProductDetails = () => {
                             <img src={largeImage} alt="" />
                         </div>
                         <div className="productdetails-imgmin">
-                            <img
-                                className={activeImg === "https://desero-store-demo.myshopify.com/cdn/shop/products/13.4.png?v=1656902509" ? "productdetails-imgmin1 hover" : "productdetails-imgmin1"}
-                                src="https://desero-store-demo.myshopify.com/cdn/shop/products/13.4.png?v=1656902509"
+                            <img 
+                                className={activeImg === "https://bazaarvietnam.vn/wp-content/uploads/2022/03/harper-bazaar-cach-lam-nuoc-ep-dua-hau-2-e1647506440642.jpeg" ? "productdetails-imgmin1 hover" : "productdetails-imgmin1"}
+                                src="https://bazaarvietnam.vn/wp-content/uploads/2022/03/harper-bazaar-cach-lam-nuoc-ep-dua-hau-2-e1647506440642.jpeg"
                                 alt=""
-                                onClick={() => handleImageClick("https://desero-store-demo.myshopify.com/cdn/shop/products/13.4.png?v=1656902509")}
+                                onClick={() => handleImageClick("https://bazaarvietnam.vn/wp-content/uploads/2022/03/harper-bazaar-cach-lam-nuoc-ep-dua-hau-2-e1647506440642.jpeg")}
                             />
-                            <img
-                                className={activeImg === "https://desero-store-demo.myshopify.com/cdn/shop/products/13.3.png?v=1656902509" ? "productdetails-imgmin2 hover" : "productdetails-imgmin2"}
-                                src="https://desero-store-demo.myshopify.com/cdn/shop/products/13.3.png?v=1656902509"
+                            <img 
+                                className={activeImg === "https://hc.com.vn/i/ecommerce/media/ckeditor_3197317.jpg" ? "productdetails-imgmin2 hover" : "productdetails-imgmin2"}
+                                src="https://hc.com.vn/i/ecommerce/media/ckeditor_3197317.jpg"
                                 alt=""
-                                onClick={() => handleImageClick("https://desero-store-demo.myshopify.com/cdn/shop/products/13.3.png?v=1656902509")}
+                                onClick={() => handleImageClick("https://hc.com.vn/i/ecommerce/media/ckeditor_3197317.jpg")}
                             />
-                            <img
-                                className={activeImg === "https://desero-store-demo.myshopify.com/cdn/shop/products/13.2.png?v=1656902509" ? "productdetails-imgmin2 hover" : "productdetails-imgmin2"}
-                                src="https://desero-store-demo.myshopify.com/cdn/shop/products/13.2.png?v=1656902509"
+                             <img 
+                                className={activeImg === "http://olivo.com.vn/wp-content/uploads/2021/03/nuoc-ep-tao-co-tac-dung-gi-2.png" ? "productdetails-imgmin2 hover" : "productdetails-imgmin2"}
+                                src="http://olivo.com.vn/wp-content/uploads/2021/03/nuoc-ep-tao-co-tac-dung-gi-2.png"
                                 alt=""
-                                onClick={() => handleImageClick("https://desero-store-demo.myshopify.com/cdn/shop/products/13.2.png?v=1656902509")}
+                                onClick={() => handleImageClick("http://olivo.com.vn/wp-content/uploads/2021/03/nuoc-ep-tao-co-tac-dung-gi-2.png")}
                             />
-                            <img
-                                className={activeImg === "https://desero-store-demo.myshopify.com/cdn/shop/products/13.1.png?v=1656902509" ? "productdetails-imgmin2 hover" : "productdetails-imgmin2"}
-                                src="https://desero-store-demo.myshopify.com/cdn/shop/products/13.1.png?v=1656902509"
+                             <img 
+                                className={activeImg === "https://truejuice.vn/articles/wp-content/uploads/2021/04/nuoc-ep-le-dao-thai-doc-to.jpg" ? "productdetails-imgmin2 hover" : "productdetails-imgmin2"}
+                                src="https://truejuice.vn/articles/wp-content/uploads/2021/04/nuoc-ep-le-dao-thai-doc-to.jpg"
                                 alt=""
-                                onClick={() => handleImageClick("https://desero-store-demo.myshopify.com/cdn/shop/products/13.1.png?v=1656902509")}
+                                onClick={() => handleImageClick("https://truejuice.vn/articles/wp-content/uploads/2021/04/nuoc-ep-le-dao-thai-doc-to.jpg")}
                             />
                             {/* Tương tự cho các ảnh còn lại */}
                         </div>
@@ -77,27 +65,22 @@ const ProductDetails = () => {
                     <div className="productdetails-info">
                         <div className="productdetails-gach">
                             <div className="productdetails-title">
-                                <h2>Synthetic Smoothies</h2>
+                                <h2>Orange juice</h2>
                             </div>
                             <div className="productdetails-price">
-                                <h3>$60.00 USD</h3>
+                                <h3>$65.00 USD</h3>
                             </div>
                         </div>
                         <div className="productdetails-text">
                             <p>Add more vitamins Juice is a natural solution containing tissues from fruits or vegetables. Juice is created mechanically by squeezing or squeezing or squeezing fresh fruit or vegetables without the use of heat or solvents. Fruit and vegetable juices are more nutrient-dense and easier to absorb than smoothies. This is...</p>
                         </div>
                         <div className="productdetails-card">
-                            <div className="productdetails-size">
-                                <span>Size</span>
-                                <p className={activeLink === 'sizes' ? 'productdetails-size1 hover' : 'productdetails-size1'} onClick={() => handleLinkClick('sizes')}>S</p>
-                                <h3 className={activeLink === 'sizem' ? 'productdetails-size2 hover' : 'productdetails-size2'} onClick={() => handleLinkClick('sizem')}>M</h3>
-                            </div>
                             <div className="product-quantity">
                                 <button className="quantity-button" onClick={decreaseQuantity}>-</button>
                                 <span className="quantity">{quantity}</span>
                                 <button className="quantity-button" onClick={increaseQuantity}>+</button>
                             </div>
-                            <div className="productdetails-addtocard" onClick={handleAddToCart}>
+                            <div className="productdetails-addtocard">
                                 <span >ADD TO CARD</span>
                             </div>
                             <div className="buynow-gach">
@@ -105,7 +88,6 @@ const ProductDetails = () => {
                                     <span>BUY IT NOW</span>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

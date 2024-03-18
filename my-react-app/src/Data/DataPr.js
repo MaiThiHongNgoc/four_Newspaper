@@ -1,4 +1,4 @@
-export const dataProduct3 = [
+export const dataProduct= [
     // Nước ép hoa quả
     {
    id:28,
