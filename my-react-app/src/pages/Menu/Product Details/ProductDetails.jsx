@@ -2,21 +2,23 @@ import React, { useState } from 'react';
 import './ProductDetails.scss';
 import { useShoppingContext } from '../../../Context/ShoppingContext';
 import { dataProduct } from '../../../Data/DataSt';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate từ react-router-dom
 
 const ProductDetails = () => {
     const [quantity, setQuantity] = useState(1);
     const [largeImage, setLargeImage] = useState("https://desero-store-demo.myshopify.com/cdn/shop/products/13.1.png?v=1656902509");
-    const [activeImg, setActiveImg] = useState(null); // State để theo dõi ảnh đang được chọn
+    const [activeImg, setActiveImg] = useState(null);
     const [activeLink, setActiveLink] = useState(null);
     const { addCartItem } = useShoppingContext();
+    const navigate = useNavigate(); // Sử dụng useNavigate để điều hướng
 
     const handleLinkClick = (linkName) => {
         setActiveLink(linkName);
     };
 
     const handleImageClick = (newSrc) => {
-        setLargeImage(newSrc); // Cập nhật hình ảnh lớn khi click vào ảnh nhỏ
-        setActiveImg(newSrc); // Cập nhật ảnh đang được chọn
+        setLargeImage(newSrc);
+        setActiveImg(newSrc);
     };
 
     const decreaseQuantity = () => {
@@ -30,9 +32,17 @@ const ProductDetails = () => {
     };
 
     const handleAddToCart = () => {
-        addCartItem(dataProduct); // Thêm sản phẩm vào giỏ hàng
-    };
+        addCartItem({
+            id: dataProduct.id,
+            title: "Synthetic Smoothies",
+            price: 60.00,
+            qty: quantity,
+            img: largeImage
+        });
 
+        // Sau khi thêm sản phẩm vào giỏ hàng, điều hướng đến trang giỏ hàng
+        navigate();
+    };
     return (
         <div>
             <div className='producthome'>

@@ -4,17 +4,16 @@ import { Link } from 'react-router-dom';
 import { formatCurrency } from '../../helpers/common';
 import { useShoppingContext } from '../../Context/ShoppingContext';
 import './CartIcon.scss';
-import CheckOut from '../../Context/CheckOut';
 
 function CartIcon() {
-     const { cartQty,cartItems, totalPrice} = useShoppingContext();
-// Trạng thái để kiểm soát việc hiển thị của dropdown
+    const { cartQty, cartItems, totalPrice } = useShoppingContext();
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
- // Xử lý click để toggle dropdown
+
     const toggleDropdown = () => setIsDropdownVisible(!isDropdownVisible);
-    useEffect(()=>{
-        // cạp nhập ui nếu cần khi cartItems thay đổi
-    }, [cartItems, cartQty, totalPrice])
+
+    useEffect(() => {
+        // Update UI if needed when cartItems change
+    }, [cartItems, cartQty, totalPrice]);
 
     return (
         <div className="icon-cart" onClick={toggleDropdown}>
