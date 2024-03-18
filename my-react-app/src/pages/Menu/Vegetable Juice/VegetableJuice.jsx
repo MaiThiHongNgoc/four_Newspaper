@@ -38,6 +38,7 @@ const VegetableJuice = () => {
             <p className="VegetableJuice-description">{product.description}</p>
             <p className="VegetableJuice-price">${product.price}</p>
             <button className="add-to-cart-button-VegetableJuice" onClick={() => addCartItem(product)}>Add to Cart</button>
+            <Link className="link-smoothies" to={`/ProductDetails/${product.id}`}>View Details</Link>
           </div>
         </div>
       ))}

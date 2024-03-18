@@ -5,6 +5,11 @@ const ProductDetails = () => {
     const [quantity, setQuantity] = useState(1);
     const [largeImage, setLargeImage] = useState("https://desero-store-demo.myshopify.com/cdn/shop/products/13.1.png?v=1656902509");
     const [activeImg, setActiveImg] = useState(null); // State để theo dõi ảnh đang được chọn
+    const [activeLink, setActiveLink] = useState(null);
+
+const handleLinkClick = (linkName) => {
+    setActiveLink(linkName);
+};
 
     const handleImageClick = (newSrc) => {
         setLargeImage(newSrc); // Cập nhật hình ảnh lớn khi click vào ảnh nhỏ
@@ -75,6 +80,11 @@ const ProductDetails = () => {
                             <p>Add more vitamins Juice is a natural solution containing tissues from fruits or vegetables. Juice is created mechanically by squeezing or squeezing or squeezing fresh fruit or vegetables without the use of heat or solvents. Fruit and vegetable juices are more nutrient-dense and easier to absorb than smoothies. This is...</p>
                         </div>
                         <div className="productdetails-card">
+                        <div className="productdetails-size">
+                                <span>Size</span>
+                                <p className={activeLink === 'sizes' ? 'productdetails-size1 hover' : 'productdetails-size1'} onClick={() => handleLinkClick('sizes')}>S</p>
+                                <h3 className={activeLink === 'sizem' ? 'productdetails-size2 hover' : 'productdetails-size2'} onClick={() => handleLinkClick('sizem')}>M</h3>
+                            </div>
                             <div className="product-quantity">
                                 <button className="quantity-button" onClick={decreaseQuantity}>-</button>
                                 <span className="quantity">{quantity}</span>

@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { dataProduct } from '../../../Data/DataSt'
+import { dataProduct4 } from '../../../Data/DataSt'
 import {Link} from 'react-router-dom'
 import './Smoothies.scss'
 import { useShoppingContext } from '../../../Context/ShoppingContext'
@@ -30,14 +30,15 @@ const Smoothies = () => {
       
     
     <div className=" Smoothies-list">
-    {dataProduct.map(product => (
-        <div key={product.id} className=" Smoothies-card">
-          <img src={product.img} alt={product.title} className=" Smoothies-image" />
+    {dataProduct4.map(product4 => (
+        <div key={product4.id} className=" Smoothies-card">
+          <img src={product4.img} alt={product4.title} className=" Smoothies-image" />
           <div className=" Smoothies-details">
-            <h2 className=" Smoothies-name">{product.title}</h2>
-            <p className=" Smoothies-description">{product.description}</p>
-            <p className=" Smoothies-price">${product.price}</p>
-            <button className="add-to-cart-button-Smoothies" onClick={() => addCartItem(product)}>Add to Cart</button>
+            <h2 className=" Smoothies-name">{product4.title}</h2>
+            <p className=" Smoothies-description">{product4.description}</p>
+            <p className=" Smoothies-price">${product4.price}</p>
+            <button className="add-to-cart-button-Smoothies" onClick={() => addCartItem(product4)}>Add to Cart</button>
+            <Link className="link-smoothies" to={`/ProductDetails/${product4.id}`}>View Details</Link>
           </div>
         </div>
       ))}

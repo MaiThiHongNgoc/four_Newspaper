@@ -32,8 +32,8 @@
   import Blogs6 from "./pages/Blogs/Blog6";
   import LoginPage from "./pages/Register/Login.jsx";
   import Admin from "./Admin/Admin.jsx";
-  import ProductDetails from "./pages/Menu/Product Details/ProductDetails.jsx";
-  import Evaluate from "./Evaluate/Evaluate.jsx";
+
+  import ProductDetails40 from "./pages/Menu/Product Details/ProductDetails.jsx";
   //import { WishlistContextProvider } from "./Wishlist/WishlistContext.jsx";
   // import Register from "./pageis/Register/Register";
   function App() {
@@ -63,7 +63,7 @@
             <Route path='/Juice' element={<Juice />} />
             <Route path='/Protein' element={<Protein />} />
             <Route path='/VegetableJuice' element={<VegetableJuice />} />
-            <Route path='/ProductDetails' element={<ProductDetails/>} />
+            <Route path='/ProductDetails/40' element={<ProductDetails40/>} />
 
 
             <Route path='/AboutUs' element={<AboutUs />} />
@@ -88,7 +88,6 @@
           
             <Route path='/Wishlist/wishlist2' element={<Wishlist2 />} />
             <Route path="/Bill" element={<Bill/>}/>
-            <Route path="/Evaluate" element={<Evaluate/>   } />
             <Route path="/Logout" element={<Logout/>} />
             {/* <Route path='/Register' element={<Register />} /> */}
           </Routes>
