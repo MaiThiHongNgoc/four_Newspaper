@@ -1,11 +1,9 @@
   import React from 'react'
-import Header2 from '../../Component/Header/Header2/Header2'
 import './AboutUs.scss'
 
 const AboutUs = () => {
   return (
     <div className='AboutUs'>
-        <Header2/>
         <div className="Aboutus-header">
              <div className="imgAboutusContainer">
                  <img className='imgAboutus' src="https://desero-store-demo.myshopify.com/cdn/shop/files/about-heading.png?v=1657248139" alt="" />

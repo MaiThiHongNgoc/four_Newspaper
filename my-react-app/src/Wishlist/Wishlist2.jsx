@@ -1,6 +1,5 @@
 import React from 'react';
 import { useWishlistContext } from './WishlistContext';
-import Header2 from '../Component/Header/Header2/Header2';
 import { FaRegTrashCan } from "react-icons/fa6";
 import { formatCurrency } from '../helpers/common';
 //import Footer from '../Component/Footer/Footer';
@@ -14,7 +13,6 @@ const Wishlist2 = () => {
     if (!wishlistItems || !Array.isArray(wishlistItems) || wishlistItems.length === 0) {
         return (
             <div>
-                <Header2 />
                 <div className="slide-wishlist">
                     <div className="imgWishlistContainer">
                         <img className='imgWishlist' src="https://desero-store-demo.myshopify.com/cdn/shop/files/about-heading.png?v=1657248139" alt="" />
@@ -29,7 +27,6 @@ const Wishlist2 = () => {
 
     return (
         <div>
-            <Header2 />
             <div className="slide-wishlist">
                 <div className="imgWishlistContainer">
                     <img className='imgWishlist' src="https://desero-store-demo.myshopify.com/cdn/shop/files/about-heading.png?v=1657248139" alt="" />

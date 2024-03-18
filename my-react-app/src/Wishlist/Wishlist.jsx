@@ -1,14 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header2 from '../Component/Header/Header2/Header2';
-//import Footer from '../Component/Footer/Footer';
 import './Wishlist.scss';
 
 const Wishlist = () => {
 
   return (
     <div className='Wishlist'>
-      <Header2 />
       <div className="slide-wishlist">
         <div className="imgWishlistContainer">
           <img className='imgWishlist' src="https://desero-store-demo.myshopify.com/cdn/shop/files/about-heading.png?v=1657248139" alt="" />
@@ -24,7 +21,6 @@ const Wishlist = () => {
             </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 };

@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import Header2 from '../../../Component/Header/Header2/Header2'
 import './ContectUs.scss'
 import { LuMapPin } from "react-icons/lu";
 import { BsPhoneVibrate } from "react-icons/bs";
@@ -36,7 +35,6 @@ const ContectUs = () => {
     };
   return (
     <div className='Contect'>
-       <Header2/>
         <div className="Contect-header">
              <div className="imgContectContainer">
                  <img className='imgContect' src="https://desero-store-demo.myshopify.com/cdn/shop/files/about-heading.png?v=1657248139" alt="" />

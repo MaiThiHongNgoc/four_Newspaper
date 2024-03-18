@@ -8,7 +8,6 @@ import 'swiper/css/pagination';
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaPinterestP } from "react-icons/fa";
-import Header2 from '../../Component/Header/Header2/Header2';
 import { Link } from 'react-router-dom';
 const Blogs = () => {
     const handleClick = () => {
@@ -34,7 +33,6 @@ const handleClick5 = () => {
 
     return (
         <div className="blog-page">
-            <Header2/>
             <div className="blog-all">
             <div className="blogs-text">
             <p>Home-News-<span>Popular fruit juices today</span></p>

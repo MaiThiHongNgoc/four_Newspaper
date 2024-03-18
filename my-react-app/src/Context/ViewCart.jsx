@@ -4,8 +4,6 @@ import { useShoppingContext } from './ShoppingContext';
 import { formatCurrency } from '../helpers/common';
 import './ViewCart.scss'
 import { FaRegTrashCan } from "react-icons/fa6";
-//import Header from '../Component/Header/Header1';
-//import Footer from '../Component/Footer/Footer';
 import CheckoutButton from './CheckOut';
 
 const ViewCart = () => {
@@ -16,7 +14,6 @@ const ViewCart = () => {
     if (!cartItems || !Array.isArray(cartItems) || cartItems.length === 0) {
         return (
             <div>
-                {/* <Header/> */}
                 <div><h3 className='Cart-shopping'>Your cart is empty</h3>
                 <Link to="/" className='Cart-shopping-to'>Go back to shopping</Link>
                 </div>
@@ -29,7 +26,6 @@ const ViewCart = () => {
 
     return (
         <div>
-        {/* <Header/> */}
         <div className="row">
             <h3>Checkout</h3>
             <table className="table table-hover">
@@ -75,7 +71,6 @@ const ViewCart = () => {
                 }}>Place Order</button>
             </div>
         </div>
-        {/* <Footer/> */}
         </div>
     );
 }
