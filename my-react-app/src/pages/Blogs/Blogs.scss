@@ -69,7 +69,7 @@
     transform: translateX(-50%); /* Điều chỉnh vị trí để căn giữa theo chiều ngang */
     color: #969696;; /* Màu chữ */
     font-size: 1.2rem; /* Cỡ chữ */
-    z-index: 1; /* Đặt vị trí trên cùng để chữ hiển thị trên phần ảnh */
+    // z-index: 1; /* Đặt vị trí trên cùng để chữ hiển thị trên phần ảnh */
     margin-left: -515px;
 }
 .title-tag1{
@@ -363,5 +363,5 @@
     margin-left: -10px !important;
 }
 .swiper{
-    z-index: 10 !important;
+    // z-index: 10 !important;
 }
