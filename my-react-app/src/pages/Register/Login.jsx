@@ -20,10 +20,11 @@ const LoginPage = ({ onLogin }) => {
         try {
             // Adjust the URL to your backend endpoint
             const response = await axios.post('http://localhost:3000/admin/server/login.php', JSON.stringify({ email, password }), {
-               headers: {
-                       'Content-Type': 'application/json'
-                        }
-                       });
+                headers: {
+                  'Content-Type': 'application/json'
+                }
+              });
+              
             if (response.data.status === 'success') {
                 localStorage.setItem('isLoggedIn', 'true');
                 localStorage.setItem('userType', response.data.userType); // Save the user type
@@ -71,7 +72,7 @@ const LoginPage = ({ onLogin }) => {
                         required
                     />
                     <button onClick={toggleShowPassword} className="show-password-button">
-                        {/* {showPassword ? <FaRegEyeSlash /> : <FaRegEye />} */}
+                        {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
                     </button>
                 </div>
                 <button onClick={handleLogin} className="login-button">Log In</button>
@@ -82,7 +83,3 @@ const LoginPage = ({ onLogin }) => {
 };
 
 export default LoginPage;
-
-
-
-    

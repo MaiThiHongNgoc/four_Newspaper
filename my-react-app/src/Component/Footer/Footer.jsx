@@ -94,10 +94,10 @@ const Footer = () => {
           <div className="copyright">
             <div className="container1">
                   <div className="text-copyright">
-                     © Copyright 2022 | 
+                     © Copyright 2024 | 
                     <a href="https://shopilaunch.com/" className="underline_hover-link">Desero by</a>
-                    <a href="https://shopilaunch.com/" className="underline_hover-link">ShopiLaunch.</a>
-                    <a href="https://www.shopify.com/?ref=shopifycenter" className="underline_hover-link">Powered by Shoppify.</a>
+                    <a href="https://shopilaunch.com/" className="underline_hover-link">Group3.</a>
+                    <a href="https://www.shopify.com/?ref=shopifycenter" className="underline_hover-link">Powered by Group3-Four_Newspaper.</a>
                   </div>
                 <div className="cart">
                   <img src="https://desero-store-demo.myshopify.com/cdn/shop/files/payment.png?v=1656983820" alt="" />

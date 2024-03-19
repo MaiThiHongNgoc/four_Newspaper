@@ -1,24 +1,22 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import axios from 'axios';
 import './Register2.scss'
 
 const Register2 = ({ onRegister }) => {
-  const [username, setUsername] = useState('');
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
-
   const navigate = useNavigate();
 
-  const handleUsernameChange = (e) => setUsername(e.target.value);
+  const handleNameChange = (e) => setName(e.target.value);
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
   const handleConfirmPasswordChange = (e) => setConfirmPassword(e.target.value);
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -27,21 +25,28 @@ const Register2 = ({ onRegister }) => {
       return;
     }
 
+    if (!name || !email || !password || !confirmPassword) {
+      setError('Please fill in all fields.');
+      return;
+    }
+
     try {
       const response = await axios.post('http://localhost:3000/admin/server/register.php', JSON.stringify ({
           email: email,
           password: password,
-          username: username,
+          name: name,
+          user_type: 'user', // Add user_type here
           confirmPassword: confirmPassword
       }), {
           headers: {
               'Content-Type': 'application/json'
           }
       });
-
       console.log(response.data);
-      onRegister(email);
-      navigate('/dashboard'); // Adjust as needed
+      if (onRegister) {
+        onRegister(email);
+      }
+      navigate('/Login'); // Điều chỉnh tùy theo đường dẫn bạn muốn điều hướng
     } catch (error) {
       setError('Registration failed. Please try again.');
       console.error('Registration error:', error);
@@ -54,25 +59,19 @@ const Register2 = ({ onRegister }) => {
 
   return (
     <div className="register-container1">
-      <h2 className='register-h2'>Sing In</h2>
+      <h2 className='register-h2'>Sign In</h2>
       <form onSubmit={handleSubmit} className="register-form">
         <div className="form-group">
-          <input type="text" className="form_control" value={username} onChange={handleUsernameChange} placeholder="Username" required />
+          <input type="text" className="form_control" value={name} onChange={handleNameChange} placeholder="Name" required />
         </div>
         <div className="form-group">
           <input type="email" className="form_control" value={email} onChange={handleEmailChange} placeholder="Email address" required />
         </div>
         <div className="form-group">
           <input type={showPassword ? 'text' : 'password'} className="form_control" value={password} onChange={handlePasswordChange} placeholder="Password" required />
-          <div onClick={toggleShowPassword} className="password-toggle">
-            {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
-          </div>
         </div>
         <div className="form-group">
           <input type="password" className="form_control" value={confirmPassword} onChange={handleConfirmPasswordChange} placeholder="Confirm Password" required />
-          <div onClick={toggleShowPassword} className="password-toggle">
-            {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
-          </div>
         </div>
         {error && <div className="error">{error}</div>}
         <button type="submit" className="btn-register">Register</button>
@@ -81,6 +80,5 @@ const Register2 = ({ onRegister }) => {
     </div>
   );
 };
-
 
 export default Register2;

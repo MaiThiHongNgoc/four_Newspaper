@@ -9,7 +9,7 @@ const Register = () => {
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [username, setUsername] = useState('');
+    const [name, setName] = useState(''); // Đã đổi từ username sang name
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const dropdownRef = useRef(null);
@@ -28,8 +28,8 @@ const Register = () => {
         setPassword(e.target.value);
     }
 
-    const handleUsernameChange = (e) => {
-        setUsername(e.target.value);
+    const handleNameChange = (e) => { // Đã đổi từ handleUsernameChange sang handleNameChange
+        setName(e.target.value);
     }
 
     const handleConfirmPasswordChange = (e) => {
@@ -45,8 +45,8 @@ const Register = () => {
             return;
         }
 
-        // Kiểm tra nếu email, mật khẩu hoặc tên người dùng trống
-        if (!email || !password || !username) {
+        // Kiểm tra nếu email, mật khẩu hoặc tên trống
+        if (!email || !password || !name) { // Đã đổi từ username sang name
             setError("Please fill in all fields.");
             return;
         }
@@ -56,7 +56,7 @@ const Register = () => {
             const response = await axios.post('http://localhost:3000/admin/server/register.php', JSON.stringify ({
                 email: email,
                 password: password,
-                username: username,
+                name: name, // Đã đổi từ username sang name
                 confirmPassword: confirmPassword
             }), {
                 headers: {
@@ -91,7 +91,7 @@ const Register = () => {
                         <h2 className="title-register">Create an account</h2>
                         <form onSubmit={handleSubmit}>
                             <div className="form-group">
-                                <input type="text" className="form_control" value={username} onChange={handleUsernameChange} placeholder="Username" required />
+                                <input type="text" className="form_control" value={name} onChange={handleNameChange} placeholder="Name" required /> // Đã sửa placeholder
                             </div>
                             <div className="form-group">
                                 <input type="email" className="form_control" value={email} onChange={handleEmailChange} placeholder="Email address" required />
