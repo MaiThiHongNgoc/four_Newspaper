@@ -27,12 +27,12 @@ export const dataProduct = [
    {
    id:44,
    img: "https://desero-store-demo.myshopify.com/cdn/shop/products/11.3.png?v=1656903842", 
-   title: "Raspberry Smoothies",
+   title: "Mango Smoothies",
    price :56.00
    },
    {
    id:45,
-   img: "https://desero-store-demo.myshopify.com/cdn/shop/products/12.3.png?v=1656903730", 
+   img: "https://desero-store-demo.myshopify.com/cdn/shop/products/15.1.png?v=1656902928", 
    title: "Blueberry Smoothies",
    price :56.00
    },

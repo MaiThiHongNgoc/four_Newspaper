@@ -1,26 +1,48 @@
 import React, { useState } from 'react';
 import './ProductDetails.scss';
+import { useShoppingContext } from '../../../Context/ShoppingContext';
+import { dataProduct } from '../../../Data/DataSt';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate từ react-router-dom
 
 const ProductDetails = () => {
     const [quantity, setQuantity] = useState(1);
     const [largeImage, setLargeImage] = useState("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMf8JxyfXsMX1ev1yCYAwgw6cH_vhEUH_zfA&usqp=CAU");
-    const [activeImg, setActiveImg] = useState(null); // State để theo dõi ảnh đang được chọn
+    const [activeImg, setActiveImg] = useState(null);
+    const [activeLink, setActiveLink] = useState(null);
+    const { addCartItem } = useShoppingContext();
+    const navigate = useNavigate(); // Sử dụng useNavigate để điều hướng
+
+    const handleLinkClick = (linkName) => {
+        setActiveLink(linkName);
+    };
 
     const handleImageClick = (newSrc) => {
-        setLargeImage(newSrc); // Cập nhật hình ảnh lớn khi click vào ảnh nhỏ
-        setActiveImg(newSrc); // Cập nhật ảnh đang được chọn
+        setLargeImage(newSrc);
+        setActiveImg(newSrc);
     };
-    
+
     const decreaseQuantity = () => {
         if (quantity > 1) {
             setQuantity(quantity - 1);
         }
-    }
+    };
 
     const increaseQuantity = () => {
         setQuantity(quantity + 1);
-    }
+    };
 
+    const handleAddToCart = () => {
+        addCartItem({
+            id: dataProduct.id,
+            title: "Vanilla Protein",
+            price: 65.00,
+            qty: quantity,
+            img: largeImage
+        });
+
+        // Sau khi thêm sản phẩm vào giỏ hàng, điều hướng đến trang giỏ hàng
+        navigate();
+    };
     return (
         <div>
             <div className='producthome'>
@@ -36,10 +58,10 @@ const ProductDetails = () => {
                         </div>
                         <div className="productdetails-imgmin">
                             <img 
-                                className={activeImg === "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQozZul-PpMRfhEsJ8Bb9skyQXlmhIIQAPKvA&usqp=CAU" ? "productdetails-imgmin1 hover" : "productdetails-imgmin1"}
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQozZul-PpMRfhEsJ8Bb9skyQXlmhIIQAPKvA&usqp=CAU"
+                                className={activeImg === "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMf8JxyfXsMX1ev1yCYAwgw6cH_vhEUH_zfA&usqp=CAU" ? "productdetails-imgmin1 hover" : "productdetails-imgmin1"}
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMf8JxyfXsMX1ev1yCYAwgw6cH_vhEUH_zfA&usqp=CAU"
                                 alt=""
-                                onClick={() => handleImageClick("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQozZul-PpMRfhEsJ8Bb9skyQXlmhIIQAPKvA&usqp=CAU")}
+                                onClick={() => handleImageClick("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMf8JxyfXsMX1ev1yCYAwgw6cH_vhEUH_zfA&usqp=CAU")}
                             />
                             <img 
                                 className={activeImg === "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz4K7x2eocmleB30pyPnU4nUu9QxKsaquZZg&usqp=CAU" ? "productdetails-imgmin2 hover" : "productdetails-imgmin2"}
