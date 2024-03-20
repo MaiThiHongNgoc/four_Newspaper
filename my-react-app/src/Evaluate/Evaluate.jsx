@@ -79,9 +79,9 @@ function Evaluate() {
                     </div>
                 </div>
             </div>
-             <Link to="/" className='evaluate-link2'>On the homepage</Link>
+           
         </div>
-      
+        <Link to="/" className='evaluate-link2'>On the homepage</Link>
     </div>
     )
 }
