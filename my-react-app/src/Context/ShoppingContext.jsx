@@ -21,7 +21,7 @@ export const ShoppingContextProvider = ({ children }) => {
         localStorage.setItem('shopping_cart', JSON.stringify(cartItems));
     }, [cartItems]);
 
-    const cartQty = cartItems.reduce((qty, item) => qty + item.qty, 0);
+    const cartQty = cartItems.reduce((qty, item) =>  qty + item.qty, 0);
     const totalPrice = cartItems.reduce((total, item) => total + item.price * item.qty, 0);
 
     const updateCustomerInfo = (info) => {

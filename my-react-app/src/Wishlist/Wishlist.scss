@@ -64,5 +64,12 @@
     color: #95c066;
   }
 }
+.wishlist-image {
+  max-width: 100px; /* Thiết lập kích thước tối đa cho ảnh */
+  height: auto; /* Đảm bảo tỷ lệ hình ảnh không bị méo */
+}
+.wishlist-shopping{
+  border-radius: 0px ;
+}
 
   
