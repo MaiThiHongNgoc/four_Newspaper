@@ -92,4 +92,30 @@
   .bill-conten{
     padding: 50px;
   }
+  .bill-link2 {
+    text-decoration: none;
+    padding: 20px;
+    text-align: left;
+    margin-left: 550px;
+    margin-right: 50px;
+    font-size: 1.4rem;
+    color: #58B720;
+    margin-bottom: 50px;
+    &:hover{
+      color: #f9f9f9;
+      background-color: #58B720;
+    }
+  }
+  .bill-link1 {
+    text-decoration: none;
+    padding: 20px;
+    text-align: left;
+    margin-left: 0px;
+    font-size: 1.4rem;
+    color: #58B720;
+    &:hover{
+      color: #f9f9f9;
+      background-color: #58B720;
+    }
+  }
   

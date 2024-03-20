@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { FaRegStar } from "react-icons/fa";
 import './Evaluate.scss'
+import { Link } from "react-router-dom";
 
 function Evaluate() {
     return (
@@ -78,7 +79,9 @@ function Evaluate() {
                     </div>
                 </div>
             </div>
+             <Link to="/" className='evaluate-link2'>On the homepage</Link>
         </div>
+      
     </div>
     )
 }

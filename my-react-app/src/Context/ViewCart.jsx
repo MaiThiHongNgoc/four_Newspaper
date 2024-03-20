@@ -27,7 +27,6 @@ const ViewCart = () => {
     return (
         <div>
         <div className="row">
-            <h3>Checkout</h3>
             <table className="table table-hover">
                 <thead>
                     <tr>
@@ -42,7 +41,7 @@ const ViewCart = () => {
                 <tbody>
                     {cartItems.map(item => (
                         <tr key={item.id}>
-                            {/* <td><img src={item.img} className="img-fluid rounded" alt={item.title} /></td> */}
+                            <td><img src={item.img} className="img-fluid rounded" alt={item.title} /></td>
                             <td>{item.title}</td>
                             <td>{formatCurrency(item.price)}</td>
                             <td>
@@ -65,10 +64,7 @@ const ViewCart = () => {
             </div>
             <div className="col-md-12 mt-5">
                 <Link to="/Shop" className="btn2 btn-sm btn-primary float-start">Continue shopping</Link>
-                <button className="btn2 btn-sm btn-success float-end me-2 d-block" onClick={() => {
-                    clearCart();
-                    navigate('/');
-                }}>Place Order</button>
+                <Link to="/CheckOut" className="btn2 btn-sm btn-success float-end me-2 d-block" >Place Order</Link>
             </div>
         </div>
         </div>

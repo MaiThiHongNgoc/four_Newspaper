@@ -18,7 +18,7 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
 
         <ul className='sidebar-list'>
             <li className='sidebar-list-item'>
-                <a href="http://localhost:3000/admin/server/admin_page.php">
+                <a href="http://localhost:3000/admin/server/admin_page.php" target="_blank">
                     <BsGrid1X2Fill className='icon'/> Dashboard
                 </a>
             </li>
