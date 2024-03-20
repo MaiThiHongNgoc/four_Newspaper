@@ -1,25 +1,48 @@
 import React, { useState } from 'react';
 import './ProductDetails.scss';
+import { useShoppingContext } from '../../../Context/ShoppingContext';
+import { dataProduct } from '../../../Data/DataSt';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate từ react-router-dom
 
 const ProductDetails = () => {
     const [quantity, setQuantity] = useState(1);
     const [largeImage, setLargeImage] = useState("http://olivo.com.vn/wp-content/uploads/2021/03/nuoc-ep-tao-co-tac-dung-gi-2.png");
-    const [activeImg, setActiveImg] = useState(null); // State để theo dõi ảnh đang được chọn
+    const [activeImg, setActiveImg] = useState(null);
+    const [activeLink, setActiveLink] = useState(null);
+    const { addCartItem } = useShoppingContext();
+    const navigate = useNavigate(); // Sử dụng useNavigate để điều hướng
+
+    const handleLinkClick = (linkName) => {
+        setActiveLink(linkName);
+    };
 
     const handleImageClick = (newSrc) => {
-        setLargeImage(newSrc); // Cập nhật hình ảnh lớn khi click vào ảnh nhỏ
-        setActiveImg(newSrc); // Cập nhật ảnh đang được chọn
+        setLargeImage(newSrc);
+        setActiveImg(newSrc);
     };
-    
+
     const decreaseQuantity = () => {
         if (quantity > 1) {
             setQuantity(quantity - 1);
         }
-    }
+    };
 
     const increaseQuantity = () => {
         setQuantity(quantity + 1);
-    }
+    };
+
+    const handleAddToCart = () => {
+        addCartItem({
+            id: dataProduct.id,
+            title: "Apple Juice",
+            price: 59.00,
+            qty: quantity,
+            img: largeImage
+        });
+
+        // Sau khi thêm sản phẩm vào giỏ hàng, điều hướng đến trang giỏ hàng
+        navigate();
+    };
 
     return (
         <div>
@@ -36,10 +59,10 @@ const ProductDetails = () => {
                         </div>
                         <div className="productdetails-imgmin">
                             <img 
-                                className={activeImg === "https://truejuice.vn/articles/wp-content/uploads/2021/04/nuoc-ep-le-dao-thai-doc-to.jpg" ? "productdetails-imgmin1 hover" : "productdetails-imgmin1"}
-                                src="https://truejuice.vn/articles/wp-content/uploads/2021/04/nuoc-ep-le-dao-thai-doc-to.jpg"
+                                className={activeImg === "http://olivo.com.vn/wp-content/uploads/2021/03/nuoc-ep-tao-co-tac-dung-gi-2.png" ? "productdetails-imgmin1 hover" : "productdetails-imgmin1"}
+                                src="http://olivo.com.vn/wp-content/uploads/2021/03/nuoc-ep-tao-co-tac-dung-gi-2.png"
                                 alt=""
-                                onClick={() => handleImageClick("https://truejuice.vn/articles/wp-content/uploads/2021/04/nuoc-ep-le-dao-thai-doc-to.jpg")}
+                                onClick={() => handleImageClick("http://olivo.com.vn/wp-content/uploads/2021/03/nuoc-ep-tao-co-tac-dung-gi-2.png")}
                             />
                             <img 
                                 className={activeImg === "https://blog.ptlvina.com/wp-content/uploads/2021/02/nuoc-ep-nho-2.jpg" ? "productdetails-imgmin2 hover" : "productdetails-imgmin2"}
@@ -80,7 +103,7 @@ const ProductDetails = () => {
                                 <span className="quantity">{quantity}</span>
                                 <button className="quantity-button" onClick={increaseQuantity}>+</button>
                             </div>
-                            <div className="productdetails-addtocard">
+                            <div className="productdetails-addtocard" onClick={handleAddToCart}>
                                 <span >ADD TO CARD</span>
                             </div>
                             <div className="buynow-gach">

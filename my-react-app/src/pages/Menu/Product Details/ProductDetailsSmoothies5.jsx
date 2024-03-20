@@ -1,26 +1,48 @@
 import React, { useState } from 'react';
 import './ProductDetails.scss';
+import { useShoppingContext } from '../../../Context/ShoppingContext';
+import { dataProduct } from '../../../Data/DataSt';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate từ react-router-dom
 
 const ProductDetails = () => {
     const [quantity, setQuantity] = useState(1);
-    const [largeImage, setLargeImage] = useState("https://desero-store-demo.myshopify.com/cdn/shop/products/12.3.png?v=16569037302");
-    const [activeImg, setActiveImg] = useState(null); // State để theo dõi ảnh đang được chọn
+    const [largeImage, setLargeImage] = useState("https://desero-store-demo.myshopify.com/cdn/shop/products/15.1.png?v=1656902928");
+    const [activeImg, setActiveImg] = useState(null);
+    const [activeLink, setActiveLink] = useState(null);
+    const { addCartItem } = useShoppingContext();
+    const navigate = useNavigate(); // Sử dụng useNavigate để điều hướng
+
+    const handleLinkClick = (linkName) => {
+        setActiveLink(linkName);
+    };
 
     const handleImageClick = (newSrc) => {
-        setLargeImage(newSrc); // Cập nhật hình ảnh lớn khi click vào ảnh nhỏ
-        setActiveImg(newSrc); // Cập nhật ảnh đang được chọn
+        setLargeImage(newSrc);
+        setActiveImg(newSrc);
     };
-    
+
     const decreaseQuantity = () => {
         if (quantity > 1) {
             setQuantity(quantity - 1);
         }
-    }
+    };
 
     const increaseQuantity = () => {
         setQuantity(quantity + 1);
-    }
+    };
 
+    const handleAddToCart = () => {
+        addCartItem({
+            id: dataProduct.id,
+            title: "Blueberry Smoothies",
+            price: 56.00,
+            qty: quantity,
+            img: largeImage
+        });
+
+        // Sau khi thêm sản phẩm vào giỏ hàng, điều hướng đến trang giỏ hàng
+        navigate();
+    };
     return (
         <div>
             <div className='producthome'>
@@ -36,16 +58,16 @@ const ProductDetails = () => {
                         </div>
                         <div className="productdetails-imgmin">
                             <img 
-                                className={activeImg === "https://desero-store-demo.myshopify.com/cdn/shop/products/10.3.png?v=1656903572" ? "productdetails-imgmin1 hover" : "productdetails-imgmin1"}
-                                src="https://desero-store-demo.myshopify.com/cdn/shop/products/10.3.png?v=1656903572"
-                                alt=""
-                                onClick={() => handleImageClick("https://desero-store-demo.myshopify.com/cdn/shop/products/10.3.png?v=1656903572")}
-                            />
-                            <img 
-                                className={activeImg === "https://desero-store-demo.myshopify.com/cdn/shop/products/15.1.png?v=1656902928" ? "productdetails-imgmin2 hover" : "productdetails-imgmin2"}
+                                className={activeImg === "https://desero-store-demo.myshopify.com/cdn/shop/products/15.1.png?v=1656902928" ? "productdetails-imgmin1 hover" : "productdetails-imgmin1"}
                                 src="https://desero-store-demo.myshopify.com/cdn/shop/products/15.1.png?v=1656902928"
                                 alt=""
                                 onClick={() => handleImageClick("https://desero-store-demo.myshopify.com/cdn/shop/products/15.1.png?v=1656902928")}
+                            />
+                            <img 
+                                className={activeImg === "https://desero-store-demo.myshopify.com/cdn/shop/products/10.3.png?v=1656903572" ? "productdetails-imgmin2 hover" : "productdetails-imgmin2"}
+                                src="https://desero-store-demo.myshopify.com/cdn/shop/products/10.3.png?v=1656903572"
+                                alt=""
+                                onClick={() => handleImageClick("https://desero-store-demo.myshopify.com/cdn/shop/products/10.3.png?v=1656903572")}
                             />
                              <img 
                                 className={activeImg === "https://www.upstateramblings.com/wp-content/uploads/2016/09/apple-smoothie-4-of-6.jpg" ? "productdetails-imgmin2 hover" : "productdetails-imgmin2"}
@@ -75,12 +97,17 @@ const ProductDetails = () => {
                             <p>Add more vitamins Juice is a natural solution containing tissues from fruits or vegetables. Juice is created mechanically by squeezing or squeezing or squeezing fresh fruit or vegetables without the use of heat or solvents. Fruit and vegetable juices are more nutrient-dense and easier to absorb than smoothies. This is...</p>
                         </div>
                         <div className="productdetails-card">
+                        <div className="productdetails-size">
+                                <span>Size</span>
+                                <p className={activeLink === 'sizes' ? 'productdetails-size1 hover' : 'productdetails-size1'} onClick={() => handleLinkClick('sizes')}>S</p>
+                                <h3 className={activeLink === 'sizem' ? 'productdetails-size2 hover' : 'productdetails-size2'} onClick={() => handleLinkClick('sizem')}>M</h3>
+                            </div>
                             <div className="product-quantity">
                                 <button className="quantity-button" onClick={decreaseQuantity}>-</button>
                                 <span className="quantity">{quantity}</span>
                                 <button className="quantity-button" onClick={increaseQuantity}>+</button>
                             </div>
-                            <div className="productdetails-addtocard">
+                            <div className="productdetails-addtocard" onClick={handleAddToCart}>
                                 <span >ADD TO CARD</span>
                             </div>
                             <div className="buynow-gach">
