@@ -1,6 +1,7 @@
   import React, { useState } from "react";
   import { Route, Link, Routes, BrowserRouter, Router } from 'react-router-dom';
   import './App.css'
+  import axios from "axios";
 
 
   import Home from "./pages/Home/Home";
@@ -38,6 +39,33 @@
   //import { WishlistContextProvider } from "./Wishlist/WishlistContext.jsx";
   // import Register from "./pageis/Register/Register";
   function App() {
+    const [user, setUser] = useState(null);
+    const [errorMessage, setErrorMessage] = useState('');
+    const handleLogin = async (email, password, onLogin, navigate) => {
+      if (!email.trim() || !password.trim()) {
+          setErrorMessage('Please enter both email and password.');
+          return;
+      }
+  
+      try {
+          const response = await axios.post('http://localhost:3000/admin/server/login.php', { email, password });
+          
+          if (response.data.status === 'success') {
+              localStorage.setItem('isLoggedIn', 'true');
+              localStorage.setItem('userType', response.data.userType); // Save the user type
+              onLogin(email, response.data.userType); // Update login state with email and user type
+              // Redirect based on the user type
+              navigate(response.data.userType === 'admin' ? '/Admin' : '/');
+          } else {
+              setErrorMessage(response.data.message);
+          }
+      } catch (error) {
+          console.error('Login error:', error);
+          setErrorMessage('An error occurred during login. Please try again later.');
+      }
+    };
+  
+
 
 
     return (
@@ -55,7 +83,7 @@
             </Route>
             
             <Route path='/Register2' element={<Register2 />} />
-            <Route path='/Login' element={<LoginPage />} />
+            <Route path='/Login' element={<LoginPage onLogin={handleLogin} />} />
             <Route path='/Admin' element={<Admin />} />
           
 

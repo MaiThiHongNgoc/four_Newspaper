@@ -4,7 +4,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import axios from 'axios';
 import './Login.scss';
 
-const LoginPage = ({ onLogin }) => {
+const LoginPage = ({onLogin}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -18,13 +18,8 @@ const LoginPage = ({ onLogin }) => {
         }
 
         try {
-            // Adjust the URL to your backend endpoint
-            const response = await axios.post('http://localhost:3000/admin/server/login.php', JSON.stringify({ email, password }), {
-                headers: {
-                  'Content-Type': 'application/json'
-                }
-              });
-              
+            const response = await axios.post('http://localhost:3000/admin/server/login.php', { email, password });
+            
             if (response.data.status === 'success') {
                 localStorage.setItem('isLoggedIn', 'true');
                 localStorage.setItem('userType', response.data.userType); // Save the user type

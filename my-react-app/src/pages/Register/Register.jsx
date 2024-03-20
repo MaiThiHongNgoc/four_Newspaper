@@ -57,7 +57,8 @@ const Register = () => {
                 email: email,
                 password: password,
                 name: name, // Đã đổi từ username sang name
-                confirmPassword: confirmPassword
+                confirmPassword: confirmPassword,
+                // user_type: 'admin' // Đặt giá trị user_type là 'admin' cho đăng ký người dùng admin
             }), {
                 headers: {
                     'Content-Type': 'application/json'
@@ -91,7 +92,7 @@ const Register = () => {
                         <h2 className="title-register">Create an account</h2>
                         <form onSubmit={handleSubmit}>
                             <div className="form-group">
-                                <input type="text" className="form_control" value={name} onChange={handleNameChange} placeholder="Name" required /> // Đã sửa placeholder
+                                <input type="text" className="form_control" value={name} onChange={handleNameChange} placeholder="Name" required /> 
                             </div>
                             <div className="form-group">
                                 <input type="email" className="form_control" value={email} onChange={handleEmailChange} placeholder="Email address" required />

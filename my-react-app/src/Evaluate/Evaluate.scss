@@ -1,18 +1,21 @@
 .evaluate-none {
     opacity: 1;
     visibility: visible;
-    z-index: 11;
+    // margin-top: 110px;
+    // margin-bottom: 70px;
+    // z-index: 11;
     width: 560px;
-    margin: auto;
+    margin: 110px auto;
+    height: 670px;
     background-color: #f3f3f3;
     box-shadow: 7px 6px 40px #ccccdf29;
-    position: fixed;
+    // position: fixed;
     max-width: 90%;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 600px;
+    // height: 600px;
     padding: 50px;
     display: block;
 }
@@ -72,6 +75,18 @@
     min-height: 1px;
     padding-right: 15px;
 }
+.evaluate-price {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin: 18px 0 15px;
+}
+.evaluate-bad {
+    color: #95c066;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Jost;
+    margin-left: -200px;
+}
 .evaluate-p-4 {
     padding: 0;
     flex: 0 0 33.333333%;
@@ -96,7 +111,7 @@
     padding-left: 15px;
 }
 .evaluate-des {
-    font-size: 16px;
+    font-size: 20px;
     padding-bottom: 9px;
     text-transform: capitalize;
     display: flex;
@@ -116,13 +131,13 @@
     display: block;
 }
 .evaluate-badgw {
-    margin: 0 3px 0 0;
+    margin: 0 130px 0 0;
 }
 .evaluate-icon {
     color: #ffc107;
     margin-right: 1.6px;
     opacity: 1;
-    font-size: 13px;
+    font-size: 25px;
     position: relative;
     top: 1px;
     float: none;
@@ -162,7 +177,7 @@
     padding-left: 15px;
 }
 .evaluate-des {
-    font-size: 16px;
+    font-size: 20px;
     padding-bottom: 9px;
     text-transform: capitalize;
     display: flex;

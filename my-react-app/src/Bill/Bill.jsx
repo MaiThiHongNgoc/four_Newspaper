@@ -70,7 +70,7 @@ const BillPage = () => {
       
       {/* Hiển thị chi tiết đơn hàng */}
       {renderOrderDetails()}
-      <Link to="/Evaluate">Evaluate</Link>
+      <Link to="/Evaluate">FeedBack</Link>
     </div>
   );
 };

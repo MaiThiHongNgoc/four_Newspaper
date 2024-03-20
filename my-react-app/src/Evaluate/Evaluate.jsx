@@ -38,9 +38,9 @@ function Evaluate() {
                                                 <i className="evaluate-icon"><FaRegStar /></i>
                                             </span>
                                         </span>
-                                        <p className="evaluate-price">
+                                        <div className="evaluate-price">
                                             <span className="evaluate-bad">$55.00</span>
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
 
